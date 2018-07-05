@@ -254,7 +254,7 @@
     <property name="database.console.LAST_STATE" value="true" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
@@ -283,7 +283,7 @@
   </component>
   <component name="RunManager">
     <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="ServerApp" />
+      <module name="AppointmentServer" />
       <working_directory value="$PROJECT_DIR$/" />
       <go_parameters value="-i" />
       <kind value="FILE" />
@@ -292,7 +292,7 @@
       <directory value="$PROJECT_DIR$/" />
     </configuration>
     <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
-      <module name="ServerApp" />
+      <module name="AppointmentServer" />
       <working_directory value="$PROJECT_DIR$/" />
       <go_parameters value="-i" />
       <framework value="gotest" />
