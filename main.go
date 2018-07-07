@@ -1,7 +1,7 @@
 package main
 
 import (
-	. "ServerApp/PostServer"
+	. "AppointmentServer/PostServer"
 )
 
 

@@ -40,20 +40,31 @@ func PostServer(){
 	dbtest()
 	//JSON.TestClientJSON()
 	//fmt.Printf ("%v\n", JSON.TestClientJSON())
+
+	//log.Fatal(
+	//	http.ListenAndServe(
+	//		":8080", handlers.CORS(
+	//			handlers.AllowedMethods([]string {
+	//				"GET", "POST", "PUT", "HEAD", "DELETE", "OPTIONS",
+	//			}),
+	//			handlers.AllowedOrigins([]string{"*"}) )(router)))
+
 	log.Fatal(
 		http.ListenAndServe(
 			":8080", handlers.CORS(
-				handlers.AllowedMethods([]string {
-					"GET", "POST", "PUT", "HEAD", "DELETE", "OPTIONS",
-				}),
-				handlers.AllowedOrigins([]string{"*"}))(router)))
+				handlers.AllowedOrigins([]string{"*"}),
+				handlers.AllowedMethods([]string{"GET","POST"}),
+				handlers.AllowedHeaders([]string{"Content-Type", "X-Requested-With"}),
+			)(router)))
+
+
 }
 
 
 func routerBehavior(){
 	router = mux.NewRouter()
-	router.HandleFunc(api, ListEndpoint).Methods("GET","POST")
-	router.HandleFunc(api + "/{id}", ObjectEndpoint).Methods("GET","DELETE","OPTIONS")
+	router.HandleFunc(api, ListEndpoint).Methods("GET","POST","OPTIONS")
+	router.HandleFunc(api + "/{id}", ObjectEndpoint).Methods("GET","DELETE","OPTIONS","POST")
 	http.Handle("/", router)
 }
 
@@ -69,10 +80,16 @@ func dbtest(){
 	checkErr(err)
 }
 
-
 func ListEndpoint(w http.ResponseWriter, req *http.Request) {
 	switch req.Method {
 	case "POST":
+		decoder := json.NewDecoder(req.Body)
+		var cli DSInterface.Client
+		err:= decoder.Decode(&cli)
+		if err != nil {
+			panic(err)
+		}
+	case "OPTIONS":
 		decoder := json.NewDecoder(req.Body)
 		var cli DSInterface.Client
 		err:= decoder.Decode(&cli)
@@ -93,6 +110,13 @@ func ObjectEndpoint(w http.ResponseWriter, req *http.Request) {
 			// handle error
 			fmt.Println(err)
 			os.Exit(2)
+		}
+	case "POST":
+		decoder := json.NewDecoder(req.Body)
+		var cli DSInterface.Client
+		err:= decoder.Decode(&cli)
+		if err != nil {
+			panic(err)
 		}
 	//case "DELETE":
 	//	err := dbobj.DeleteByID(id)
