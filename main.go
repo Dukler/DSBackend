@@ -1,9 +1,8 @@
 package main
 
 import (
-	. "AppointmentServer/PostServer"
+	. "AppointmentServer/API"
 )
-
 
 func main() {
 	PostServer()

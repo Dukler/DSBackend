@@ -1,8 +1,8 @@
 package DSInterface
 
 import (
+	"AppointmentServer/Structs"
 	"time"
-	"ServerApp/Structs"
 )
 
 type Sender interface {
@@ -11,14 +11,14 @@ type Sender interface {
 
 type Appointment struct {
 	DBObject
-	Date time.Time `json:"date"`
-	Client_id int `json:"-"`
-	Appointment_type_id int `json:"-"`
+	Date                time.Time `json:"date"`
+	Client_id           int       `json:"-"`
+	Appointment_type_id int       `json:"-"`
 }
 type Client struct {
 	DBObject
-	Telephones []Structs.Telephone `json:"telephones"`
-	Addresses []Structs.Address `json:"addresses"`
-	Email string `json:"email"`
-	Description string `json:"description"`
+	Telephones  []Structs.Telephone `json:"telephones"`
+	Addresses   []Structs.Address   `json:"addresses"`
+	Email       string              `json:"email"`
+	Description string              `json:"description"`
 }
