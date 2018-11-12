@@ -11,7 +11,6 @@ import (
 	"log"
 	"net/http"
 	"os"
-	"strconv"
 	"time"
 )
 
@@ -51,8 +50,8 @@ func PostServer() {
 
 func routerBehavior() {
 	router = mux.NewRouter()
-	router.HandleFunc(api+"/{entity}", SaveEndpoint).Methods("GET", "POST", "OPTIONS")
-	router.HandleFunc(api+"/{entity}"+"/{id}", ObjectEndpoint).Methods("GET", "DELETE", "OPTIONS", "POST")
+	router.HandleFunc(api+"/save/{entity}/{id}", SaveEndpoint).Methods("GET", "POST", "OPTIONS")
+	router.HandleFunc(api+"/ui/update", UIEndpoint).Methods("GET", "DELETE", "OPTIONS", "POST")
 	http.Handle("/", router)
 }
 
@@ -70,18 +69,22 @@ func dbtest() {
 
 func SaveEndpoint(w http.ResponseWriter, req *http.Request) {
 	vars := mux.Vars(req)
-	var entity string
-	entity = vars["entity"]
+	//var entity string
+	//var id int
+	//var err error
+	//id, err = strconv.Atoi(vars["id"])
+	//entity = vars["entity"]
 	switch req.Method {
 	case "POST":
-		decoder := json.NewDecoder(req.Body)
+		//decoder := json.NewDecoder(req.Body)
 		/*var obj interface{}
 		err:= decoder.Decode(&obj)
 		if err != nil {
 			panic(err)
 		}*/
 		//cli.Entity = "Client"
-		dbh.Save(decoder, entity)
+		log.Print(vars["entity"])
+		//dbh.Save(decoder, vars["entity"])
 	case "OPTIONS":
 		decoder := json.NewDecoder(req.Body)
 		var cli DSInterface.Client
@@ -92,31 +95,34 @@ func SaveEndpoint(w http.ResponseWriter, req *http.Request) {
 	}
 }
 
-func ObjectEndpoint(w http.ResponseWriter, req *http.Request) {
-	vars := mux.Vars(req)
-	var entity string
-	var id int
-	var err error
-	id, err = strconv.Atoi(vars["id"])
-	entity = vars["entity"]
+func UIEndpoint(w http.ResponseWriter, req *http.Request) {
+	var widgets []*DSInterface.DSWidget
+	var wdg = DSInterface.NewWidget("clientName", "name", "Nombre", "text", "")
+	var wdg2 = DSInterface.NewWidget("droga", "droga", "droga2", "text", "")
+	widgets = append(widgets, wdg)
+	widgets = append(widgets, wdg2)
 	switch req.Method {
 	case "GET":
-		appointment, err := dbh.GetAppointmentByID(id)
-		json.NewEncoder(w).Encode(&appointment)
-		if err != nil {
-			// handle error
-			fmt.Println(err)
-			fmt.Println(entity)
-			os.Exit(2)
-		}
+		//appointment, err := dbh.GetAppointmentByID(id)
+		json.NewEncoder(w).Encode(&widgets)
+		//if err != nil {
+		//	// handle error
+		//	fmt.Println(err)
+		//	fmt.Println(entity)
+		//	os.Exit(2)
+		//}
 	case "POST":
 		decoder := json.NewDecoder(req.Body)
-		var cli DSInterface.Client
-		err := decoder.Decode(&cli)
+		//var cli DSInterface.Client
+		//err := decoder.Decode(&cli)
+		var test interface{}
+		var uiState []byte
+		err := decoder.Decode(&test)
+		uiState, err = json.Marshal(&test)
 		if err != nil {
 			panic(err)
 		}
-
+		fmt.Println(uiState)
 		//case "DELETE":
 		//	err := dbobj.DeleteByID(id)
 		//	if err != nil {
@@ -131,11 +137,6 @@ func ObjectEndpoint(w http.ResponseWriter, req *http.Request) {
 		//		fmt.Println(err)
 		//		os.Exit(2)
 		//	}
-	}
-	if err != nil {
-		// handle error
-		fmt.Println(err)
-		os.Exit(2)
 	}
 
 }
