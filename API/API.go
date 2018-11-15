@@ -61,8 +61,6 @@ func dbtest() {
 		host, port, user, password, dbname)
 	var err error
 	dbh, err = Helpers.NewDBHelper(psqlInfo)
-	fmt.Println(dbh.GetEntityByID(1, "appointment"))
-	fmt.Println(dbh.GetEntityByID(1, "client"))
 
 	checkErr(err)
 }
@@ -96,21 +94,23 @@ func SaveEndpoint(w http.ResponseWriter, req *http.Request) {
 }
 
 func UIEndpoint(w http.ResponseWriter, req *http.Request) {
-	var widgets []*DSInterface.DSWidget
+	var ui = new(DSInterface.DSUI)
 	var wdg = DSInterface.NewWidget("clientName", "name", "Nombre", "text", "")
 	var wdg2 = DSInterface.NewWidget("droga", "droga", "droga2", "text", "")
-	widgets = append(widgets, wdg)
-	widgets = append(widgets, wdg2)
+	ui.AddWidget(wdg)
+	ui.AddWidget(wdg2)
 	switch req.Method {
 	case "GET":
-		//appointment, err := dbh.GetAppointmentByID(id)
-		json.NewEncoder(w).Encode(&widgets)
-		//if err != nil {
-		//	// handle error
-		//	fmt.Println(err)
-		//	fmt.Println(entity)
-		//	os.Exit(2)
-		//}
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(http.StatusOK)
+		response, err := json.Marshal(ui.Widgets)
+		w.Write(response)
+		//err := json.NewEncoder(w).Encode(&ui)
+		if err != nil {
+			fmt.Println(err)
+			os.Exit(2)
+		}
+
 	case "POST":
 		decoder := json.NewDecoder(req.Body)
 		//var cli DSInterface.Client

@@ -8,7 +8,7 @@ type DSWidget struct {
 	Value string `json:"value"`
 }
 
-func NewWidget(ID string, Label string, Type string, Name string, Value string) *DSWidget {
+func NewWidget(ID string, Name string, Label string, Type string, Value string) *DSWidget {
 	w := new(DSWidget)
 	w.ID = ID
 	w.Label = Label
