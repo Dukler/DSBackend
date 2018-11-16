@@ -1,17 +1,16 @@
-[{
-  "widget": {
-    "id": "clientName",
-    "label": "Nombre",
-    "name": "name",
-    "type": "text",
-    "value": ""
+[
+  {
+  "ID": "clientName",
+  "Caption": "Nombre",
+  "Name": "name",
+  "Type": "text",
+  "Value": ""
+  },
+  {
+    "ID": "droga",
+    "Caption": "droga",
+    "Name": "droga",
+    "Type": "text",
+    "Value": ""
   }
-}, {
-  "widget": {
-    "id": "droga",
-    "label": "droga",
-    "name": "droga",
-    "type": "text",
-    "value": ""
-  }
-}]
+]

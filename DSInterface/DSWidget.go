@@ -1,17 +1,17 @@
 package DSInterface
 
 type DSWidget struct {
-	ID    string `json:"id"`
-	Label string `json:"label"`
-	Type  string `json:"type"`
-	Name  string `json:"name"`
-	Value string `json:"value"`
+	ID      string `json:"id"`
+	Caption string `json:"caption"`
+	Type    string `json:"type"`
+	Name    string `json:"name"`
+	Value   string `json:"value"`
 }
 
-func NewWidget(ID string, Name string, Label string, Type string, Value string) *DSWidget {
+func NewWidget(ID string, Name string, Caption string, Type string, Value string) *DSWidget {
 	w := new(DSWidget)
 	w.ID = ID
-	w.Label = Label
+	w.Caption = Caption
 	w.Type = Type
 	w.Name = Name
 	w.Value = Value

@@ -8,6 +8,7 @@ import (
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 	_ "github.com/lib/pq"
+	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
@@ -94,11 +95,18 @@ func SaveEndpoint(w http.ResponseWriter, req *http.Request) {
 }
 
 func UIEndpoint(w http.ResponseWriter, req *http.Request) {
-	var ui = new(DSInterface.DSUI)
-	var wdg = DSInterface.NewWidget("clientName", "name", "Nombre", "text", "")
-	var wdg2 = DSInterface.NewWidget("droga", "droga", "droga2", "text", "")
-	ui.AddWidget(wdg)
-	ui.AddWidget(wdg2)
+	var ui DSInterface.DSUI
+	var filename = "C:/Users/iarwa/Workspace/Go/src/AppointmentServer/API/UIState.json"
+	data, e := ioutil.ReadFile(filename)
+	if e != nil {
+		fmt.Println(e)
+		os.Exit(2)
+	}
+	err := json.Unmarshal(data, &ui)
+	if err != nil {
+		fmt.Println(err)
+		os.Exit(2)
+	}
 	switch req.Method {
 	case "GET":
 		w.Header().Set("Content-Type", "application/json")

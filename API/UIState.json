@@ -1,21 +1,25 @@
-[{
-  "props": {
-    "id": "clientName",
-    "label": "Nombre",
-    "name": "name",
-    "type": "text",
-    "value": "1323123123dfgsdf"
-  },
-  "refs": {},
-  "updater": {}
-}, {
-  "props": {
-    "id": "droga",
-    "label": "droga",
-    "name": "droga",
-    "type": "text",
-    "value": "56vdsfsdf"
-  },
-  "refs": {},
-  "updater": {}
-}]
+{
+  "widgets":
+  [
+    {
+      "ID": "clientName",
+      "Caption": "Nombre",
+      "Name": "name",
+      "Type": "text",
+      "Value": ""
+    },
+    {
+      "ID": "droga",
+      "Caption": "droga",
+      "Name": "droga",
+      "Type": "text",
+      "Value": ""
+    }
+  ],
+  "buttons":
+  [
+    {
+
+    }
+  ]
+}
