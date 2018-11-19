@@ -111,9 +111,8 @@ func UIEndpoint(w http.ResponseWriter, req *http.Request) {
 	case "GET":
 		w.Header().Set("Content-Type", "application/json")
 		w.WriteHeader(http.StatusOK)
-		response, err := json.Marshal(ui.Widgets)
+		response, err := json.Marshal(ui)
 		w.Write(response)
-		//err := json.NewEncoder(w).Encode(&ui)
 		if err != nil {
 			fmt.Println(err)
 			os.Exit(2)

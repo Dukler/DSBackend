@@ -1,25 +1,36 @@
 {
-  "widgets":
-  [
+  "widgets":[
     {
       "ID": "clientName",
       "Caption": "Nombre",
       "Name": "name",
       "Type": "text",
+      "DSType": "input",
       "Value": ""
     },
     {
       "ID": "droga",
-      "Caption": "droga",
+      "Caption": "Droga",
       "Name": "droga",
-      "Type": "text",
+      "Type": "number",
+      "DSType": "input",
       "Value": ""
+    },
+    {
+      "ID": "save",
+      "Caption": "save",
+      "Name": "save",
+      "DSType": "button",
+      "Action": "test"
     }
   ],
-  "buttons":
+  "testExtraProperty":
   [
     {
-
+      "ID": "save",
+      "Caption": "save",
+      "Name": "save",
+      "Action": "test"
     }
   ]
 }
