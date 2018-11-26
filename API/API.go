@@ -52,7 +52,7 @@ func PostServer() {
 func routerBehavior() {
 	router = mux.NewRouter()
 	router.HandleFunc(api+"/save/{entity}/{id}", SaveEndpoint).Methods("GET", "POST", "OPTIONS")
-	router.HandleFunc(api+"/ui/update", UIEndpoint).Methods("GET", "DELETE", "OPTIONS", "POST")
+	router.HandleFunc(api+"/ui/update/{Screen}", UIEndpoint).Methods("GET", "DELETE", "OPTIONS", "POST")
 	http.Handle("/", router)
 }
 
@@ -93,11 +93,18 @@ func SaveEndpoint(w http.ResponseWriter, req *http.Request) {
 		}
 	}
 }
+func getScreenJson(screen string) string {
+	var filename = "C:/Users/iarwa/Workspace/Go/src/AppointmentServer/API/" + screen + ".json"
+	return filename
+
+}
 
 func UIEndpoint(w http.ResponseWriter, req *http.Request) {
 	var ui DSInterface.DSUI
-	var filename = "C:/Users/iarwa/Workspace/Go/src/AppointmentServer/API/UIState.json"
-	data, e := ioutil.ReadFile(filename)
+	vars := mux.Vars(req)
+	var screen string
+	screen = vars["Screen"]
+	data, e := ioutil.ReadFile(getScreenJson(screen))
 	if e != nil {
 		fmt.Println(e)
 		os.Exit(2)
@@ -120,8 +127,6 @@ func UIEndpoint(w http.ResponseWriter, req *http.Request) {
 
 	case "POST":
 		decoder := json.NewDecoder(req.Body)
-		//var cli DSInterface.Client
-		//err := decoder.Decode(&cli)
 		var test interface{}
 		var uiState []byte
 		err := decoder.Decode(&test)
@@ -130,6 +135,7 @@ func UIEndpoint(w http.ResponseWriter, req *http.Request) {
 			panic(err)
 		}
 		fmt.Println(uiState)
+
 		//case "DELETE":
 		//	err := dbobj.DeleteByID(id)
 		//	if err != nil {

@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="01d798cd-61aa-45f5-8fcd-33f50b04e121" name="Default" comment="widgets rendered dynamically from server">
-      <change afterPath="$PROJECT_DIR$/DSInterface/DSButton.go" afterDir="false" />
+    <list default="true" id="01d798cd-61aa-45f5-8fcd-33f50b04e121" name="Default" comment="code updated">
+      <change afterPath="$PROJECT_DIR$/API/Login.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/API/Main.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DSInterface/DSContent.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DSInterface/DSMenu.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/API.go" beforeDir="false" afterPath="$PROJECT_DIR$/API/API.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/NewUIState.json" beforeDir="false" afterPath="$PROJECT_DIR$/API/NewUIState.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/UIState.json" beforeDir="false" afterPath="$PROJECT_DIR$/API/UIState.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DSInterface/DSUI.go" beforeDir="false" afterPath="$PROJECT_DIR$/DSInterface/DSUI.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DSInterface/DSWidget.go" beforeDir="false" afterPath="$PROJECT_DIR$/DSInterface/DSWidget.go" afterDir="false" />
@@ -42,40 +44,42 @@
           <entry key="project.closed" value="6" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.12" value="1" />
-          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.14" value="3" />
           <entry key="project.open.time.15" value="2" />
           <entry key="project.open.time.16" value="2" />
           <entry key="project.open.time.6" value="2" />
-          <entry key="project.open.time.7" value="5" />
-          <entry key="project.open.time.8" value="2" />
-          <entry key="project.opened" value="19" />
+          <entry key="project.open.time.7" value="7" />
+          <entry key="project.open.time.8" value="3" />
+          <entry key="project.opened" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="go" value="1612" />
-          <entry key="json" value="481" />
-          <entry key="txt" value="127" />
+          <entry key="go" value="1861" />
+          <entry key="json" value="638" />
+          <entry key="txt" value="139" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Go" value="1612" />
-          <entry key="JSON" value="481" />
-          <entry key="PLAIN_TEXT" value="127" />
+          <entry key="Go" value="1861" />
+          <entry key="JSON" value="638" />
+          <entry key="PLAIN_TEXT" value="139" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="go" value="42" />
-          <entry key="json" value="9" />
+          <entry key="go" value="44" />
+          <entry key="js" value="3" />
+          <entry key="json" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Go" value="42" />
-          <entry key="JSON" value="9" />
+          <entry key="Go" value="44" />
+          <entry key="JSON" value="11" />
+          <entry key="JavaScript" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.go.postfix.template.usages.trigger">
@@ -99,8 +103,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DSInterface/DSUI.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+            <state relative-caret-position="54">
+              <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -108,8 +112,53 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/API.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="114" column="25" selection-start-line="114" selection-start-column="25" selection-end-line="114" selection-end-column="25" />
+            <state relative-caret-position="180">
+              <caret line="101" column="13" lean-forward="true" selection-start-line="101" selection-start-column="13" selection-end-line="101" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DSInterface/DSMenu.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" selection-start-line="2" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DSInterface/DSContent.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../../React/duckstackui/src/DSUI/DSWidgets/Widget.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/Login.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="612">
+              <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/Main.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -117,8 +166,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DSInterface/DSWidget.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="252">
+              <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -160,6 +209,9 @@
       <find>interfac</find>
       <find>append</find>
       <find>log</find>
+      <find>vars</find>
+      <find>return</find>
+      <find>AddWidget</find>
     </findStrings>
     <replaceStrings>
       <replace>deleteByID</replace>
@@ -183,12 +235,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Handler/xml.go" />
-        <option value="$PROJECT_DIR$/handler/xml.go" />
-        <option value="$PROJECT_DIR$/Handlers/XMLHandler.go" />
-        <option value="$PROJECT_DIR$/Indoor.go" />
-        <option value="$PROJECT_DIR$/Server/PostServer.go" />
-        <option value="$PROJECT_DIR$/Server/PostServer.go" />
         <option value="$PROJECT_DIR$/Handlers/XML.go" />
         <option value="$PROJECT_DIR$/Web/edit.html" />
         <option value="$PROJECT_DIR$/Web/view.html" />
@@ -230,10 +276,16 @@
         <option value="$PROJECT_DIR$/Structs/UIState.go" />
         <option value="$PROJECT_DIR$/API/NewUIState.json" />
         <option value="$PROJECT_DIR$/DSInterface/DSButton.go" />
-        <option value="$PROJECT_DIR$/DSInterface/DSUI.go" />
-        <option value="$PROJECT_DIR$/API/API.go" />
         <option value="$PROJECT_DIR$/API/UIState.json" />
+        <option value="$PROJECT_DIR$/API/API.go" />
+        <option value="$PROJECT_DIR$/DSInterface/DSMenu.go" />
+        <option value="$PROJECT_DIR$/DSInterface/DSContent.go" />
+        <option value="$PROJECT_DIR$/API/Test.json" />
+        <option value="$PROJECT_DIR$/API/Login.json" />
+        <option value="$PROJECT_DIR$/API/Home.json" />
+        <option value="$PROJECT_DIR$/DSInterface/DSUI.go" />
         <option value="$PROJECT_DIR$/DSInterface/DSWidget.go" />
+        <option value="$PROJECT_DIR$/API/Main.json" />
       </list>
     </option>
   </component>
@@ -244,9 +296,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="266" />
-    <option name="y" value="46" />
-    <option name="width" value="1168" />
+    <option name="x" value="-1882" />
+    <option name="y" value="41" />
+    <option name="width" value="1283" />
     <option name="height" value="979" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -297,21 +349,6 @@
             </path>
             <path>
               <item name="AppointmentServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AppointmentServer" type="462c0819:PsiDirectoryNode" />
-              <item name="Handlers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AppointmentServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AppointmentServer" type="462c0819:PsiDirectoryNode" />
-              <item name="Helpers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AppointmentServer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AppointmentServer" type="462c0819:PsiDirectoryNode" />
-              <item name="Structs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AppointmentServer" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -331,7 +368,7 @@
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -401,10 +438,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="74" y="55" width="1168" height="979" extended-state="0" />
+    <frame x="-1882" y="41" width="1283" height="979" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2202166" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2142273" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -496,7 +533,8 @@
     <MESSAGE value="designing new ui" />
     <MESSAGE value="update fast" />
     <MESSAGE value="widgets rendered dynamically from server" />
-    <option name="LAST_COMMIT_MESSAGE" value="widgets rendered dynamically from server" />
+    <MESSAGE value="code updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="code updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -571,43 +609,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/WemosClient/ClientApp/ClientApp.ino" />
-    <entry file="file://C:/Go/src/encoding/xml/read.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="132" column="18" selection-start-line="132" selection-start-column="18" selection-end-line="132" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/html/edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Web/html/view.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Go/src/html/template/template.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="412" selection-start-line="412" selection-end-line="412" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ServidorDePorro.txt" />
-    <entry file="file://C:/Go/src/context/context.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="232" selection-start-line="232" selection-end-line="232" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Web/Web.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -810,6 +811,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../../React/duckstackui/src/DSUI/DSWidgets/WidgetList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../React/duckstackui/src/DSUI/DSWidgets/widgetListRender.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/API/UIState.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -817,24 +832,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/DSInterface/DSMenu.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" selection-start-line="2" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/Login.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DSInterface/DSUI.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+        <state relative-caret-position="54">
+          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../React/duckstackui/src/DSUI/DSWidgets/Widget.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DSInterface/DSContent.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/Main.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/API/API.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="114" column="25" selection-start-line="114" selection-start-column="25" selection-end-line="114" selection-end-column="25" />
+        <state relative-caret-position="180">
+          <caret line="101" column="13" lean-forward="true" selection-start-line="101" selection-start-column="13" selection-end-line="101" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DSInterface/DSWidget.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="252">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
         </state>
       </provider>
     </entry>

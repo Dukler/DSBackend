@@ -1,8 +1,9 @@
 package DSInterface
 
 type DSUI struct {
-	Widgets []*DSWidget `json:"widgets"`
-	Buttons []*DSButton `json:"buttons"`
+	Widgets []*DSWidget  `json:"Widgets"`
+	Menu    []*DSMenu    `json:"NavMenu"`
+	Content []*DSContent `json:"Content"`
 }
 
 func (dsui *DSUI) AddWidget(widget *DSWidget) {
@@ -10,4 +11,7 @@ func (dsui *DSUI) AddWidget(widget *DSWidget) {
 }
 func (dsui *DSUI) AddButton(widget *DSWidget) {
 	dsui.Widgets = append(dsui.Widgets, widget)
+}
+func (dsui *DSUI) AddMenu(menu *DSMenu) {
+	dsui.Menu = append(dsui.Menu, menu)
 }

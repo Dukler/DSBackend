@@ -1,19 +1,21 @@
 {
-  "widgets":[
+  "Widgets":[
     {
       "ID": "userName",
       "Caption": "Usuario",
       "Name": "userName",
       "Type": "text",
       "DSType": "input",
+      "suggested": "username",
       "Value": ""
     },
     {
       "ID": "userPassword",
       "Caption": "Contraseña",
       "Name": "userPassword",
-      "Type": "text",
+      "Type": "password",
       "DSType": "input",
+      "suggested": "current-password",
       "Value": ""
     },
     {
@@ -24,13 +26,20 @@
       "Action": "test"
     }
   ],
-  "testExtraProperty":
+  "NavMenu":
   [
     {
-      "ID": "save",
-      "Caption": "save",
-      "Name": "save",
-      "Action": "test"
+      "ID": "login",
+      "Caption": "Iniciar sesión",
+      "Path": "/"
+    }
+  ],
+  "Content":
+  [
+    {
+      "ID": "login",
+      "Path": "/",
+      "Caption": "Login"
     }
   ]
 }

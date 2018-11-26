@@ -1,0 +1,78 @@
+{
+  "Widgets":[
+    {
+      "ID": "test",
+      "Caption": "Usuario",
+      "Name": "userName",
+      "Type": "text",
+      "DSType": "input",
+      "Suggested": "username",
+      "ContentFilter": "home",
+      "Value": ""
+    },
+    {
+      "ID": "userPassword",
+      "Caption": "Contraseña",
+      "Name": "userPassword",
+      "Type": "password",
+      "DSType": "input",
+      "Suggested": "current-password",
+      "ContentFilter": "home",
+      "Value": ""
+    },
+    {
+      "ID": "submit",
+      "Caption": "Iniciar sesión",
+      "Name": "submit",
+      "DSType": "button",
+      "ContentFilter": "home",
+      "Action": "test"
+    },
+    {
+      "ID": "test1",
+      "Caption": "Prueba",
+      "Name": "test1",
+      "Type": "text",
+      "DSType": "input",
+      "Suggested": "",
+      "ContentFilter": "test",
+      "Value": ""
+    },
+    {
+      "ID": "tes2",
+      "Caption": "Prueba2",
+      "Name": "tes2",
+      "Type": "text",
+      "DSType": "input",
+      "Suggested": "",
+      "ContentFilter": "test",
+      "Value": ""
+    }
+  ],
+  "NavMenu":
+  [
+    {
+      "ID": "home",
+      "Caption": "Home",
+      "Path": "/"
+    },
+    {
+      "ID": "test",
+      "Caption": "Test",
+      "Path": "/test"
+    }
+  ],
+  "Content":
+  [
+    {
+      "ID": "home",
+      "Path": "/",
+      "Caption": ""
+    },
+    {
+      "ID": "test",
+      "Caption": "",
+      "Path": "/test"
+    }
+  ]
+}
