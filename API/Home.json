@@ -1,7 +1,7 @@
 {
   "Widgets":[
     {
-      "ID": "test",
+      "ID": "userName",
       "Caption": "Usuario",
       "Name": "userName",
       "Type": "text",
@@ -53,13 +53,13 @@
   [
     {
       "ID": "home",
-      "Caption": "Home",
-      "Path": "/"
+      "Path": "/",
+      "Caption": "Home"
     },
     {
       "ID": "test",
-      "Caption": "Test",
-      "Path": "/test"
+      "Path": "/test",
+      "Caption": "Test"
     }
   ],
   "Content":

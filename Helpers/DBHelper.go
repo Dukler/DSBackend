@@ -1,7 +1,7 @@
 package Helpers
 
 import (
-	"AppointmentServer/DSInterface"
+	"AppointmentServer/DSInterface/DB"
 	"AppointmentServer/Structs"
 	"database/sql"
 	"encoding/json"
@@ -9,12 +9,6 @@ import (
 	"log"
 	"strconv"
 )
-
-//const (
-//	client_index = 0
-//	appType_index = 1
-//
-//)
 
 type DBHelper struct {
 	db         *sql.DB
@@ -68,7 +62,7 @@ func (dbh *DBHelper) Save(decoder *json.Decoder, entity string) {
 
 	switch entity {
 	case "Appointment":
-		var dbobj DSInterface.Appointment
+		var dbobj DB.Appointment
 		err := decoder.Decode(&dbobj)
 		if err != nil {
 			panic(err)
@@ -87,7 +81,7 @@ func (dbh *DBHelper) Save(decoder *json.Decoder, entity string) {
 			log.Print("cliente o tipo de turno no encontrado")
 		}
 	case "Client":
-		var dbobj DSInterface.Client
+		var dbobj DB.Client
 		err := decoder.Decode(&dbobj)
 		if err != nil {
 			panic(err)
@@ -100,7 +94,7 @@ func (dbh *DBHelper) Save(decoder *json.Decoder, entity string) {
 			panic(err)
 		}
 	default:
-		var dbobj DSInterface.DBObject
+		var dbobj DB.DBObject
 		err := decoder.Decode(&dbobj)
 		if err != nil {
 			panic(err)
@@ -123,7 +117,7 @@ func (dbh *DBHelper) GetEntityByID(ID int, entitiy string) (interface{}, error) 
 	case "appointment":
 		return dbh.GetAppointmentByID(ID)
 	case "client":
-		var cli DSInterface.Client
+		var cli DB.Client
 		data, err := dbh.GetJsonByID(ID, entitiy)
 		if err := json.Unmarshal(data, &cli); err != nil {
 			panic(err)
@@ -165,8 +159,8 @@ func (dbh *DBHelper) entityExists(id int, entity string) bool {
 	return true
 }
 
-func (dbh *DBHelper) GetAppointmentByID(ID int) (DSInterface.Appointment, error) {
-	var app DSInterface.Appointment
+func (dbh *DBHelper) GetAppointmentByID(ID int) (DB.Appointment, error) {
+	var app DB.Appointment
 	var data []byte
 	var id, client_id, appointment_type_id int
 	err := dbh.GetRowByID(ID, "appointment").Scan(&id, &client_id, &appointment_type_id, &data)

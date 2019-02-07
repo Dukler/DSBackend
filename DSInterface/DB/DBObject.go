@@ -1,4 +1,4 @@
-package DSInterface
+package DB
 
 type DBObject struct {
 	ID     int    `json:"-"`
