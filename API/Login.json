@@ -1,45 +1,48 @@
 {
   "Widgets":[
     {
-      "ID": "userName",
+      "ID": "1",
       "Caption": "Usuario",
       "Name": "userName",
       "Type": "text",
       "DSType": "input",
-      "suggested": "username",
+      "Suggested": "username",
+      "ContentFilter": "login",
       "Value": ""
     },
     {
-      "ID": "userPassword",
+      "ID": "2",
       "Caption": "Contraseña",
       "Name": "userPassword",
       "Type": "password",
       "DSType": "input",
-      "suggested": "current-password",
+      "Suggested": "current-password",
+      "ContentFilter": "login",
       "Value": ""
     },
     {
-      "ID": "submit",
+      "ID": "3",
       "Caption": "Iniciar sesión",
       "Name": "submit",
       "DSType": "button",
+      "ContentFilter": "login",
       "Action": "test"
     }
   ],
   "NavMenu":
   [
     {
-      "ID": "login",
-      "Caption": "Iniciar sesión",
+      "ID": "4",
+      "Caption": "Login",
       "Path": "/"
     }
   ],
   "Content":
   [
     {
-      "ID": "login",
+      "ID": "5",
       "Path": "/",
-      "Caption": "Login"
+      "Caption": ""
     }
   ]
 }

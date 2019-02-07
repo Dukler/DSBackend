@@ -1,4 +1,4 @@
-package DSdbhelper
+package DB
 
 type DBObject struct {
 	ID     int    `json:"-"`

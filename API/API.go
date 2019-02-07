@@ -1,7 +1,8 @@
 package API
 
 import (
-	"AppointmentServer/DSInterface"
+	"AppointmentServer/DSInterface/DB"
+	"AppointmentServer/DSInterface/DSUI"
 	"AppointmentServer/Helpers"
 	"encoding/json"
 	"fmt"
@@ -15,10 +16,6 @@ import (
 	"time"
 )
 
-//type urlType struct{
-//	index int
-//	description string
-//}
 
 var router *mux.Router
 var api = "/api"
@@ -51,6 +48,7 @@ func PostServer() {
 
 func routerBehavior() {
 	router = mux.NewRouter()
+	router.HandleFunc(api+"/Login", LogInEndpoint).Methods("GET", "DELETE", "OPTIONS", "POST")
 	router.HandleFunc(api+"/save/{entity}/{id}", SaveEndpoint).Methods("GET", "POST", "OPTIONS")
 	router.HandleFunc(api+"/ui/update/{Screen}", UIEndpoint).Methods("GET", "DELETE", "OPTIONS", "POST")
 	http.Handle("/", router)
@@ -86,7 +84,7 @@ func SaveEndpoint(w http.ResponseWriter, req *http.Request) {
 		//dbh.Save(decoder, vars["entity"])
 	case "OPTIONS":
 		decoder := json.NewDecoder(req.Body)
-		var cli DSInterface.Client
+		var cli DB.Client
 		err := decoder.Decode(&cli)
 		if err != nil {
 			panic(err)
@@ -96,14 +94,17 @@ func SaveEndpoint(w http.ResponseWriter, req *http.Request) {
 func getScreenJson(screen string) string {
 	var filename = "C:/Users/iarwa/Workspace/Go/src/AppointmentServer/API/" + screen + ".json"
 	return filename
-
 }
 
 func UIEndpoint(w http.ResponseWriter, req *http.Request) {
-	var ui DSInterface.DSUI
+	var ui DSUI.UI
 	vars := mux.Vars(req)
 	var screen string
 	screen = vars["Screen"]
+	if _, err := os.Stat(getScreenJson(screen)); os.IsNotExist(err) {
+		return
+	}
+
 	data, e := ioutil.ReadFile(getScreenJson(screen))
 	if e != nil {
 		fmt.Println(e)
@@ -135,23 +136,24 @@ func UIEndpoint(w http.ResponseWriter, req *http.Request) {
 			panic(err)
 		}
 		fmt.Println(uiState)
-
-		//case "DELETE":
-		//	err := dbobj.DeleteByID(id)
-		//	if err != nil {
-		//		// handle error
-		//		fmt.Println(err)
-		//		os.Exit(2)
-		//	}
-		//case "OPTIONS":
-		//	err := dbobj.DeleteByID(id)
-		//	if err != nil {
-		//		// handle error
-		//		fmt.Println(err)
-		//		os.Exit(2)
-		//	}
 	}
 
+}
+
+func LogInEndpoint(w http.ResponseWriter, req *http.Request) {
+	switch req.Method {
+	case "POST":
+		decoder := json.NewDecoder(req.Body)
+		var test interface{}
+		var uiState []byte
+		err := decoder.Decode(&test)
+		uiState, err = json.Marshal(&test)
+		if err != nil {
+			panic(err)
+		}
+		fmt.Println(uiState)
+		w.WriteHeader(http.StatusOK)
+	}
 }
 
 func testTimeString() {

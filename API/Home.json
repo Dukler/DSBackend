@@ -53,13 +53,13 @@
   [
     {
       "ID": "home",
-      "Caption": "Home",
-      "Path": "/"
+      "Path": "/",
+      "Caption": "Home"
     },
     {
       "ID": "test",
-      "Caption": "Test",
-      "Path": "/test"
+      "Path": "/test",
+      "Caption": "Test"
     }
   ],
   "Content":

@@ -1,17 +1,17 @@
 package DSUI
 
-type DSUI struct {
+type UI struct {
 	Widgets []*DSWidget  `json:"Widgets"`
 	Menu    []*DSMenu    `json:"NavMenu"`
 	Content []*DSContent `json:"Content"`
 }
 
-func (dsui *DSUI) AddWidget(widget *DSWidget) {
+func (dsui *UI) AddWidget(widget *DSWidget) {
 	dsui.Widgets = append(dsui.Widgets, widget)
 }
-func (dsui *DSUI) AddButton(widget *DSWidget) {
+func (dsui *UI) AddButton(widget *DSWidget) {
 	dsui.Widgets = append(dsui.Widgets, widget)
 }
-func (dsui *DSUI) AddMenu(menu *DSMenu) {
+func (dsui *UI) AddMenu(menu *DSMenu) {
 	dsui.Menu = append(dsui.Menu, menu)
 }
