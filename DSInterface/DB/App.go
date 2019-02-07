@@ -1,4 +1,4 @@
-package DSInterface
+package DSdbhelper
 
 import (
 	"AppointmentServer/Structs"

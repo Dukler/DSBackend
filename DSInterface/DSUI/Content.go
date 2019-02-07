@@ -1,4 +1,4 @@
-package DSInterface
+package DSUI
 
 type DSContent struct {
 	ID      string `json:"id"`

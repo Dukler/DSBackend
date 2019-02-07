@@ -1,4 +1,4 @@
-package DSInterface
+package DSUI
 
 type DSUI struct {
 	Widgets []*DSWidget  `json:"Widgets"`

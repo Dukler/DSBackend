@@ -1,4 +1,4 @@
-package DSInterface
+package DSUI
 
 type DSMenu struct {
 	ID      string `json:"id"`

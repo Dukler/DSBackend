@@ -1,7 +1,7 @@
 {
   "Widgets":[
     {
-      "ID": "test",
+      "ID": "userName",
       "Caption": "Usuario",
       "Name": "userName",
       "Type": "text",

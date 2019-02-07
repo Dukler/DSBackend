@@ -1,4 +1,4 @@
-package DSInterface
+package DSUI
 
 type DSWidget struct {
 	ID            string `json:"id"`
