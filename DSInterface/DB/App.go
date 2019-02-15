@@ -1,7 +1,7 @@
 package DB
 
 import (
-	"AppointmentServer/Structs"
+	"DuckstackBE/Structs"
 	"time"
 )
 

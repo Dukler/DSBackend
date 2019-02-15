@@ -1,8 +1,8 @@
 package Helpers
 
 import (
-	"AppointmentServer/DSInterface/DB"
-	"AppointmentServer/Structs"
+	"DuckstackBE/DSInterface/DB"
+	"DuckstackBE/Structs"
 	"database/sql"
 	"encoding/json"
 	_ "github.com/lib/pq"
