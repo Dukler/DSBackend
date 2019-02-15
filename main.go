@@ -1,7 +1,7 @@
 package main
 
 import (
-	. "AppointmentServer/API"
+	. "DuckstackBE/API"
 )
 
 func main() {

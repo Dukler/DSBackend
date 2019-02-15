@@ -2,7 +2,7 @@ package DSUI
 
 type UI struct {
 	Widgets []*DSWidget  `json:"Widgets"`
-	Menu    []*DSMenu    `json:"NavMenu"`
+	LinkList    []*DSLinkList    `json:"LinkList"`
 	Content []*DSContent `json:"Content"`
 }
 
@@ -12,6 +12,6 @@ func (dsui *UI) AddWidget(widget *DSWidget) {
 func (dsui *UI) AddButton(widget *DSWidget) {
 	dsui.Widgets = append(dsui.Widgets, widget)
 }
-func (dsui *UI) AddMenu(menu *DSMenu) {
-	dsui.Menu = append(dsui.Menu, menu)
+func (dsui *UI) AddMenu(menu *DSLinkList) {
+	dsui.LinkList = append(dsui.LinkList, menu)
 }

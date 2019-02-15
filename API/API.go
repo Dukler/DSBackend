@@ -1,9 +1,9 @@
 package API
 
 import (
-	"AppointmentServer/DSInterface/DB"
-	"AppointmentServer/DSInterface/DSUI"
-	"AppointmentServer/Helpers"
+	"DuckstackBE/DSInterface/DB"
+	"DuckstackBE/DSInterface/DSUI"
+	"DuckstackBE/Helpers"
 	"encoding/json"
 	"fmt"
 	"github.com/gorilla/handlers"
@@ -15,7 +15,6 @@ import (
 	"os"
 	"time"
 )
-
 
 var router *mux.Router
 var api = "/api"
@@ -79,7 +78,7 @@ func SaveEndpoint(w http.ResponseWriter, req *http.Request) {
 		if err != nil {
 			panic(err)
 		}*/
-		//cli.Entity = "Client"
+		//cli.Entity = "Cli-nt"
 		log.Print(vars["entity"])
 		//dbh.Save(decoder, vars["entity"])
 	case "OPTIONS":
@@ -92,7 +91,7 @@ func SaveEndpoint(w http.ResponseWriter, req *http.Request) {
 	}
 }
 func getScreenJson(screen string) string {
-	var filename = "C:/Users/iarwa/Workspace/Go/src/AppointmentServer/API/" + screen + ".json"
+	var filename = "C:/Users/iarwa/Workspace/Go/src/DuckstackBE/API/" + screen + ".json"
 	return filename
 }
 
