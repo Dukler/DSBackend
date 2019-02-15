@@ -32,7 +32,7 @@
   "NavMenu":
   [
     {
-      "ID": "4",
+      "ID": "login",
       "Caption": "Login",
       "Path": "/"
     }
@@ -40,7 +40,7 @@
   "Content":
   [
     {
-      "ID": "5",
+      "ID": "login",
       "Path": "/",
       "Caption": ""
     }

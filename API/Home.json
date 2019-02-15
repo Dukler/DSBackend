@@ -14,7 +14,7 @@
       "ID": "userPassword",
       "Caption": "Contraseña",
       "Name": "userPassword",
-      "Type": "password",
+      "Type": "text",
       "DSType": "input",
       "Suggested": "current-password",
       "ContentFilter": "home",

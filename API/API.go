@@ -16,7 +16,6 @@ import (
 	"time"
 )
 
-
 var router *mux.Router
 var api = "/api"
 var dbh = new(Helpers.DBHelper)
@@ -79,7 +78,7 @@ func SaveEndpoint(w http.ResponseWriter, req *http.Request) {
 		if err != nil {
 			panic(err)
 		}*/
-		//cli.Entity = "Client"
+		//cli.Entity = "Cli-nt"
 		log.Print(vars["entity"])
 		//dbh.Save(decoder, vars["entity"])
 	case "OPTIONS":
