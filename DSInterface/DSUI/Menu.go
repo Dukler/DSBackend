@@ -1,6 +1,6 @@
 package DSUI
 
-type DSMenu struct {
+type DSLinkList struct {
 	ID      string `json:"id"`
 	Caption string `json:"caption"`
 	Path    string `json:"path"`

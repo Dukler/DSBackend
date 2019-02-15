@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/AppointmentServer.iml" filepath="$PROJECT_DIR$/.idea/AppointmentServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/DuckstackBE.iml" filepath="$PROJECT_DIR$/.idea/DuckstackBE.iml" />
     </modules>
   </component>
 </project>
