@@ -52,28 +52,14 @@
   "LinkList":
   [
     {
-      "ID": "Turnos",
+      "ID": "home",
       "Path": "/",
-      "Caption": "p",
-      "Icon": "EventAvailable"
+      "Caption": "Home"
     },
     {
-      "ID": "Clientes",
-      "Path": "/clientes",
-      "Caption": "e",
-      "Icon": "Contacts"
-    },
-    {
-      "ID": "Calendario",
-      "Path": "/calendario",
-      "Caption": "t",
-      "Icon": "DateRange"
-    },
-    {
-      "ID": "Historiales",
-      "Path": "/historiales",
-      "Caption": "e",
-      "Icon": "Notes"
+      "ID": "test",
+      "Path": "/test",
+      "Caption": "Test"
     }
   ],
   "Content":
