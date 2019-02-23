@@ -7,7 +7,7 @@
       "Type": "text",
       "DSType": "input",
       "Suggested": "username",
-      "ContentFilter": "home",
+      "ContentFilter": "Turnos",
       "Value": ""
     },
     {
@@ -17,7 +17,7 @@
       "Type": "text",
       "DSType": "input",
       "Suggested": "current-password",
-      "ContentFilter": "home",
+      "ContentFilter": "Turnos",
       "Value": ""
     },
     {
@@ -25,7 +25,7 @@
       "Caption": "Iniciar sesión",
       "Name": "submit",
       "DSType": "button",
-      "ContentFilter": "home",
+      "ContentFilter": "Turnos",
       "Action": "test"
     },
     {
@@ -35,7 +35,7 @@
       "Type": "text",
       "DSType": "input",
       "Suggested": "",
-      "ContentFilter": "test",
+      "ContentFilter": "Clientes",
       "Value": ""
     },
     {
@@ -45,7 +45,7 @@
       "Type": "text",
       "DSType": "input",
       "Suggested": "",
-      "ContentFilter": "test",
+      "ContentFilter": "Clientes",
       "Value": ""
     }
   ],
@@ -79,14 +79,24 @@
   "Content":
   [
     {
-      "ID": "home",
+      "ID": "Turnos",
       "Path": "/",
-      "Caption": ""
+      "Caption": "p"
     },
     {
-      "ID": "test",
-      "Caption": "",
-      "Path": "/test"
+      "ID": "Clientes",
+      "Path": "/clientes",
+      "Caption": "e"
+    },
+    {
+      "ID": "Calendario",
+      "Path": "/calendario",
+      "Caption": "t"
+    },
+    {
+      "ID": "Historiales",
+      "Path": "/historiales",
+      "Caption": "e"
     }
   ]
 }
