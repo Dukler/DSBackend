@@ -1,16 +1,14 @@
 {
-  "Components": [
+  "Widgets": [
     {
-      "Fuck": {
-        "ID": "userPassword",
-        "Caption": "Contraseña",
-        "Name": "userPassword",
-        "Type": "password",
-        "DSComponent": "FormInput",
-        "Suggested": "current-password",
-        "ContentFilter": "Turnos",
-        "Value": ""
-      }
+      "ID": "userName",
+      "Caption": "Usuario",
+      "Name": "userName",
+      "Type": "text",
+      "DSComponent": "FormInput",
+      "Suggested": "username",
+      "ContentFilter": "Turnos",
+      "Value": ""
     },
     {
       "ID": "userPassword",
@@ -58,6 +56,16 @@
       "DSComponent": "CalendarAgenda",
       "Suggested": "",
       "ContentFilter": "Calendario",
+      "Value": ""
+    },
+    {
+      "ID": "logtest",
+      "Caption": "fu",
+      "Name": "containing",
+      "Type": "asd",
+      "DSComponent": [{"Paper": }],
+      "Suggested": "",
+      "ContentFilter": "Historiales",
       "Value": ""
     }
 
