@@ -1,23 +1,21 @@
 {
   "Components": [
     {
-      "Fuck": {
-        "ID": "userPassword",
-        "Caption": "Contraseña",
-        "Name": "userPassword",
-        "Type": "password",
-        "DSComponent": "FormInput",
-        "Suggested": "current-password",
-        "ContentFilter": "Turnos",
-        "Value": ""
-      }
+      "ID": "userName",
+      "Caption": "Usuario",
+      "Name": "userName",
+      "Type": "text",
+      "ComponentName": "FormInput",
+      "Suggested": "username",
+      "ContentFilter": "Turnos",
+      "Value": ""
     },
     {
       "ID": "userPassword",
       "Caption": "Contraseña",
       "Name": "userPassword",
       "Type": "password",
-      "DSComponent": "FormInput",
+      "ComponentName": "FormInput",
       "Suggested": "current-password",
       "ContentFilter": "Turnos",
       "Value": ""
@@ -26,7 +24,7 @@
       "ID": "submit",
       "Caption": "Iniciar sesión",
       "Name": "submit",
-      "DSComponent": "CustomButton",
+      "ComponentName": "CustomButton",
       "ContentFilter": "Turnos",
       "Action": "test"
     },
@@ -35,7 +33,7 @@
       "Caption": "Prueba",
       "Name": "test1",
       "Type": "text",
-      "DSComponent": "FormInput",
+      "ComponentName": "FormInput",
       "Suggested": "",
       "ContentFilter": "Clientes",
       "Value": ""
@@ -45,7 +43,7 @@
       "Caption": "Prueba2",
       "Name": "tes2",
       "Type": "text",
-      "DSComponent": "FormInput",
+      "ComponentName": "FormInput",
       "Suggested": "",
       "ContentFilter": "Clientes",
       "Value": ""
@@ -55,7 +53,7 @@
       "Caption": "Prueba2",
       "Name": "tes2",
       "Type": "text",
-      "DSComponent": "CalendarAgenda",
+      "ComponentName": "CalendarAgenda",
       "Suggested": "",
       "ContentFilter": "Calendario",
       "Value": ""
@@ -69,28 +67,28 @@
       "Path": "/",
       "Caption": "p",
       "Icon": "EventAvailable",
-      "DSComponent": "ListedLink"
+      "ComponentName": "ListedLink"
     },
     {
       "ID": "Clientes",
       "Path": "/clientes",
       "Caption": "e",
       "Icon": "Contacts",
-      "DSComponent": "ListedLink"
+      "ComponentName": "ListedLink"
     },
     {
       "ID": "Calendario",
       "Path": "/calendario",
       "Caption": "t",
       "Icon": "DateRange",
-      "DSComponent": "ListedLink"
+      "ComponentName": "ListedLink"
     },
     {
       "ID": "Historiales",
       "Path": "/historiales",
       "Caption": "e",
       "Icon": "Notes",
-      "DSComponent": "ListedLink"
+      "ComponentName": "ListedLink"
     }
   ],
   "Content":
@@ -99,25 +97,25 @@
       "ID": "Turnos",
       "Path": "/",
       "Caption": "p",
-      "DSComponent": "Content"
+      "ComponentName": "ContentRoute"
     },
     {
       "ID": "Clientes",
       "Path": "/clientes",
       "Caption": "e",
-      "DSComponent": "Content"
+      "ComponentName": "ContentRoute"
     },
     {
       "ID": "Calendario",
       "Path": "/calendario",
       "Caption": "t",
-      "DSComponent": "Content"
+      "ComponentName": "ContentRoute"
     },
     {
       "ID": "Historiales",
       "Path": "/historiales",
       "Caption": "e",
-      "DSComponent": "Content"
+      "ComponentName": "ContentRoute"
     }
   ]
 }

@@ -1,8 +1,8 @@
 package DSUI
 
-type DSContent struct {
+type DSContentRoute struct {
 	ID      	string `json:"id"`
 	Path    	string `json:"path"`
 	Caption 	string `json:"caption"`
-	DSComponent string `json:"dscomponent"`
+	ComponentName string `json:"componentName"`
 }

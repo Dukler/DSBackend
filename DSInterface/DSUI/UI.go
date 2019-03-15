@@ -1,17 +1,14 @@
 package DSUI
 
 type UI struct {
-	Widgets []*DSWidget         `json:"Widgets"`
-	LinkList    []*DSListedLink `json:"LinkList"`
-	Content []*DSContent        `json:"Content"`
+	Components 	[]*DSComponent `json:"Components"`
+	LinkList    []*DSListedLink  `json:"LinkList"`
+	Content 	[]*DSContentRoute `json:"Content"`
 }
 
-func (dsui *UI) AddWidget(widget *DSWidget) {
-	dsui.Widgets = append(dsui.Widgets, widget)
+func (dsui *UI) AddComponent(widget *DSComponent) {
+	dsui.Components = append(dsui.Components, widget)
 }
-func (dsui *UI) AddButton(widget *DSWidget) {
-	dsui.Widgets = append(dsui.Widgets, widget)
-}
-func (dsui *UI) AddMenu(menu *DSListedLink) {
+func (dsui *UI) AddLink(menu *DSListedLink) {
 	dsui.LinkList = append(dsui.LinkList, menu)
 }
