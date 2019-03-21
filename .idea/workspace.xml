@@ -2,13 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01d798cd-61aa-45f5-8fcd-33f50b04e121" name="Default" comment="???">
+      <change afterPath="$PROJECT_DIR$/app/auth.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/errors.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/authControllers.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/contactsControllers.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/uiController.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/accounts.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/base.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/contact.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/util.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d14186eb-34f8-4755-91a9-4929d74f0d3f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d14186eb-34f8-4755-91a9-4929d74f0d3f.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d14186eb-34f8-4755-91a9-4929d74f0d3f/storage_v2/_src_/database/test.kkQ2AA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d14186eb-34f8-4755-91a9-4929d74f0d3f/storage_v2/_src_/database/test.kkQ2AA/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/API.go" beforeDir="false" afterPath="$PROJECT_DIR$/API/API.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/Home.json" beforeDir="false" afterPath="$PROJECT_DIR$/API/Home.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/HomeTEST.json" beforeDir="false" afterPath="$PROJECT_DIR$/API/HomeTEST.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSInterface/DSUI/Content.go" beforeDir="false" afterPath="$PROJECT_DIR$/DSInterface/DSUI/ContentRoute.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSInterface/DSUI/ListedLink.go" beforeDir="false" afterPath="$PROJECT_DIR$/DSInterface/DSUI/ListedLink.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSInterface/DSUI/UI.go" beforeDir="false" afterPath="$PROJECT_DIR$/DSInterface/DSUI/UI.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSInterface/DSUI/Widget.go" beforeDir="false" afterPath="$PROJECT_DIR$/DSInterface/DSUI/Component.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/Login.json" beforeDir="false" afterPath="$PROJECT_DIR$/API/Login.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DSInterface/DSUI/Component.go" beforeDir="false" afterPath="$PROJECT_DIR$/DSInterface/DSUI/Component.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Handlers/JSON/JSON.go" beforeDir="false" afterPath="$PROJECT_DIR$/Handlers/JSON/JSON.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Handlers/XML/XML.go" beforeDir="false" afterPath="$PROJECT_DIR$/Handlers/XML/XML.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/Web.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/html/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web/html/view.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,12 +45,7 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="testpsql" type="feb32156:DbDataSourceImpl" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="FileEditorManager">
@@ -40,35 +53,53 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/API.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="120" column="23" selection-start-line="120" selection-start-column="23" selection-end-line="120" selection-end-column="23" />
+            <state relative-caret-position="240">
+              <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/auth.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="24" column="12" lean-forward="true" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/uiController.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/API/Login.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/HomeTEST.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="65" column="37" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
+            <state relative-caret-position="80">
+              <caret line="4" column="27" lean-forward="true" selection-end-line="158" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DSInterface/DSUI/UI.go">
+        <entry file="file://$PROJECT_DIR$/API/Home.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DSInterface/DSUI/Component.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="2860">
+              <caret line="158" selection-start-line="158" selection-end-line="158" />
             </state>
           </provider>
         </entry>
@@ -85,11 +116,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>postserver</find>
-      <find>appointments</find>
-      <find>”</find>
-      <find>API server listening at</find>
-      <find>decode</find>
       <find>Client</find>
       <find>Appointment</find>
       <find>time</find>
@@ -115,6 +141,11 @@
       <find>Content</find>
       <find>&quot;dscomponent</find>
       <find>dscomponent</find>
+      <find>suggested</find>
+      <find>serverapp</find>
+      <find>env</find>
+      <find>&quot;..</find>
+      <find>8080</find>
     </findStrings>
     <replaceStrings>
       <replace>deleteByID</replace>
@@ -142,25 +173,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Handlers/JSON/Electronics.json" />
-        <option value="$PROJECT_DIR$/Helpers/DBHelper/DBHelper.go" />
-        <option value="$PROJECT_DIR$/Handlers/JSON/JSON.go" />
-        <option value="$PROJECT_DIR$/Structs/Appointment/Appointment_type.go" />
-        <option value="$PROJECT_DIR$/Structs/DBObject/DBObject.go" />
-        <option value="$PROJECT_DIR$/Structs/Appointment/Appointment.go" />
-        <option value="$PROJECT_DIR$/Structs/DBObject.go" />
-        <option value="$PROJECT_DIR$/Structs/Appointment.go" />
-        <option value="$PROJECT_DIR$/Structs/Client/Client.go" />
-        <option value="$PROJECT_DIR$/insertTest.sql" />
-        <option value="$PROJECT_DIR$/Framework/DBObject.go" />
-        <option value="$PROJECT_DIR$/Framework/Appointment.go" />
         <option value="$PROJECT_DIR$/DSInterface/Address.go" />
         <option value="$PROJECT_DIR$/DSInterface/Telephone.go" />
         <option value="$PROJECT_DIR$/Structs/Appointment_type.go" />
         <option value="$PROJECT_DIR$/Framework/Client.go" />
         <option value="$PROJECT_DIR$/main.go" />
         <option value="$PROJECT_DIR$/main.go" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/d14186eb-34f8-4755-91a9-4929d74f0d3f/console.sql" />
         <option value="$PROJECT_DIR$/PostServer/PostServer.go" />
         <option value="$PROJECT_DIR$/DSInterface/DBObject.go" />
         <option value="$PROJECT_DIR$/DSInterface/DSInterface.go" />
@@ -180,26 +198,39 @@
         <option value="$PROJECT_DIR$/DSInterface/DB/App.go" />
         <option value="$PROJECT_DIR$/Helpers/DBHelper.go" />
         <option value="$PROJECT_DIR$/API/Test.json" />
-        <option value="$PROJECT_DIR$/API/Login.json" />
         <option value="$PROJECT_DIR$/DSInterface/DSUI/Menu.go" />
         <option value="$PROJECT_DIR$/API/HomeDrawer.json" />
-        <option value="$PROJECT_DIR$/API/API.go" />
-        <option value="$PROJECT_DIR$/API/API.go" />
         <option value="$PROJECT_DIR$/DSInterface/DSUI/Widget.go" />
         <option value="$PROJECT_DIR$/DSInterface/DSUI/Content.go" />
         <option value="$PROJECT_DIR$/DSInterface/DSUI/ContentRoute.go" />
         <option value="$PROJECT_DIR$/DSInterface/DSUI/ListedLink.go" />
-        <option value="$PROJECT_DIR$/API/Home.json" />
-        <option value="$PROJECT_DIR$/DSInterface/DSUI/Component.go" />
         <option value="$PROJECT_DIR$/DSInterface/DSUI/UI.go" />
         <option value="$PROJECT_DIR$/API/HomeTEST.json" />
+        <option value="$PROJECT_DIR$/DSInterface/DSUI/Component.go" />
+        <option value="$PROJECT_DIR$/Handlers/JSON/JSON.go" />
+        <option value="$PROJECT_DIR$/Handlers/XML/XML.go" />
+        <option value="$PROJECT_DIR$/app/erros.go" />
+        <option value="$PROJECT_DIR$/utils/util.go" />
+        <option value="$PROJECT_DIR$/controllers/uiController.go" />
+        <option value="$PROJECT_DIR$/controllers/authControllers.go" />
+        <option value="$PROJECT_DIR$/models/accounts.go" />
+        <option value="$PROJECT_DIR$/models/contact.go" />
+        <option value="$PROJECT_DIR$/models/base.go" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/d14186eb-34f8-4755-91a9-4929d74f0d3f/console.sql" />
+        <option value="$PROJECT_DIR$/app/errors.go" />
+        <option value="$PROJECT_DIR$/controllers/contactsControllers.go" />
+        <option value="$PROJECT_DIR$/API/API.go" />
+        <option value="$PROJECT_DIR$/API/API.go" />
+        <option value="$PROJECT_DIR$/app/auth.go" />
+        <option value="$PROJECT_DIR$/API/Home.json" />
+        <option value="$PROJECT_DIR$/API/Login.json" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="4" />
-    <option name="y" value="41" />
-    <option name="width" value="1090" />
+    <option name="x" value="84" />
+    <option name="y" value="31" />
+    <option name="width" value="1531" />
     <option name="height" value="948" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -230,7 +261,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -246,18 +276,28 @@
             <path>
               <item name="DuckstackBE" type="b2602c69:ProjectViewProjectNode" />
               <item name="DuckstackBE" type="462c0819:PsiDirectoryNode" />
-              <item name="DSInterface" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DuckstackBE" type="b2602c69:ProjectViewProjectNode" />
               <item name="DuckstackBE" type="462c0819:PsiDirectoryNode" />
-              <item name="DSInterface" type="462c0819:PsiDirectoryNode" />
-              <item name="DSUI" type="462c0819:PsiDirectoryNode" />
+              <item name="Helpers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DuckstackBE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DuckstackBE" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DuckstackBE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DuckstackBE" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -353,22 +393,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="4" y="41" width="1090" height="948" extended-state="0" />
+    <frame x="84" y="31" width="1531" height="948" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23980583" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16247451" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32846716" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.63980585" weight="0.32515338" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49611652" weight="0.3190184" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.63893807" weight="0.32515338" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.8119266" weight="0.3190184" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3293556" />
-      <window_info anchor="bottom" x="-1642" y="772" width="1195" height="222" id="Database Console" order="7" sideWeight="0.49867138" weight="0.23627685" />
+      <window_info anchor="bottom" x="-1642" y="772" width="1195" height="222" id="Database Console" order="7" sideWeight="0.4977064" weight="0.23558283" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.3293556" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.5038835" side_tool="true" weight="0.3190184" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.5022936" side_tool="true" weight="0.23558283" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.32475883" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.32603407" />
       <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.32912722" />
@@ -377,7 +417,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" weight="0.32902583" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32874617" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12633263" />
@@ -468,16 +508,38 @@
     <option name="LAST_COMMIT_MESSAGE" value="???" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/controllers/contactsControllers.go</url>
+          <line>11</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="GoApplicationRunConfiguration">
-        <watch expression="widgets" />
-        <watch expression="console.log(widgets)" language="go" />
-        <watch expression="response" language="go" />
+        <watch expression="r.Context().Value(&quot;user&quot;)" language="go" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>r.Context().Value(&quot;user&quot;)</expression-string>
+        <language-id>go</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>r.Context()</expression-string>
+        <language-id>go</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>os.Getenv(&quot;db_host&quot;)</expression-string>
+        <language-id>go</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>response</expression-string>
         <language-id>go</language-id>
@@ -508,93 +570,14 @@
         <language-id>go</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>object.(DSInterface.Client)</expression-string>
-        <language-id>go</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>reflect.ValueOf(object)</expression-string>
-        <language-id>go</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>object(DSInterface.DBObject)</expression-string>
-        <language-id>go</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>object[&quot;Entity&quot;]</expression-string>
-        <language-id>go</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DSInterface/Telephone.go" />
-    <entry file="file://C:/Go/src/runtime/proc.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="150" selection-start-line="150" selection-end-line="150" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Go/src/database/sql/sql.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="1529" column="14" selection-start-line="1529" selection-start-column="14" selection-end-line="1529" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../github.com/gorilla/mux/context_native.go" />
-    <entry file="file://$USER_HOME$/go/src/ServerApp/PostServer/PostServer.go" />
-    <entry file="file://$USER_HOME$/go/src/github.com/gorilla/mux/mux.go" />
-    <entry file="file://C:/Go/src/runtime/panic.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="505" selection-start-line="505" selection-end-line="505" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Go/src/runtime/asm_amd64.s">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="572" selection-start-line="572" selection-end-line="572" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/go/src/ServerApp/Helpers/DBHelper.go" />
-    <entry file="file://$PROJECT_DIR$/Framework/Appointment.go" />
-    <entry file="file://$PROJECT_DIR$/Framework/Client.go" />
-    <entry file="file://$PROJECT_DIR$/Framework/DBObject.go" />
-    <entry file="file://$PROJECT_DIR$/Structs/Indoor.go" />
     <entry file="file://$PROJECT_DIR$/Structs/Electronic.go" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d14186eb-34f8-4755-91a9-4929d74f0d3f/console.sql" />
-    <entry file="file://$PROJECT_DIR$/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Go/src/encoding/json/stream.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-263">
           <caret line="194" column="20" selection-start-line="194" selection-start-column="20" selection-end-line="194" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Handlers/JSON/JSON.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-140">
-          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="31" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Handlers/XML/XML.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="26" selection-end-column="74" />
         </state>
       </provider>
     </entry>
@@ -628,23 +611,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Helpers/DBHelper.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="972">
-          <caret line="62" column="19" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../React/duckstackui/src/DSUI/DSWidgets/WidgetListRender.js" />
     <entry file="file://$PROJECT_DIR$/../../../React/duckstackui/src/DSUI/DSWidgets/Widget.js" />
     <entry file="file://$PROJECT_DIR$/../../../React/duckstackui/src/DSUI/DSContent/Content.js" />
-    <entry file="file://$PROJECT_DIR$/DSInterface/DB/App.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Structs/Telephone.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -674,13 +643,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../React/duckstackui/src/DSUI/DSComposer/Composer.js" />
-    <entry file="file://$PROJECT_DIR$/API/Login.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/API/Test.json" />
     <entry file="file://$PROJECT_DIR$/DSInterface/DSUI/ListedLink.go">
       <provider selected="true" editor-type-id="text-editor">
@@ -696,13 +658,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API/Home.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-620">
-          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../React/duckstackui/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -710,13 +665,6 @@
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/API.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="120" column="23" selection-start-line="120" selection-start-column="23" selection-end-line="120" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -729,15 +677,171 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DSInterface/DSUI/Component.go">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Handlers/XML/XML.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="13" column="2" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DSInterface/DB/App.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web/html/view.html" />
+    <entry file="file://$PROJECT_DIR$/Web/Web.go" />
+    <entry file="file://$PROJECT_DIR$/Handlers/JSON/JSON.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-218">
+          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/util.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding>
+            <element signature="e#15#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/errors.go">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#13#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Helpers/DBHelper.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="62" column="19" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d14186eb-34f8-4755-91a9-4929d74f0d3f/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/authControllers.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+          <folding>
+            <element signature="e#21#105#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/base.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#16#139#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../github.com/jinzhu/gorm/model.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../github.com/jinzhu/gorm/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="454" column="13" selection-start-line="454" selection-start-column="13" selection-end-line="454" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/API.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/contactsControllers.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/contact.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="43" column="16" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
+          <folding>
+            <element signature="e#16#82#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/accounts.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="e#16#153#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/auth.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="24" column="12" lean-forward="true" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/uiController.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/API/HomeTEST.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="65" column="37" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
+        <state relative-caret-position="80">
+          <caret line="4" column="27" lean-forward="true" selection-end-line="158" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/Home.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2860">
+          <caret line="158" selection-start-line="158" selection-end-line="158" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/Login.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
         </state>
       </provider>
     </entry>

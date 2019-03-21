@@ -1,48 +1,108 @@
 {
-  "Widgets":[
+  "Components": [
     {
-      "ID": "1",
-      "Caption": "Usuario",
-      "Name": "userName",
-      "Type": "text",
-      "DSType": "input",
-      "Suggested": "username",
-      "ContentFilter": "login",
-      "Value": ""
-    },
-    {
-      "ID": "2",
-      "Caption": "Contraseña",
-      "Name": "userPassword",
-      "Type": "password",
-      "DSType": "input",
-      "Suggested": "current-password",
-      "ContentFilter": "login",
-      "Value": ""
-    },
-    {
-      "ID": "3",
-      "Caption": "Iniciar sesión",
-      "Name": "submit",
-      "DSType": "button",
-      "ContentFilter": "login",
-      "Action": "test"
+      "ID": "paper",
+      "ComponentName": "ContainedComponents",
+      "ContentFilter": "Turnos",
+      "Container": "DSPaper",
+      "Components":[
+        {
+          "ID": "form",
+          "ComponentName": "ContainedList",
+          "ContentFilter": "Turnos",
+          "Container": "form",
+          "Components":[
+            {
+              "ID": "userName",
+              "Caption": "Usuario",
+              "Name": "email",
+              "Type": "text",
+              "ComponentName": "FormInput",
+              "AutoComplete": "username",
+              "ContentFilter": "Turnos",
+              "Value": ""
+            },
+            {
+              "ID": "userPassword",
+              "Caption": "Contraseña",
+              "Name": "password",
+              "Type": "password",
+              "ComponentName": "FormInput",
+              "AutoComplete": "current-password",
+              "ContentFilter": "Turnos",
+              "Value": ""
+            }
+          ]
+        },
+        {
+          "ID": "submit",
+          "Caption": "Iniciar sesión",
+          "Name": "submit",
+          "ComponentName": "CustomButton",
+          "ContentFilter": "Turnos",
+          "Action": "test"
+        }
+
+      ]
     }
+
   ],
-  "NavMenu":
+  "LinkList":
   [
     {
-      "ID": "login",
-      "Caption": "Login",
-      "Path": "/"
+      "ID": "Turnos",
+      "Path": "/",
+      "Caption": "p",
+      "Icon": "EventAvailable",
+      "ComponentName": "ListedLink"
+    },
+    {
+      "ID": "Clientes",
+      "Path": "/clientes",
+      "Caption": "e",
+      "Icon": "Contacts",
+      "ComponentName": "ListedLink"
+    },
+    {
+      "ID": "Calendario",
+      "Path": "/calendario",
+      "Caption": "t",
+      "Icon": "DateRange",
+      "ComponentName": "ListedLink"
+    },
+    {
+      "ID": "Historiales",
+      "Path": "/historiales",
+      "Caption": "e",
+      "Icon": "Notes",
+      "ComponentName": "ListedLink"
     }
   ],
   "Content":
   [
     {
-      "ID": "login",
+      "ID": "Turnos",
       "Path": "/",
-      "Caption": ""
+      "Caption": "p",
+      "ComponentName": "ContentRoute"
+    },
+    {
+      "ID": "Clientes",
+      "Path": "/clientes",
+      "Caption": "e",
+      "ComponentName": "ContentRoute"
+    },
+    {
+      "ID": "Calendario",
+      "Path": "/calendario",
+      "Caption": "t",
+      "ComponentName": "ContentRoute"
+    },
+    {
+      "ID": "Historiales",
+      "Path": "/historiales",
+      "Caption": "e",
+      "ComponentName": "ContentRoute"
     }
   ]
 }

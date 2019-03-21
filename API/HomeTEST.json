@@ -6,7 +6,7 @@
       "Name": "userName",
       "Type": "text",
       "ComponentName": "FormInput",
-      "Suggested": "username",
+      "AutoComplete": "username",
       "ContentFilter": "Turnos",
       "Value": ""
     },
@@ -16,7 +16,7 @@
       "Name": "userPassword",
       "Type": "password",
       "ComponentName": "FormInput",
-      "Suggested": "current-password",
+      "AutoComplete": "current-password",
       "ContentFilter": "Turnos",
       "Value": ""
     },
@@ -34,7 +34,7 @@
       "Name": "test1",
       "Type": "text",
       "ComponentName": "FormInput",
-      "Suggested": "",
+      "AutoComplete": "",
       "ContentFilter": "Clientes",
       "Value": ""
     },
@@ -44,7 +44,7 @@
       "Name": "tes2",
       "Type": "text",
       "ComponentName": "FormInput",
-      "Suggested": "",
+      "AutoComplete": "",
       "ContentFilter": "Clientes",
       "Value": ""
     },
@@ -54,41 +54,45 @@
       "Name": "tes2",
       "Type": "text",
       "ComponentName": "CalendarAgenda",
-      "Suggested": "",
+      "AutoComplete": "",
       "ContentFilter": "Calendario",
       "Value": ""
     },
     {
       "ID": "paper",
-      "Caption": "Prueba2",
-      "Name": "shiet",
-      "Type": "fuac",
-      "ComponentName": "ContainedList",
-      "Suggested": "",
+      "ComponentName": "ContainedComponents",
       "ContentFilter": "Historiales",
-      "Value": "",
       "Container": "DSPaper",
       "Components":[
         {
-          "ID": "test3",
-          "Caption": "Prueba",
-          "Name": "test3",
-          "Type": "text",
-          "ComponentName": "FormInput",
-          "Suggested": "",
+          "ID": "form",
+          "ComponentName": "ContainedList",
           "ContentFilter": "Historiales",
-          "Value": ""
-        },
-        {
-          "ID": "tes4",
-          "Caption": "Prueba2",
-          "Name": "tes4",
-          "Type": "text",
-          "ComponentName": "FormInput",
-          "Suggested": "",
-          "ContentFilter": "Historiales",
-          "Value": ""
+          "Container": "form",
+          "Components":[
+            {
+              "ID": "test3",
+              "Caption": "Prueba",
+              "Name": "test3",
+              "Type": "text",
+              "ComponentName": "FormInput",
+              "AutoComplete": "current-user",
+              "ContentFilter": "Historiales",
+              "Value": ""
+            },
+            {
+              "ID": "tes4",
+              "Caption": "Prueba2",
+              "Name": "tes4",
+              "Type": "password",
+              "ComponentName": "FormInput",
+              "AutoComplete": "current-password",
+              "ContentFilter": "Historiales",
+              "Value": ""
+            }
+          ]
         }
+
       ]
     }
 

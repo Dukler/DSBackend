@@ -1,15 +1,13 @@
 package API
 
 import (
-	"DuckstackBE/DSInterface/DB"
-	"DuckstackBE/DSInterface/DSUI"
 	"DuckstackBE/Helpers"
-	"encoding/json"
+	"DuckstackBE/app"
+	"DuckstackBE/controllers"
 	"fmt"
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 	_ "github.com/lib/pq"
-	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
@@ -30,11 +28,9 @@ const (
 	dbname   = "test"
 )
 
-func PostServer() {
+func RESTApi() {
 
 	routerBehavior()
-	//CreateJSON()
-	dbtest()
 	log.Fatal(
 		http.ListenAndServe(
 			":8080", handlers.CORS(
@@ -47,113 +43,17 @@ func PostServer() {
 
 func routerBehavior() {
 	router = mux.NewRouter()
-	router.HandleFunc(api+"/Login", LogInEndpoint).Methods("GET", "DELETE", "OPTIONS", "POST")
-	router.HandleFunc(api+"/save/{entity}/{id}", SaveEndpoint).Methods("GET", "POST", "OPTIONS")
-	router.HandleFunc(api+"/ui/update/{Screen}", UIEndpoint).Methods("GET", "DELETE", "OPTIONS", "POST")
+	router.Use(app.JwtAuthentication)
+	//router.HandleFunc(api+"/Login", LogInEndpoint).Methods("GET", "DELETE", "OPTIONS", "POST")
+	//router.HandleFunc(api+"/save/{entity}/{id}", SaveEndpoint).Methods("GET", "POST", "OPTIONS")
+	router.HandleFunc(api+"/ui/update/{Screen}", controllers.UIEndpoint).Methods("GET", "DELETE", "OPTIONS", "POST")
+	router.HandleFunc("/api/user/new", controllers.CreateAccount).Methods("POST")
+	router.HandleFunc("/api/user/login", controllers.Authenticate).Methods("POST")
+	router.HandleFunc("/api/contacts/new", controllers.CreateContact).Methods("POST")
+	router.HandleFunc("/api/me/contacts", controllers.GetContactsFor).Methods("GET")
 	http.Handle("/", router)
 }
 
-func dbtest() {
-	psqlInfo := fmt.Sprintf("host=%s port=%d user=%s "+
-		"password=%s dbname=%s sslmode=disable",
-		host, port, user, password, dbname)
-	var err error
-	dbh, err = Helpers.NewDBHelper(psqlInfo)
-
-	checkErr(err)
-}
-
-func SaveEndpoint(w http.ResponseWriter, req *http.Request) {
-	vars := mux.Vars(req)
-	//var entity string
-	//var id int
-	//var err error
-	//id, err = strconv.Atoi(vars["id"])
-	//entity = vars["entity"]
-	switch req.Method {
-	case "POST":
-		//decoder := json.NewDecoder(req.Body)
-		/*var obj interface{}
-		err:= decoder.Decode(&obj)
-		if err != nil {
-			panic(err)
-		}*/
-		//cli.Entity = "Cli-nt"
-		log.Print(vars["entity"])
-		//dbh.Save(decoder, vars["entity"])
-	case "OPTIONS":
-		decoder := json.NewDecoder(req.Body)
-		var cli DB.Client
-		err := decoder.Decode(&cli)
-		if err != nil {
-			panic(err)
-		}
-	}
-}
-func getScreenJson(screen string) string {
-	var filename = "C:/Users/iarwa/Workspace/Go/src/DuckstackBE/API/" + screen + ".json"
-	return filename
-}
-
-func UIEndpoint(w http.ResponseWriter, req *http.Request) {
-	var ui DSUI.UI
-	vars := mux.Vars(req)
-	var screen string
-	screen = vars["Screen"]
-	if _, err := os.Stat(getScreenJson(screen)); os.IsNotExist(err) {
-		return
-	}
-
-	data, e := ioutil.ReadFile(getScreenJson(screen))
-	if e != nil {
-		fmt.Println(e)
-		os.Exit(2)
-	}
-	err := json.Unmarshal(data, &ui)
-	if err != nil {
-		fmt.Println(err)
-		os.Exit(2)
-	}
-	switch req.Method {
-	case "GET":
-		w.Header().Set("Content-Type", "application/json")
-		w.WriteHeader(http.StatusOK)
-		response, err := json.Marshal(ui)
-		w.Write(response)
-		if err != nil {
-			fmt.Println(err)
-			os.Exit(2)
-		}
-
-	case "POST":
-		decoder := json.NewDecoder(req.Body)
-		var test interface{}
-		var uiState []byte
-		err := decoder.Decode(&test)
-		uiState, err = json.Marshal(&test)
-		if err != nil {
-			panic(err)
-		}
-		fmt.Println(uiState)
-	}
-
-}
-
-func LogInEndpoint(w http.ResponseWriter, req *http.Request) {
-	switch req.Method {
-	case "POST":
-		decoder := json.NewDecoder(req.Body)
-		var test interface{}
-		var uiState []byte
-		err := decoder.Decode(&test)
-		uiState, err = json.Marshal(&test)
-		if err != nil {
-			panic(err)
-		}
-		fmt.Println(uiState)
-		w.WriteHeader(http.StatusOK)
-	}
-}
 
 func testTimeString() {
 	t1, err := time.Parse(
