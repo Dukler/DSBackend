@@ -7,9 +7,9 @@ type DSComponent struct {
 	ComponentName   string 			`json:"componentName"`
 	Name          	string 			`json:"name"`
 	AutoComplete    string 			`json:"autoComplete"`
-	Action        	string 			`json:"action"`
+	Actions        	Actions 		`json:"actions"`
 	ContentFilter 	string 			`json:"contentFilter"`
-	Container 		string 			`json:"container"`
+	Wrapper 		string 			`json:"wrapper"`
 	Components		[]*DSComponent 	`json:"components"`
 	Value         	string 			`json:"value"`
 }

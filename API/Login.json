@@ -1,16 +1,14 @@
 {
   "Components": [
     {
-      "ID": "paper",
-      "ComponentName": "ContainedComponents",
-      "ContentFilter": "Turnos",
-      "Container": "DSPaper",
+      "ID": "form",
+      "ComponentName": "WrappedComponents",
+      "Wrapper": "form",
       "Components":[
         {
-          "ID": "form",
-          "ComponentName": "ContainedList",
-          "ContentFilter": "Turnos",
-          "Container": "form",
+          "ID": "modal",
+          "ComponentName": "WrappedList",
+          "Wrapper": "DSModal",
           "Components":[
             {
               "ID": "userName",
@@ -19,8 +17,10 @@
               "Type": "text",
               "ComponentName": "FormInput",
               "AutoComplete": "username",
-              "ContentFilter": "Turnos",
-              "Value": ""
+              "Value": "",
+              "Actions": {
+                "OnChange":"test"
+              }
             },
             {
               "ID": "userPassword",
@@ -29,80 +29,21 @@
               "Type": "password",
               "ComponentName": "FormInput",
               "AutoComplete": "current-password",
-              "ContentFilter": "Turnos",
+              "ContentFilter": "",
               "Value": ""
+            },
+            {
+              "ID": "submit",
+              "Caption": "Iniciar sesión",
+              "Name": "submit",
+              "ComponentName": "SubmitButton",
+              "Actions": {
+                "OnClick":"login"
+              }
             }
           ]
-        },
-        {
-          "ID": "submit",
-          "Caption": "Iniciar sesión",
-          "Name": "submit",
-          "ComponentName": "CustomButton",
-          "ContentFilter": "Turnos",
-          "Action": "test"
         }
-
       ]
-    }
-
-  ],
-  "LinkList":
-  [
-    {
-      "ID": "Turnos",
-      "Path": "/",
-      "Caption": "p",
-      "Icon": "EventAvailable",
-      "ComponentName": "ListedLink"
-    },
-    {
-      "ID": "Clientes",
-      "Path": "/clientes",
-      "Caption": "e",
-      "Icon": "Contacts",
-      "ComponentName": "ListedLink"
-    },
-    {
-      "ID": "Calendario",
-      "Path": "/calendario",
-      "Caption": "t",
-      "Icon": "DateRange",
-      "ComponentName": "ListedLink"
-    },
-    {
-      "ID": "Historiales",
-      "Path": "/historiales",
-      "Caption": "e",
-      "Icon": "Notes",
-      "ComponentName": "ListedLink"
-    }
-  ],
-  "Content":
-  [
-    {
-      "ID": "Turnos",
-      "Path": "/",
-      "Caption": "p",
-      "ComponentName": "ContentRoute"
-    },
-    {
-      "ID": "Clientes",
-      "Path": "/clientes",
-      "Caption": "e",
-      "ComponentName": "ContentRoute"
-    },
-    {
-      "ID": "Calendario",
-      "Path": "/calendario",
-      "Caption": "t",
-      "ComponentName": "ContentRoute"
-    },
-    {
-      "ID": "Historiales",
-      "Path": "/historiales",
-      "Caption": "e",
-      "ComponentName": "ContentRoute"
     }
   ]
 }

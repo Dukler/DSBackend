@@ -1,33 +1,22 @@
 {
   "Components": [
     {
-      "ID": "userName",
-      "Caption": "Usuario",
-      "Name": "userName",
-      "Type": "text",
-      "ComponentName": "FormInput",
-      "AutoComplete": "username",
-      "ContentFilter": "Turnos",
-      "Value": ""
-    },
-    {
-      "ID": "userPassword",
-      "Caption": "Contraseña",
-      "Name": "userPassword",
-      "Type": "password",
-      "ComponentName": "FormInput",
-      "AutoComplete": "current-password",
-      "ContentFilter": "Turnos",
-      "Value": ""
-    },
-    {
-      "ID": "submit",
-      "Caption": "Iniciar sesión",
-      "Name": "submit",
-      "ComponentName": "CustomButton",
-      "ContentFilter": "Turnos",
-      "Action": "test"
-    },
+    "ID": "form",
+    "ComponentName": "WrappedList",
+    "ContentFilter": "Turnos",
+    "Wrapper": "form",
+    "Components":[
+      {
+        "ID": "btn",
+        "Caption": "rToken",
+        "Name": "rToken",
+        "ComponentName": "SubmitButton",
+        "ContentFilter": "Turnos",
+        "Actions": {
+          "OnClick":"removeToken"
+        }
+      }
+    ]},
     {
       "ID": "test1",
       "Caption": "Prueba",
@@ -62,13 +51,13 @@
       "ID": "paper",
       "ComponentName": "ContainedComponents",
       "ContentFilter": "Historiales",
-      "Container": "DSPaper",
+      "Wrapper": "DSPaper",
       "Components":[
         {
           "ID": "form",
           "ComponentName": "ContainedList",
           "ContentFilter": "Historiales",
-          "Container": "form",
+          "Wrapper": "form",
           "Components":[
             {
               "ID": "test3",
@@ -104,28 +93,32 @@
       "Path": "/",
       "Caption": "p",
       "Icon": "EventAvailable",
-      "ComponentName": "ListedLink"
+      "ComponentName": "ListedLink",
+      "ContentFilter": ""
     },
     {
       "ID": "Clientes",
       "Path": "/clientes",
       "Caption": "e",
       "Icon": "Contacts",
-      "ComponentName": "ListedLink"
+      "ComponentName": "ListedLink",
+      "ContentFilter": ""
     },
     {
       "ID": "Calendario",
       "Path": "/calendario",
       "Caption": "t",
       "Icon": "DateRange",
-      "ComponentName": "ListedLink"
+      "ComponentName": "ListedLink",
+      "ContentFilter": ""
     },
     {
       "ID": "Historiales",
       "Path": "/historiales",
       "Caption": "e",
       "Icon": "Notes",
-      "ComponentName": "ListedLink"
+      "ComponentName": "ListedLink",
+      "ContentFilter": ""
     }
   ],
   "Content":

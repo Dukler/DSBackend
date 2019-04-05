@@ -15,9 +15,13 @@ var JwtAuthentication = func(next http.Handler) http.Handler {
 
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 
-		notAuth := []string{"/api/user/new", "/api/user/login","/api/ui/update/Login"} //List of endpoints that doesn't require auth
+		notAuth := []string{"/api/user/new",
+			"/api/user/login",
+			"/api/ui/update/Login",
+			"/api/ui/update/Home",
+		} //List of endpoints that doesn't require auth
 		requestPath := r.URL.Path //current request path
-
+//lirik saab buddha eddie tony
 		//check if request does not need authentication, serve the request if it doesn't need it
 		for _, value := range notAuth {
 
@@ -48,7 +52,7 @@ var JwtAuthentication = func(next http.Handler) http.Handler {
 		}
 
 		tokenPart := splitted[1] //Grab the token part, what we are truly interested in
-		tk := &models.Token{}
+ 		tk := &models.Token{}
 
 		token, err := jwt.ParseWithClaims(tokenPart, tk, func(token *jwt.Token) (interface{}, error) {
 			return []byte(os.Getenv("token_password")), nil

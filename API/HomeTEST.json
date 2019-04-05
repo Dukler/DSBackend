@@ -1,33 +1,57 @@
 {
   "Components": [
     {
-      "ID": "userName",
-      "Caption": "Usuario",
-      "Name": "userName",
-      "Type": "text",
-      "ComponentName": "FormInput",
-      "AutoComplete": "username",
+      "ID": "form",
+      "ComponentName": "WrappedList",
       "ContentFilter": "Turnos",
-      "Value": ""
-    },
-    {
-      "ID": "userPassword",
-      "Caption": "Contraseña",
-      "Name": "userPassword",
-      "Type": "password",
-      "ComponentName": "FormInput",
-      "AutoComplete": "current-password",
-      "ContentFilter": "Turnos",
-      "Value": ""
-    },
-    {
-      "ID": "submit",
-      "Caption": "Iniciar sesión",
-      "Name": "submit",
-      "ComponentName": "CustomButton",
-      "ContentFilter": "Turnos",
-      "Action": "test"
-    },
+      "Wrapper": "form",
+      "Components":[
+        {
+          "ID": "userName",
+          "Caption": "Usuario",
+          "Name": "email",
+          "Type": "text",
+          "ComponentName": "FormInput",
+          "AutoComplete": "username",
+          "ContentFilter": "Turnos",
+          "Value": "",
+          "Actions": {
+            "OnChange":"test"
+          }
+        },
+        {
+          "ID": "userPassword",
+          "Caption": "Contraseña",
+          "Name": "password",
+          "Type": "password",
+          "ComponentName": "FormInput",
+          "AutoComplete": "current-password",
+          "ContentFilter": "Turnos",
+          "Actions": {
+            "OnChange":"test"
+          }
+        },
+        {
+          "ID": "submit",
+          "Caption": "Iniciar sesión",
+          "Name": "submit",
+          "ComponentName": "SubmitButton",
+          "ContentFilter": "Turnos",
+          "Actions": {
+            "OnClick":"login"
+          }
+        },
+        {
+          "ID": "btn",
+          "Caption": "rToken",
+          "Name": "rToken",
+          "ComponentName": "SubmitButton",
+          "ContentFilter": "Turnos",
+          "Actions": {
+            "OnClick":"removeToken"
+          }
+        }
+      ]},
     {
       "ID": "test1",
       "Caption": "Prueba",
@@ -62,13 +86,13 @@
       "ID": "paper",
       "ComponentName": "ContainedComponents",
       "ContentFilter": "Historiales",
-      "Container": "DSPaper",
+      "Wrapper": "DSPaper",
       "Components":[
         {
           "ID": "form",
           "ComponentName": "ContainedList",
           "ContentFilter": "Historiales",
-          "Container": "form",
+          "Wrapper": "form",
           "Components":[
             {
               "ID": "test3",

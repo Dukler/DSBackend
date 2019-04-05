@@ -35,8 +35,8 @@ func RESTApi() {
 		http.ListenAndServe(
 			":8080", handlers.CORS(
 				handlers.AllowedOrigins([]string{"*"}),
-				handlers.AllowedMethods([]string{"GET", "POST"}),
-				handlers.AllowedHeaders([]string{"Content-Type", "X-Requested-With"}),
+				handlers.AllowedMethods([]string{"GET", "POST","OPTIONS"}),
+				handlers.AllowedHeaders([]string{"Content-Type", "X-Requested-With",  "Access-Control-Allow-Headers", "Authorization"}),
 			)(router)))
 
 }
