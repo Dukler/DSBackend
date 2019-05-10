@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"DuckstackBE/DSInterface/DSUI"
+	"DuckstackBE/DSUI"
 	"encoding/json"
 	"fmt"
 	"github.com/gorilla/mux"
