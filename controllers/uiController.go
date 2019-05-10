@@ -58,10 +58,8 @@ var UIEndpoint = func (w http.ResponseWriter, req *http.Request) {
 }
 
 func getScreenJson(screen string) string {
-	//var filename = "C:/Users/iarwa/Workspace/Go/src/DuckstackBE/Screens/" + screen + ".json"
 	filename, err := filepath.Abs("./Screens/" + screen + ".json")
 	if err != nil {
-		// handle error
 		fmt.Println(err)
 		os.Exit(2)
 	}
