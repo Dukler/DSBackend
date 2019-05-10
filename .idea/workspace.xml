@@ -29,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+            <state relative-caret-position="281">
+              <caret line="23" column="10" lean-forward="true" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="30" />
               <folding>
                 <element signature="e#14#171#0" expanded="true" />
               </folding>
@@ -290,6 +290,9 @@
       <module name="DuckstackBE" />
       <working_directory value="C:\Users\iarwa\Workspace\Go\src\DuckstackBE" />
       <go_parameters value="-i" />
+      <envs>
+        <env name="APP_ENV" value="Debug" />
+      </envs>
       <kind value="FILE" />
       <filePath value="C:\Users\iarwa\Workspace\Go\src\DuckstackBE\main.go" />
       <package value="AppointmentServer" />
@@ -336,14 +339,14 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49921876" weight="0.32743362" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.63893807" weight="0.32480535" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.54539007" visible="true" weight="0.28871682" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6375887" weight="0.32411504" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.54397166" visible="true" weight="0.28871682" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32844242" />
       <window_info anchor="bottom" x="-1642" y="772" width="1195" height="222" id="Database Console" order="7" sideWeight="0.4977064" weight="0.23558283" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32844242" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.45460993" side_tool="true" visible="true" weight="0.28871682" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.45602837" side_tool="true" visible="true" weight="0.28871682" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.3893735" side_tool="true" weight="0.29345372" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.60400444" />
       <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.32912722" />
@@ -442,8 +445,20 @@
     <MESSAGE value="???" />
     <option name="LAST_COMMIT_MESSAGE" value="???" />
   </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="GoApplicationRunConfiguration">
+        <watch expression="os.Getenv(&quot;PORT&quot;)" language="go" />
+      </configuration>
+    </watches-manager>
+  </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>os.Getenv(&quot;PORT&quot;)</expression-string>
+        <language-id>go</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>componentPool[1].Title()</expression-string>
         <language-id>go</language-id>
@@ -489,15 +504,9 @@
         <language-id>go</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>dsui.</expression-string>
-        <language-id>go</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Web/Web.go" />
     <entry file="file://$PROJECT_DIR$/Handlers/JSON/JSON.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-218">
@@ -798,10 +807,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://C:/Go/src/os/env.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="100" selection-start-line="100" selection-end-line="100" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        <state relative-caret-position="281">
+          <caret line="23" column="10" lean-forward="true" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="30" />
           <folding>
             <element signature="e#14#171#0" expanded="true" />
           </folding>

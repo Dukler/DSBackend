@@ -20,9 +20,9 @@ func main() {
 		handlers.AllowedHeaders([]string{"Content-Type", "X-Requested-With",  "Access-Control-Allow-Headers", "Authorization"}),
 	)(router)
 
-	port :=  "8081"
-	if os.Getenv("APP_ENV")== "production"{
-		port = os.Getenv("PORT")
+	port :=  os.Getenv("PORT")
+	if os.Getenv("APP_ENV")== "Debug"{
+		port = "8081"
 	}
 
 
