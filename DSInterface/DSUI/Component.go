@@ -4,23 +4,14 @@ type DSComponent struct {
 	ID            	string 			`json:"id"`
 	Caption       	string 			`json:"caption"`
 	Type          	string 			`json:"type"`
-	ComponentName   string 			`json:"componentName"`
+	ClassName   	string 			`json:"className"`
+	ClassType 		string			`json:"classType"`
 	Name          	string 			`json:"name"`
 	AutoComplete    string 			`json:"autoComplete"`
-	Actions        	Actions 		`json:"actions"`
+	Actions        	DSActions 		`json:"actions"`
 	ContentFilter 	string 			`json:"contentFilter"`
 	Wrapper 		string 			`json:"wrapper"`
-	Components		[]*DSComponent 	`json:"components"`
 	Value         	string 			`json:"value"`
 }
 
-func NewWidget(ID string, Name string, Caption string, Type string, ComponentName string, Value string) *DSComponent {
-	w := new(DSComponent)
-	w.ID = ID
-	w.Caption = Caption
-	w.Type = Type
-	w.ComponentName = ComponentName
-	w.Name = Name
-	w.Value = Value
-	return w
-}
+

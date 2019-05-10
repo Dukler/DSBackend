@@ -1,0 +1,140 @@
+{
+  "Components": [
+    {
+      "ID": "root",
+      "Wrapper": "root"
+    },
+    {
+      "ID": "responsiveDrawer",
+      "ComponentName": "ResponsiveDrawer"
+    },
+    {
+      "ID": "calendarAgenda",
+      "ComponentName": "CalendarAgenda"
+    },
+    {
+      "ID": "formTurnos",
+      "ComponentName": "WrappedList",
+      "Wrapper": "testForm"
+    },
+    {
+      "ID": "testPaper",
+      "ComponentName": "WrappedComponent",
+      "Wrapper": "testPaper"
+    },
+    {
+      "ID": "calendarPaper",
+      "ComponentName": "WrappedList",
+      "Wrapper": "calendarPaper"
+    },
+    {
+      "ID": "btn",
+      "Caption": "rToken",
+      "Name": "rToken",
+      "ComponentName": "SubmitButton",
+      "Actions": {
+        "OnClick":"removeToken"
+      }
+    },
+    {
+      "ID": "test1",
+      "Caption": "Prueba",
+      "Name": "test1",
+      "Type": "text",
+      "ComponentName": "FormInput",
+      "AutoComplete": "",
+      "Value": ""
+    },
+    {
+      "ID": "tes2",
+      "Caption": "Prueba2",
+      "Name": "tes2",
+      "Type": "text",
+      "ComponentName": "FormInput",
+      "AutoComplete": "",
+      "Value": ""
+    },
+    {
+      "ID": "tes3",
+      "Caption": "Prueba3",
+      "Name": "tes3",
+      "Type": "text",
+      "ComponentName": "FormInput",
+      "AutoComplete": "",
+      "Value": ""
+    }
+  ],
+  "Wrappers": [
+    {
+      "ID": "root",
+      "Name": "root",
+      "Components": ["responsiveDrawer"],
+      "LinkList": ["Turnos","Clientes","Calendario","Historiales"]
+    },
+    {
+      "ID": "testPaper",
+      "Name": "DSPaper",
+      "Components": ["formTurnos"]
+    },
+    {
+      "ID": "testForm",
+      "Name": "form",
+      "Components": ["tes3","btn"],
+      "Attributes":{
+        "test": "testing",
+        "allthisfuckery": true,
+        "shit": ""
+      }
+    },
+    {
+      "ID": "calendarPaper",
+      "Name": "DSPaper",
+      "Components": ["calendarAgenda"]
+    }
+  ],
+  "ContentRoutes":[
+    {
+      "ID": "Turnos",
+      "Path": "/turnos",
+      "Caption": "p",
+      "Components": ["testPaper"]
+    },
+    {
+      "ID": "Clientes",
+      "Path": "/clientes",
+      "Components": ["test1","tes2"]
+    },
+    {
+      "ID": "Calendario",
+      "Path": "/calendario",
+      "Components": ["calendarPaper"]
+    },
+    {
+      "ID": "Historiales",
+      "Path": "/historiales",
+      "Components": ["asd"]
+    }
+  ],
+  "LinkList":[
+    {
+      "ID": "Turnos",
+      "Path": "/turnos",
+      "Icon": "EventAvailable"
+    },
+    {
+      "ID": "Clientes",
+      "Path": "/clientes",
+      "Icon": "Contacts"
+    },
+    {
+      "ID": "Calendario",
+      "Path": "/calendario",
+      "Icon": "DateRange"
+    },
+    {
+      "ID": "Historiales",
+      "Path": "/historiales",
+      "Icon": "Notes"
+    }
+  ]
+}

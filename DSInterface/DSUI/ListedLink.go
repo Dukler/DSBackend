@@ -5,5 +5,6 @@ type DSListedLink struct {
 	Caption 		string `json:"caption"`
 	Path    		string `json:"path"`
 	Icon    		string `json:"icon"`
-	ComponentName	string `json:"componentName"`
+	ClassName		string `json:"className"`
+	*ComponentIds
 }
