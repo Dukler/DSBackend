@@ -1,0 +1,9 @@
+{
+  "name": "duckstackui-backend",
+  "description": "asd",
+  "keywords": [
+    "go"
+  ],
+  "website": "https://git.heroku.com/duckstackui-backend.git",
+  "repository": "https://git.heroku.com/duckstackui-backend.git"
+}
