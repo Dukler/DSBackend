@@ -2,112 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01d798cd-61aa-45f5-8fcd-33f50b04e121" name="Default" comment="???">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSInterface/DB/App.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSInterface/DB/DBObject.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSInterface/DSUI/Actions.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSInterface/DSUI/Component.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSInterface/DSUI/ContentRoute.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSInterface/DSUI/Data.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSInterface/DSUI/ListedLink.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSInterface/DSUI/UI.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSInterface/DSUI/Wrapper.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Godeps/Godeps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Godeps/Godeps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Handlers/JSON/Electronics.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Handlers/JSON/JSON.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Handlers/XML/XML.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helpers/DBHelper.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Structs/Address.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Structs/Appointment_type.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Structs/Telephone.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Structs/UIState.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/auth.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/errors.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cert.pem" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/authControllers.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/contactsControllers.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/uiController.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/uiController.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dsbe.code-workspace" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/insertTest.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/key.pem" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/accounts.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/base.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/contact.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/connection.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/util.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/dgrijalva/jwt-go/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/dgrijalva/jwt-go/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/dgrijalva/jwt-go/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/dgrijalva/jwt-go/MIGRATION_GUIDE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/dgrijalva/jwt-go/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/dgrijalva/jwt-go/VERSION_HISTORY.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/dgrijalva/jwt-go/claims.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/dgrijalva/jwt-go/doc.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/dgrijalva/jwt-go/ecdsa.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/dgrijalva/jwt-go/ecdsa_utils.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/dgrijalva/jwt-go/errors.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/dgrijalva/jwt-go/hmac.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/dgrijalva/jwt-go/map_claims.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/dgrijalva/jwt-go/none.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/dgrijalva/jwt-go/parser.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/dgrijalva/jwt-go/rsa.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/dgrijalva/jwt-go/rsa_pss.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/dgrijalva/jwt-go/rsa_utils.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/dgrijalva/jwt-go/signing_method.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/dgrijalva/jwt-go/token.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/.codeclimate.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/License" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/association.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/callback.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/callback_create.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/callback_delete.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/callback_query.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/callback_query_preload.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/callback_row_query.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/callback_save.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/callback_update.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/dialect.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/dialect_common.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/dialect_mysql.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/dialect_postgres.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/dialect_sqlite3.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/dialects/postgres/postgres.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/errors.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/field.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/go.mod" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/go.sum" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/interface.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/join_table_handler.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/logger.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/main.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/model.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/model_struct.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/naming.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/scope.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/search.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/test_all.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/utils.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/wercker.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/inflection/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/inflection/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/inflection/inflections.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/inflection/wercker.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/joho/godotenv/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/joho/godotenv/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/joho/godotenv/LICENCE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/joho/godotenv/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/joho/godotenv/godotenv.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/lib/pq/hstore/hstore.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/crypto/bcrypt/base64.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/crypto/bcrypt/bcrypt.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/crypto/blowfish/block.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/crypto/blowfish/cipher.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/crypto/blowfish/const.go" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -134,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="27" column="28" lean-forward="true" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+            <state relative-caret-position="121">
+              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
               <folding>
                 <element signature="e#14#171#0" expanded="true" />
               </folding>
@@ -279,9 +174,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="68" />
-    <option name="y" value="16" />
-    <option name="width" value="1340" />
+    <option name="x" value="403" />
+    <option name="width" value="1470" />
     <option name="height" value="1037" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -318,6 +212,17 @@
             <path>
               <item name="DuckstackBE" type="b2602c69:ProjectViewProjectNode" />
               <item name="DuckstackBE" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DuckstackBE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DuckstackBE" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DuckstackBE" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DuckstackBE" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="github.com" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -423,22 +328,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="68" y="16" width="1340" height="1037" extended-state="0" />
+    <frame x="403" y="0" width="1470" height="1037" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22734375" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20638297" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49921876" weight="0.32743362" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.63893807" weight="0.32480535" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.5453125" visible="true" weight="0.28871682" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.54539007" visible="true" weight="0.28871682" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32844242" />
       <window_info anchor="bottom" x="-1642" y="772" width="1195" height="222" id="Database Console" order="7" sideWeight="0.4977064" weight="0.23558283" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32844242" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.4546875" side_tool="true" visible="true" weight="0.28871682" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.45493257" side_tool="true" weight="0.28871682" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.3893735" side_tool="true" weight="0.29345372" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.60400444" />
       <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.32912722" />
@@ -895,8 +800,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="27" column="28" lean-forward="true" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+        <state relative-caret-position="121">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
           <folding>
             <element signature="e#14#171#0" expanded="true" />
           </folding>

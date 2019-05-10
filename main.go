@@ -7,10 +7,10 @@ import (
 	_ "github.com/lib/pq"
 	"log"
 	"net/http"
+	"os"
 )
 
 var router *mux.Router
-var api = "/api"
 
 func main() {
 	routerBehavior()
@@ -19,11 +19,11 @@ func main() {
 		handlers.AllowedMethods([]string{"GET", "POST","OPTIONS"}),
 		handlers.AllowedHeaders([]string{"Content-Type", "X-Requested-With",  "Access-Control-Allow-Headers", "Authorization"}),
 	)(router)
-	log.Fatal(http.ListenAndServe(":8081", handler))
+	log.Fatal(http.ListenAndServe(":"+ os.Getenv("PORT"), handler))
 }
 
 func routerBehavior() {
 	router = mux.NewRouter()
-	router.HandleFunc(api+"/ui/update/{Screen}", controllers.UIEndpoint).Methods("GET", "DELETE", "OPTIONS", "POST")
+	router.HandleFunc("/api/ui/update/{Screen}", controllers.UIEndpoint).Methods("GET", "DELETE", "OPTIONS", "POST")
 	http.Handle("/", router)
 }
