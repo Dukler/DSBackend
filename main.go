@@ -19,7 +19,14 @@ func main() {
 		handlers.AllowedMethods([]string{"GET", "POST","OPTIONS"}),
 		handlers.AllowedHeaders([]string{"Content-Type", "X-Requested-With",  "Access-Control-Allow-Headers", "Authorization"}),
 	)(router)
-	log.Fatal(http.ListenAndServe(":"+ os.Getenv("PORT"), handler))
+
+	port :=  "8081"
+	if os.Getenv("APP_ENV")== "production"{
+		port = os.Getenv("PORT")
+	}
+
+
+	log.Fatal(http.ListenAndServe(":"+ port, handler))
 }
 
 func routerBehavior() {
