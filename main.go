@@ -19,13 +19,12 @@ func main() {
 		handlers.AllowedMethods([]string{"GET", "POST","OPTIONS"}),
 		handlers.AllowedHeaders([]string{"Content-Type", "X-Requested-With",  "Access-Control-Allow-Headers", "Authorization"}),
 	)(router)
-
 	port :=  os.Getenv("PORT")
-	if os.Getenv("APP_ENV")== "Debug"{
-		port = "8081"
-	}
 
 
+
+
+	//REST
 	log.Fatal(http.ListenAndServe(":"+ port, handler))
 }
 
@@ -34,3 +33,4 @@ func routerBehavior() {
 	router.HandleFunc("/api/ui/update/{Screen}", controllers.UIEndpoint).Methods("GET", "DELETE", "OPTIONS", "POST")
 	http.Handle("/", router)
 }
+

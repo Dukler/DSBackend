@@ -3,9 +3,13 @@ package controllers
 import (
 	"DuckstackBE/DSUI"
 	"encoding/json"
+	firebase "firebase.google.com/go"
 	"fmt"
 	"github.com/gorilla/mux"
+	"golang.org/x/net/context"
+	"google.golang.org/api/option"
 	"io/ioutil"
+	"log"
 	"net/http"
 	"os"
 	"path/filepath"
@@ -16,18 +20,9 @@ var UIEndpoint = func (w http.ResponseWriter, req *http.Request) {
 	vars := mux.Vars(req)
 	var screen string
 	screen = vars["Screen"]
-	if _, err := os.Stat(getScreenJson(screen)); os.IsNotExist(err) {
-		return
-	}
-	data, e := ioutil.ReadFile(getScreenJson(screen))
-	if e != nil {
-		fmt.Println(e)
-		os.Exit(2)
-	}
+	data := getScreenJson(screen)
 
-	ui.Unmarshal(data)
-
-	nUI := ui.NormalizeData()
+	nUI := ui.NormalizeData(data)
 
 	switch req.Method {
 		case "GET":
@@ -57,11 +52,37 @@ var UIEndpoint = func (w http.ResponseWriter, req *http.Request) {
 
 }
 
-func getScreenJson(screen string) string {
-	filename, err := filepath.Abs("./Screens/" + screen + ".json")
-	if err != nil {
-		fmt.Println(err)
-		os.Exit(2)
+func getScreenJson(screen string) []byte {
+	config := &firebase.Config{
+		StorageBucket: "duckstackui.appspot.com",
 	}
-	return filename
+	path,_:=filepath.Abs("./tokens/firebase.json")
+	opt := option.WithCredentialsFile(path)
+	app, err := firebase.NewApp(context.Background(), config, opt)
+	if err != nil {
+		log.Fatalln(err)
+	}
+	client, err := app.Storage(context.Background())
+	if err != nil {
+		log.Fatalln(err)
+	}
+	bucket, err := client.DefaultBucket()
+	if err != nil {
+		log.Fatalln(err)
+	}
+
+	//test leeer bucket
+	rc, err:= bucket.Object("SPA/Home.json").NewReader(context.Background())
+	if err != nil {
+		log.Fatalln(err)
+
+	}
+	defer rc.Close()
+	slurp, err := ioutil.ReadAll(rc)
+	if err != nil {
+		log.Fatalln(err)
+
+	}
+
+	return slurp
 }
