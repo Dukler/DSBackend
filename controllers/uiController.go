@@ -2,17 +2,12 @@ package controllers
 
 import (
 	"DuckstackBE/DSUI"
+	. "DuckstackBE/cloudStorage"
 	"encoding/json"
-	firebase "firebase.google.com/go"
 	"fmt"
 	"github.com/gorilla/mux"
-	"golang.org/x/net/context"
-	"google.golang.org/api/option"
-	"io/ioutil"
-	"log"
 	"net/http"
 	"os"
-	"path/filepath"
 )
 
 var UIEndpoint = func (w http.ResponseWriter, req *http.Request) {
@@ -53,36 +48,6 @@ var UIEndpoint = func (w http.ResponseWriter, req *http.Request) {
 }
 
 func getScreenJson(screen string) []byte {
-	config := &firebase.Config{
-		StorageBucket: "duckstackui.appspot.com",
-	}
-	path,_:=filepath.Abs("./tokens/firebase.json")
-	opt := option.WithCredentialsFile(path)
-	app, err := firebase.NewApp(context.Background(), config, opt)
-	if err != nil {
-		log.Fatalln(err)
-	}
-	client, err := app.Storage(context.Background())
-	if err != nil {
-		log.Fatalln(err)
-	}
-	bucket, err := client.DefaultBucket()
-	if err != nil {
-		log.Fatalln(err)
-	}
-
-	//test leeer bucket
-	rc, err:= bucket.Object("SPA/Home.json").NewReader(context.Background())
-	if err != nil {
-		log.Fatalln(err)
-
-	}
-	defer rc.Close()
-	slurp, err := ioutil.ReadAll(rc)
-	if err != nil {
-		log.Fatalln(err)
-
-	}
-
-	return slurp
+	s:= fmt.Sprintf("SPA/%s.json",screen)
+	return Firebase.ReadFile(s)
 }

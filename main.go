@@ -1,6 +1,7 @@
 package main
 
 import (
+	. "DuckstackBE/cloudStorage"
 	"DuckstackBE/controllers"
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
@@ -10,7 +11,10 @@ import (
 	"os"
 )
 
-var router *mux.Router
+var (
+	router *mux.Router
+)
+
 
 func main() {
 	routerBehavior()
@@ -22,7 +26,7 @@ func main() {
 	port :=  os.Getenv("PORT")
 
 
-
+	Firebase.InitBucket("duckstackui")
 
 	//REST
 	log.Fatal(http.ListenAndServe(":"+ port, handler))
