@@ -22,6 +22,7 @@ var UIEndpoint = func (w http.ResponseWriter, req *http.Request) {
 	switch req.Method {
 		case "GET":
 			w.Header().Set("Content-Type", "application/json")
+			w.Header().Add("Cache-Control", "max-age=86400")
 			w.WriteHeader(http.StatusOK)
 			response, err := json.Marshal(nUI)
 			w.Write(response)
