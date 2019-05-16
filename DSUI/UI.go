@@ -10,8 +10,8 @@ type ComponentIds struct {
 	ComponentIds  []string	`json:"components"`
 }
 
-type Attributes struct {
-	Attributes  map[string]*interface{}	`json:"attributes"`
+type ExtProperties struct {
+	ExtProperties 	map[string]*interface{} `json:"extProperties"`
 }
 
 type UI struct {

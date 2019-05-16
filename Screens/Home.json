@@ -2,7 +2,9 @@
   "Components": [
     {
       "ID": "root",
-      "Wrapper": "root"
+      "Wrapper": {
+        "id": "root"
+      }
     },
     {
       "ID": "responsiveDrawer",
@@ -15,49 +17,108 @@
     {
       "ID": "formTurnos",
       "ClassName": "WrappedComponents",
-      "Wrapper": "testForm"
+      "Wrapper": {
+        "id": "testForm"
+      }
     },
     {
       "ID": "testPaper",
       "ClassName": "WrappedComponents",
-      "Wrapper": "testPaper"
+      "Wrapper": {
+        "id": "testPaper"
+      }
     },
     {
       "ID": "calendarPaper",
       "ClassName": "WrappedComponents",
-      "Wrapper": "calendarPaper"
+      "Wrapper": {
+        "id": "calendarPaper",
+        "grid": {
+          "item": true,
+          "xs": 12
+        }
+      }
     },
     {
       "ID": "btn",
-      "Caption": "rToken",
       "ClassName": "SubmitButton",
+      "ExtProperties": {
+        "caption": "rToken",
+        "variant": "contained",
+        "color": "primary"
+      },
       "Actions": {
         "OnClick":"removeToken"
       }
     },
     {
       "ID": "test1",
-      "Caption": "Prueba",
-      "Type": "text",
       "ClassName": "FormInput",
-      "AutoComplete": "",
-      "Value": ""
+      "Value": "",
+      "ExtProperties": {
+        "caption": "Prueba",
+        "type": "text",
+        "autoComplete": ""
+      }
     },
     {
       "ID": "tes2",
-      "Caption": "Prueba2",
-      "Type": "text",
       "ClassName": "FormInput",
-      "AutoComplete": "",
-      "Value": ""
+      "Value": "",
+      "ExtProperties": {
+        "autoComplete": "",
+        "type": "text",
+        "caption": "Prueba2"
+      }
     },
     {
       "ID": "tes3",
-      "Caption": "Prueba3",
-      "Type": "text",
       "ClassName": "FormInput",
-      "AutoComplete": "",
-      "Value": ""
+      "Value": "",
+      "ExtProperties": {
+        "caption": "Prueba3",
+        "type": "text",
+        "autoComplete": ""
+      }
+    },
+    {
+      "ID": "tes5",
+      "ClassName": "FormInput",
+      "Value": "",
+      "ExtProperties": {
+        "autoComplete": "",
+        "type": "text",
+        "caption": "Prueba5"
+      },
+      "Wrapper": {
+        "grid": {
+          "item": true,
+          "xs": 12
+        }
+      }
+    },
+    {
+      "ID": "tes4",
+      "ClassName": "FormInput",
+      "Value": "",
+      "ExtProperties": {
+        "autoComplete": "",
+        "type": "text",
+        "caption": "Prueba4"
+      },
+      "Wrapper": {
+        "grid": {
+          "item": true,
+          "xs": 12
+        }
+      }
+    },
+    {
+      "ID": "testGrid",
+      "ClassName": "WrappedComponents",
+      "Wrapper": {
+        "id": "testGrid"
+      }
     }
   ],
   "Wrappers": [
@@ -65,7 +126,9 @@
       "ID": "root",
       "ClassName": "root",
       "Components": ["responsiveDrawer"],
-      "LinkList": ["Turnos","Clientes","Calendario","Historiales"]
+      "ExtProperties": {
+        "LinkList": ["Turnos","Clientes","Calendario","Historiales"]
+      }
     },
     {
       "ID": "testPaper",
@@ -81,9 +144,15 @@
     {
       "ID": "calendarPaper",
       "ClassName": "Paper",
-      "Components": ["calendarAgenda"],
-      "Attributes": {
-        "className": "paper"
+      "Components": ["calendarAgenda"]
+    },
+    {
+      "ID": "testGrid",
+      "ClassName": "Grid",
+      "Components": ["calendarPaper"],
+      "ExtProperties": {
+        "container": true,
+        "spacing": 24
       }
     }
   ],
@@ -107,33 +176,29 @@
     {
       "ID": "Historiales",
       "Path": "/historiales",
-      "Components": [""]
+      "Components": ["testGrid"]
     }
   ],
   "LinkList":[
     {
       "ID": "Turnos",
       "Path": "/turnos",
-      "Icon": "EventAvailable",
-      "Components": ["testPaper","formTurnos","tes3","btn"]
+      "Icon": "EventAvailable"
     },
     {
       "ID": "Clientes",
       "Path": "/clientes",
-      "Icon": "Contacts",
-      "Components": ["test1","tes2"]
+      "Icon": "Contacts"
     },
     {
       "ID": "Calendario",
       "Path": "/calendario",
-      "Icon": "DateRange",
-      "Components": ["testPaper","formTurnos","tes3","btn"]
+      "Icon": "DateRange"
     },
     {
       "ID": "Historiales",
       "Path": "/historiales",
-      "Icon": "Notes",
-      "Components": ["calendarPaper","calendarAgenda"]
+      "Icon": "Notes"
     }
   ]
 }

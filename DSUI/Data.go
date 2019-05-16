@@ -4,24 +4,17 @@ import "strings"
 
 func (dsui *UI) NormalizeData (data []byte) *NUI{
 	var nUI = NewNUI()
-	//var cmpIds 	[]string
-	//var wrIds	[]string
-	//var llIds 	[]string
-	//var crIds 	[]string
 	componentPool := make(map[string]string)
 	dsui.Unmarshal(data)
 
 	for _,component := range dsui.Components {
 		nUI.Components.ByIDs[component.ID] = component
 		nUI.Components.IDs = append(nUI.Components.IDs,component.ID)
-		//cmpIds = append(cmpIds,component.ID)
-		//componentPool = append(componentPool,component.ClassName)
 		componentPool[component.ClassName]= "Components"
 	}
 	for _,wrapper := range dsui.Wrappers {
 		nUI.Wrappers.ByIDs[wrapper.ID] = wrapper
 		nUI.Wrappers.IDs = append(nUI.Wrappers.IDs,wrapper.ID)
-		//wrIds = append(wrIds,wrapper.ID)
 		if(strings.Title(wrapper.ClassName) == wrapper.ClassName){
 			componentPool[wrapper.ClassName]= "Wrappers"
 		}
@@ -29,18 +22,12 @@ func (dsui *UI) NormalizeData (data []byte) *NUI{
 	for _,listedList := range dsui.LinkList {
 		nUI.LinkList.ByIDs[listedList.ID] = listedList
 		nUI.LinkList.IDs = append(nUI.LinkList.IDs,listedList.ID)
-		//llIds = append(llIds,listedList.ID)
 	}
 	for _,contentRoute := range dsui.ContentRoutes {
 		nUI.ContentRoutes.ByIDs[contentRoute.ID] = contentRoute
 		nUI.ContentRoutes.IDs = append(nUI.ContentRoutes.IDs,contentRoute.ID)
-		//crIds = append(crIds,contentRoute.ID)
 	}
 
-	//nUI.Components.IDs=cmpIds
-	//nUI.Wrappers.IDs=wrIds
-	//nUI.LinkList.IDs=llIds
-	//nUI.ContentRoutes.IDs=crIds
 	delete(componentPool, "")
 	nUI.ComponentsPool=componentPool
 

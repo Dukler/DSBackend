@@ -6,8 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/gorilla/mux"
+	"io/ioutil"
 	"net/http"
 	"os"
+	"path/filepath"
 )
 
 var UIEndpoint = func (w http.ResponseWriter, req *http.Request) {
@@ -16,7 +18,6 @@ var UIEndpoint = func (w http.ResponseWriter, req *http.Request) {
 	var screen string
 	screen = vars["Screen"]
 	data := getScreenJson(screen)
-
 	nUI := ui.NormalizeData(data)
 
 	switch req.Method {
@@ -49,6 +50,14 @@ var UIEndpoint = func (w http.ResponseWriter, req *http.Request) {
 }
 
 func getScreenJson(screen string) []byte {
-	s:= fmt.Sprintf("SPA/%s.json",screen)
-	return Firebase.ReadFile(s)
+	var data []byte
+	if (os.Getenv("APP_ENV")=="Debug"){
+		s:= fmt.Sprintf("./Screens/%s.json",screen)
+		path,_ := filepath.Abs(s)
+		data,_ = ioutil.ReadFile(path)
+	}else{
+		s:= fmt.Sprintf("SPA/%s.json",screen)
+		data = Firebase.ReadFile(s)
+	}
+	return data
 }
