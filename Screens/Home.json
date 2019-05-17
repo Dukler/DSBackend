@@ -149,7 +149,7 @@
     {
       "ID": "testGrid",
       "ClassName": "Grid",
-      "Components": ["calendarPaper"],
+      "Components": ["tes5","tes4"],
       "ExtProperties": {
         "container": true,
         "spacing": 24
@@ -171,7 +171,7 @@
     {
       "ID": "Calendario",
       "Path": "/calendario",
-      "Components": ["calendarPaper"]
+      "Components": ["calendarAgenda"]
     },
     {
       "ID": "Historiales",
