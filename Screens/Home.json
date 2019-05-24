@@ -12,7 +12,7 @@
     },
     {
       "ID": "calendarAgenda",
-      "ClassName": "CalendarAgenda"
+      "ClassName": "Calendar"
     },
     {
       "ID": "formTurnos",
@@ -119,6 +119,13 @@
       "Wrapper": {
         "id": "testGrid"
       }
+    },
+    {
+      "ID": "testExpPanel",
+      "ClassName": "WrappedComponents",
+      "Wrapper": {
+        "id": "testExpPanel"
+      }
     }
   ],
   "Wrappers": [
@@ -154,6 +161,15 @@
         "container": true,
         "spacing": 24
       }
+    },
+    {
+      "ID": "testExpPanel",
+      "ClassName": "ExpansionPanel",
+      "Components": ["tes5","tes4"],
+      "ExtProperties": {
+        "container": true,
+        "spacing": 24
+      }
     }
   ],
   "ContentRoutes":[
@@ -176,29 +192,41 @@
     {
       "ID": "Historiales",
       "Path": "/historiales",
-      "Components": ["testGrid"]
+      "Components": ["testExpPanel"]
     }
   ],
   "LinkList":[
     {
       "ID": "Turnos",
       "Path": "/turnos",
-      "Icon": "EventAvailable"
+      "Icon": "EventAvailable",
+      "ExtProperties": {
+        "isMain": true
+      }
     },
     {
       "ID": "Clientes",
       "Path": "/clientes",
-      "Icon": "Contacts"
+      "Icon": "Contacts",
+      "ExtProperties": {
+        "isMain": true
+      }
     },
     {
       "ID": "Calendario",
       "Path": "/calendario",
-      "Icon": "DateRange"
+      "Icon": "DateRange",
+      "ExtProperties": {
+        "isMain": true
+      }
     },
     {
       "ID": "Historiales",
       "Path": "/historiales",
-      "Icon": "Notes"
+      "Icon": "Notes",
+      "ExtProperties": {
+        "isMain": true
+      }
     }
   ]
 }
