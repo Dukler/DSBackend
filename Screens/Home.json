@@ -8,130 +8,179 @@
     },
     {
       "ID": "responsiveDrawer",
-      "ClassName": "ResponsiveDrawer"
+      "LazyID": "ResponsiveDrawer"
     },
     {
       "ID": "calendarAgenda",
-      "ClassName": "Calendar"
+      "LazyID": "Calendar"
     },
     {
       "ID": "formTurnos",
-      "ClassName": "WrappedComponents",
+      "LazyID": "WrappedComponents",
       "Wrapper": {
         "id": "testForm"
       }
     },
     {
       "ID": "testPaper",
-      "ClassName": "WrappedComponents",
+      "LazyID": "WrappedComponents",
       "Wrapper": {
         "id": "testPaper"
       }
     },
     {
-      "ID": "calendarPaper",
-      "ClassName": "WrappedComponents",
-      "Wrapper": {
-        "id": "calendarPaper",
-        "grid": {
-          "item": true,
-          "xs": 12
-        }
-      }
-    },
-    {
       "ID": "btn",
-      "ClassName": "SubmitButton",
+      "LazyID": "SubmitButton",
       "ExtProperties": {
-        "caption": "rToken",
+        "label": "rToken",
         "variant": "contained",
-        "color": "primary"
+        "color": "primary",
+        "margin":"normal"
       },
       "Actions": {
         "OnClick":"removeToken"
       }
     },
     {
-      "ID": "test1",
-      "ClassName": "FormInput",
-      "Value": "",
-      "ExtProperties": {
-        "caption": "Prueba",
-        "type": "text",
-        "autoComplete": ""
-      }
-    },
-    {
-      "ID": "tes2",
-      "ClassName": "FormInput",
-      "Value": "",
-      "ExtProperties": {
-        "autoComplete": "",
-        "type": "text",
-        "caption": "Prueba2"
-      }
-    },
-    {
       "ID": "tes3",
-      "ClassName": "FormInput",
+      "LazyID": "TextField",
       "Value": "",
       "ExtProperties": {
-        "caption": "Prueba3",
+        "label": "Prueba3",
         "type": "text",
-        "autoComplete": ""
+        "autoComplete": "",
+        "margin":"normal",
+        "variant": "outlined"
       }
     },
     {
       "ID": "tes5",
-      "ClassName": "FormInput",
+      "LazyID": "TextField",
       "Value": "",
       "ExtProperties": {
         "autoComplete": "",
         "type": "text",
-        "caption": "Prueba5"
+        "label": "Prueba5",
+        "margin":"normal"
       },
       "Wrapper": {
-        "grid": {
-          "item": true,
-          "xs": 12
-        }
+        "item": true,
+        "xs": 12
       }
     },
     {
       "ID": "tes4",
-      "ClassName": "FormInput",
+      "LazyID": "TextField",
       "Value": "",
       "ExtProperties": {
         "autoComplete": "",
         "type": "text",
-        "caption": "Prueba4"
+        "label": "Prueba4",
+        "margin":"normal"
       },
       "Wrapper": {
-        "grid": {
-          "item": true,
-          "xs": 12
-        }
+        "item": true,
+        "xs": 12
       }
     },
     {
       "ID": "testGrid",
-      "ClassName": "WrappedComponents",
+      "LazyID": "WrappedComponents",
       "Wrapper": {
         "id": "testGrid"
       }
     },
     {
       "ID": "testExpPanel",
-      "ClassName": "WrappedComponents",
+      "LazyID": "WrappedComponents",
       "Wrapper": {
         "id": "testExpPanel"
       }
+    },
+    {
+      "ID": "typo1",
+      "LazyID": "Typography",
+      "Value": "Location",
+      "ExtProperties": {
+      },
+      "Styles": {
+        "component": {
+          "fontSize": 15,
+          "color": "primary"
+        }
+      }
+    },
+    {
+      "ID": "typo2",
+      "LazyID": "Typography",
+      "Value": "Select trip destination",
+      "ExtProperties": {
+      },
+      "Styles": {
+        "component": {
+          "fontSize": 15,
+          "color": "secondary"
+        }
+      }
+    },
+    {
+      "ID": "typo3",
+      "LazyID": "Typography",
+      "Value": "Select your destination of choice\n<br />\n<a\n    href=\"#sub-labels-and-columns\"\n    LazyID={classes.link}\n>\n    Learn more\n</a>",
+      "ValueProps": {
+        "isHtml": true
+      },
+      "ExtProperties": {
+        "variant": "caption"
+      },
+      "Styles": {
+        "name": "helper",
+        "component": {
+          "fontSize": 12,
+          "color": "secondary"
+        }
+      }
+    },
+    {
+      "ID": "chip",
+      "LazyID": "Chip",
+      "Value": "",
+      "ExtProperties": {
+        "label": "Barbados"
+      },
+      "Styles": {}
+    },
+    {
+      "ID": "btn2",
+      "LazyID": "SubmitButton",
+      "ExtProperties": {
+        "size":"small",
+        "label": "Cancel"
+      },
+      "Actions": {
+        "OnClick":"removeToken"
+      },
+      "Styles": {}
+    },
+    {
+      "ID": "btn3",
+      "LazyID": "SubmitButton",
+      "ExtProperties": {
+        "size":"small",
+        "color":"primary",
+        "label": "Save"
+      },
+      "Actions": {
+        "OnClick":"removeToken"
+      },
+      "Styles": {}
     }
+
   ],
   "Wrappers": [
     {
       "ID": "root",
-      "ClassName": "root",
+      "LazyID": "root",
       "Components": ["responsiveDrawer"],
       "ExtProperties": {
         "LinkList": ["Turnos","Clientes","Calendario","Historiales"]
@@ -139,36 +188,45 @@
     },
     {
       "ID": "testPaper",
-      "ClassName": "Paper",
+      "LazyID": "Paper",
       "Components": ["formTurnos"]
     },
     {
       "ID": "testForm",
-      "ClassName": "form",
+      "LazyID": "form",
       "Components": ["tes3","btn"]
-
-    },
-    {
-      "ID": "calendarPaper",
-      "ClassName": "Paper",
-      "Components": ["calendarAgenda"]
     },
     {
       "ID": "testGrid",
-      "ClassName": "Grid",
+      "LazyID": "Grid",
       "Components": ["tes5","tes4"],
       "ExtProperties": {
         "container": true,
-        "spacing": 24
+        "spacing": 0
+      },
+      "renderComponents": {
+        "All": {
+          "components": ["tes5","tes4"]
+        }
       }
     },
     {
       "ID": "testExpPanel",
-      "ClassName": "ExpansionPanel",
-      "Components": ["tes5","tes4"],
+      "LazyID": "ExpansionPanel",
+      "Components": ["typo1","typo2","null","chip","typo3","btn2","btn3","tes3"],
       "ExtProperties": {
-        "container": true,
-        "spacing": 24
+        "defaultExpanded": true
+      },
+      "renderComponents": {
+        "ExpansionPanelSummary": {
+          "components": ["typo1","typo2","tes3"]
+        },
+        "ExpansionPanelDetails": {
+          "components": ["null","chip","typo3"]
+        },
+        "ExpansionPanelActions": {
+          "components": ["btn2","btn3"]
+        }
       }
     }
   ],
@@ -176,13 +234,13 @@
     {
       "ID": "Turnos",
       "Path": "/turnos",
-      "Caption": "p",
+      "label": "p",
       "Components": ["testPaper"]
     },
     {
       "ID": "Clientes",
       "Path": "/clientes",
-      "Components": ["test1","tes2"]
+      "Components": ["testGrid"]
     },
     {
       "ID": "Calendario",
@@ -201,7 +259,7 @@
       "Path": "/turnos",
       "Icon": "EventAvailable",
       "ExtProperties": {
-        "isMain": true
+        "isMain": false
       }
     },
     {
@@ -209,7 +267,7 @@
       "Path": "/clientes",
       "Icon": "Contacts",
       "ExtProperties": {
-        "isMain": true
+        "isMain": false
       }
     },
     {
@@ -217,7 +275,7 @@
       "Path": "/calendario",
       "Icon": "DateRange",
       "ExtProperties": {
-        "isMain": true
+        "isMain": false
       }
     },
     {
@@ -225,7 +283,7 @@
       "Path": "/historiales",
       "Icon": "Notes",
       "ExtProperties": {
-        "isMain": true
+        "isMain": false
       }
     }
   ]

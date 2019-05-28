@@ -9,9 +9,15 @@ import (
 type ComponentIds struct {
 	ComponentIds  []string	`json:"components"`
 }
-
 type ExtProperties struct {
 	ExtProperties 	map[string]*interface{} `json:"extProperties"`
+}
+type RenderComponents struct {
+	RenderComponents 	map[string]*interface{} `json:"renderComponents"`
+}
+type Styles struct {
+	Name	string 	 `json:"name"`
+	Styles 	map[string]*interface{} `json:"styles"`
 }
 
 type UI struct {

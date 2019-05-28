@@ -7,9 +7,10 @@ package DSUI
 //}
 
 type DSWrapper struct{
-	ID string			`json:"id"`
-	ClassName string	`json:"className"`
+	ID 			string			`json:"id"`
+	LazyID		string 			`json:"lazyID"`
 	ComponentIds
 	ExtProperties
+	RenderComponents
 }
 

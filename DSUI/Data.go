@@ -1,6 +1,8 @@
 package DSUI
 
-import "strings"
+import (
+	"strings"
+)
 
 func (dsui *UI) NormalizeData (data []byte) *NUI{
 	var nUI = NewNUI()
@@ -10,13 +12,13 @@ func (dsui *UI) NormalizeData (data []byte) *NUI{
 	for _,component := range dsui.Components {
 		nUI.Components.ByIDs[component.ID] = component
 		nUI.Components.IDs = append(nUI.Components.IDs,component.ID)
-		componentPool[component.ClassName]= "Components"
+		componentPool[component.LazyID]= "Components"
 	}
 	for _,wrapper := range dsui.Wrappers {
 		nUI.Wrappers.ByIDs[wrapper.ID] = wrapper
 		nUI.Wrappers.IDs = append(nUI.Wrappers.IDs,wrapper.ID)
-		if(strings.Title(wrapper.ClassName) == wrapper.ClassName){
-			componentPool[wrapper.ClassName]= "Wrappers"
+		if(strings.Title(wrapper.LazyID) == wrapper.LazyID){
+			componentPool[wrapper.LazyID]= "Wrappers"
 		}
 	}
 	for _,listedList := range dsui.LinkList {

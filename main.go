@@ -3,6 +3,8 @@ package main
 import (
 	. "DuckstackBE/cloudStorage"
 	"DuckstackBE/controllers"
+	"encoding/json"
+	"fmt"
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 	_ "github.com/lib/pq"
@@ -25,6 +27,10 @@ func main() {
 	)(router)
 	port :=  os.Getenv("PORT")
 
+	body := "<html><body>Hello World</body></html>"
+
+	result, _ := json.Marshal(body)
+	fmt.Println(string(result))
 
 	Firebase.InitBucket("duckstackui")
 

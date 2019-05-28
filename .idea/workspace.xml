@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="01d798cd-61aa-45f5-8fcd-33f50b04e121" name="Default" comment="???">
+      <change afterPath="$PROJECT_DIR$/Screens/HomeBKP.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DSUI/ListedLink.go" beforeDir="false" afterPath="$PROJECT_DIR$/DSUI/ListedLink.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DSUI/Component.go" beforeDir="false" afterPath="$PROJECT_DIR$/DSUI/Component.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DSUI/Data.go" beforeDir="false" afterPath="$PROJECT_DIR$/DSUI/Data.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DSUI/UI.go" beforeDir="false" afterPath="$PROJECT_DIR$/DSUI/UI.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DSUI/Wrapper.go" beforeDir="false" afterPath="$PROJECT_DIR$/DSUI/Wrapper.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Screens/Home.json" beforeDir="false" afterPath="$PROJECT_DIR$/Screens/Home.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,68 +33,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/uiController.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DSUI/UI.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-              <folding>
-                <element signature="e#14#54#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DSUI/ListedLink.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DSUI/Component.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DSUI/Wrapper.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Screens/Home.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="41">
-              <caret line="119" column="24" lean-forward="true" selection-start-line="119" selection-start-column="24" selection-end-line="119" selection-end-column="24" />
+            <state relative-caret-position="458">
+              <caret line="290" selection-start-line="290" selection-end-line="290" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Screens/HomeBKP.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="269" column="23" lean-forward="true" selection-end-line="290" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Screens/HomeTEST.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="481">
+              <caret line="179" selection-start-line="179" selection-end-line="179" />
             </state>
           </provider>
         </entry>
@@ -106,15 +72,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>(ui</find>
-      <find>(</find>
-      <find>range</find>
-      <find>for</find>
-      <find>map[string]interface{}</find>
-      <find>AddComponent</find>
-      <find>&amp;</find>
-      <find>DSPaper</find>
-      <find>DSModal</find>
       <find>forminp</find>
       <find>ht</find>
       <find>:8080</find>
@@ -136,6 +93,15 @@
       <find>linklist.</find>
       <find>wrapped</find>
       <find>gr</find>
+      <find>FormInput</find>
+      <find>caption</find>
+      <find>label</find>
+      <find>variant</find>
+      <find>theme</find>
+      <find>print</find>
+      <find>testPaper</find>
+      <find>&quot;grid&quot;</find>
+      <find>ClassName</find>
     </findStrings>
     <replaceStrings>
       <replace>deleteByID</replace>
@@ -149,6 +115,9 @@
       <replace>ListWrapper</replace>
       <replace>Wrapper</replace>
       <replace>Paper</replace>
+      <replace>TextField</replace>
+      <replace>label</replace>
+      <replace>LazyID</replace>
     </replaceStrings>
   </component>
   <component name="GOROOT" path="C:/Go" />
@@ -166,7 +135,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/DSInterface/DSWidget.go" />
         <option value="$PROJECT_DIR$/API/Main.json" />
         <option value="$PROJECT_DIR$/DSInterface/DSElements/DSContent.go" />
         <option value="$PROJECT_DIR$/DSInterface/DSForm/DSForm.go" />
@@ -208,23 +176,24 @@
         <option value="$PROJECT_DIR$/controllers/authControllers.go" />
         <option value="$PROJECT_DIR$/tokens/firebase.json" />
         <option value="$PROJECT_DIR$/cloudStorage/firebase.go" />
-        <option value="$PROJECT_DIR$/main.go" />
-        <option value="$PROJECT_DIR$/DSUI/Data.go" />
         <option value="$PROJECT_DIR$/Screens/HomeTEST.json" />
-        <option value="$PROJECT_DIR$/DSUI/Wrapper.go" />
-        <option value="$PROJECT_DIR$/DSUI/UI.go" />
-        <option value="$PROJECT_DIR$/DSUI/Component.go" />
         <option value="$PROJECT_DIR$/controllers/uiController.go" />
         <option value="$PROJECT_DIR$/DSUI/ListedLink.go" />
+        <option value="$PROJECT_DIR$/main.go" />
+        <option value="$PROJECT_DIR$/DSUI/Component.go" />
+        <option value="$PROJECT_DIR$/DSUI/Wrapper.go" />
+        <option value="$PROJECT_DIR$/DSUI/Data.go" />
+        <option value="$PROJECT_DIR$/DSUI/UI.go" />
+        <option value="$PROJECT_DIR$/Screens/HomeBKP.json" />
         <option value="$PROJECT_DIR$/Screens/Home.json" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="554" />
-    <option name="y" value="106" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="242" />
+    <option name="y" value="56" />
     <option name="width" value="1376" />
-    <option name="height" value="936" />
+    <option name="height" value="968" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -254,7 +223,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -271,6 +239,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -292,17 +261,17 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\iarwa\Workspace\Go\src\DuckstackBE\API" />
+      <recent name="C:\Users\iarwa\Workspace\Go\src\AppointmentServer\API" />
+      <recent name="C:\Users\iarwa\go\src\ServerApp\DSInterface" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\iarwa\Workspace\Go\src\DuckstackBE" />
       <recent name="C:\Users\iarwa\Workspace\Go\src\AppointmentServer\DSInterface\DSElements" />
       <recent name="C:\Users\iarwa\Workspace\Go\src\AppointmentServer\DSInterface\DSdbhelper" />
       <recent name="C:\Users\iarwa\go\src\ServerApp\Structs" />
       <recent name="C:\Users\iarwa\go\src\ServerApp\Framework" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\iarwa\Workspace\Go\src\DuckstackBE\API" />
-      <recent name="C:\Users\iarwa\Workspace\Go\src\AppointmentServer\API" />
-      <recent name="C:\Users\iarwa\go\src\ServerApp\DSInterface" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -374,21 +343,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="554" y="106" width="1376" height="936" extended-state="0" />
+    <frame x="242" y="56" width="1376" height="968" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.275076" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.19604863" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49921876" weight="0.32743362" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.63687944" weight="0.32411504" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.5334346" visible="true" weight="0.2777086" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.531155" visible="true" weight="0.34610778" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32844242" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32814372" />
       <window_info anchor="bottom" x="-1642" y="772" width="1195" height="222" id="Database Console" order="7" sideWeight="0.4977064" weight="0.23558283" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32844242" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.46656534" side_tool="true" visible="true" weight="0.2777086" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.46884498" side_tool="true" weight="0.26706588" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.46105704" side_tool="true" weight="0.27195123" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.60400444" />
       <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.32912722" />
@@ -400,21 +370,21 @@
       <window_info anchor="right" id="Database" order="3" weight="0.32874617" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25535288" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.19604863" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32846716" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.63893807" weight="0.32515338" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.61538464" visible="true" weight="0.29345372" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49921876" weight="0.32743362" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.63687944" weight="0.32411504" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.531155" visible="true" weight="0.34610778" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3293556" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32814372" />
       <window_info anchor="bottom" x="-1642" y="772" width="1195" height="222" id="Database Console" order="7" sideWeight="0.4977064" weight="0.23558283" />
-      <window_info anchor="bottom" id="Database Changes" order="8" weight="0.3293556" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.5022936" side_tool="true" weight="0.23558283" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.3846154" side_tool="true" weight="0.2945824" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.605948" />
+      <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32844242" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.46884498" side_tool="true" weight="0.26706588" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.46105704" side_tool="true" weight="0.27195123" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.60400444" />
       <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.32912722" />
       <window_info active="true" anchor="bottom" id="Messages" order="13" visible="true" weight="0.3293556" />
       <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
@@ -487,8 +457,54 @@
     <MESSAGE value="???" />
     <option name="LAST_COMMIT_MESSAGE" value="???" />
   </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="GoApplicationRunConfiguration">
+        <watch expression="component.Value" language="go" />
+        <watch expression="(*component.Value).(string)" language="go" />
+        <watch expression="s" language="go" />
+      </configuration>
+    </watches-manager>
+  </component>
   <component name="debuggerHistoryManager">
+    <expressions id="breakpointCondition">
+      <expression>
+        <expression-string>component.ID == &quot;typo3&quot;</expression-string>
+        <language-id>go</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
     <expressions id="watch">
+      <expression>
+        <expression-string>s</expression-string>
+        <language-id>go</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>(*component.Value).(string)</expression-string>
+        <language-id>go</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>component.Value</expression-string>
+        <language-id>go</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>result</expression-string>
+        <language-id>go</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>string(result)</expression-string>
+        <language-id>go</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>nUI.Components.ByIDs[component.ID]</expression-string>
+        <language-id>go</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>bucket.Object(&quot;SPA&quot;)</expression-string>
         <language-id>go</language-id>
@@ -509,53 +525,9 @@
         <language-id>go</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>componentPool[1][0]</expression-string>
-        <language-id>go</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>componentPool[0]</expression-string>
-        <language-id>go</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>componentPool[&quot;&quot;]</expression-string>
-        <language-id>go</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>element.(type)</expression-string>
-        <language-id>go</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>element.(map[string]interface{})</expression-string>
-        <language-id>go</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>dsui[uiElement]</expression-string>
-        <language-id>go</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../github.com/jinzhu/gorm/model.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../github.com/jinzhu/gorm/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="454" column="13" selection-start-line="454" selection-start-column="13" selection-end-line="454" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../DSAppointments/models/contact.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -780,13 +752,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Screens/HomeTEST.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3580">
-          <caret line="179" selection-start-line="179" selection-end-line="179" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tokens/firebase.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -794,31 +759,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DSUI/Data.go">
+    <entry file="file://$PROJECT_DIR$/../../../React/duckstackui/src/Theme/dsTheme.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="400">
+          <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DSUI/Data.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/uiController.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+        <state relative-caret-position="340">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DSUI/UI.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+        <state relative-caret-position="280">
+          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
           <folding>
             <element signature="e#14#54#0" expanded="true" />
           </folding>
@@ -832,24 +804,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DSUI/Component.go">
+    <entry file="file://$PROJECT_DIR$/DSUI/Wrapper.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
+        <state relative-caret-position="180">
+          <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DSUI/Wrapper.go">
+    <entry file="file://$PROJECT_DIR$/DSUI/Component.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        <state relative-caret-position="80">
+          <caret line="4" column="10" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Screens/HomeTEST.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="179" selection-start-line="179" selection-end-line="179" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Screens/HomeBKP.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="269" column="23" lean-forward="true" selection-end-line="290" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Screens/Home.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
-          <caret line="119" column="24" lean-forward="true" selection-start-line="119" selection-start-column="24" selection-end-line="119" selection-end-column="24" />
+        <state relative-caret-position="458">
+          <caret line="290" selection-start-line="290" selection-end-line="290" />
         </state>
       </provider>
     </entry>
