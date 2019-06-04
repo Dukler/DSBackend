@@ -4,33 +4,38 @@
       "ID": "root",
       "Wrapper": {
         "id": "root"
-      }
+      },
+      "Styles": {}
     },
     {
       "ID": "responsiveDrawer",
-      "LazyID": "ResponsiveDrawer"
+      "LazyID": "ResponsiveDrawer",
+      "Styles": {}
     },
     {
       "ID": "calendarAgenda",
-      "LazyID": "Calendar"
+      "LazyID": "Calendar",
+      "Styles": {}
     },
     {
       "ID": "formTurnos",
       "LazyID": "WrappedComponents",
       "Wrapper": {
         "id": "testForm"
-      }
+      },
+      "Styles": {}
     },
     {
       "ID": "testPaper",
       "LazyID": "WrappedComponents",
       "Wrapper": {
         "id": "testPaper"
-      }
+      },
+      "Styles": {}
     },
     {
       "ID": "btn",
-      "LazyID": "SubmitButton",
+      "LazyID": "FloatingActionButton",
       "ExtProperties": {
         "label": "rToken",
         "variant": "contained",
@@ -39,7 +44,8 @@
       },
       "Actions": {
         "OnClick":"removeToken"
-      }
+      },
+      "Styles": {}
     },
     {
       "ID": "tes3",
@@ -51,6 +57,9 @@
         "autoComplete": "",
         "margin":"normal",
         "variant": "outlined"
+      },
+      "Styles": {
+        "name": "Column"
       }
     },
     {
@@ -66,7 +75,8 @@
       "Wrapper": {
         "item": true,
         "xs": 12
-      }
+      },
+      "Styles": {}
     },
     {
       "ID": "tes4",
@@ -81,21 +91,24 @@
       "Wrapper": {
         "item": true,
         "xs": 12
-      }
+      },
+      "Styles": {}
     },
     {
       "ID": "testGrid",
       "LazyID": "WrappedComponents",
       "Wrapper": {
         "id": "testGrid"
-      }
+      },
+      "Styles": {}
     },
     {
       "ID": "testExpPanel",
       "LazyID": "WrappedComponents",
       "Wrapper": {
         "id": "testExpPanel"
-      }
+      },
+      "Styles": {}
     },
     {
       "ID": "typo1",
@@ -104,6 +117,7 @@
       "ExtProperties": {
       },
       "Styles": {
+        "name": "Column",
         "component": {
           "fontSize": 15,
           "color": "primary"
@@ -117,6 +131,7 @@
       "ExtProperties": {
       },
       "Styles": {
+        "name": "Column",
         "component": {
           "fontSize": 15,
           "color": "secondary"
@@ -134,7 +149,7 @@
         "variant": "caption"
       },
       "Styles": {
-        "name": "helper",
+        "name": "Helper",
         "component": {
           "fontSize": 12,
           "color": "secondary"
@@ -148,11 +163,13 @@
       "ExtProperties": {
         "label": "Barbados"
       },
-      "Styles": {}
+      "Styles": {
+        "name": "Column"
+      }
     },
     {
       "ID": "btn2",
-      "LazyID": "SubmitButton",
+      "LazyID": "TextButton",
       "ExtProperties": {
         "size":"small",
         "label": "Cancel"
@@ -163,16 +180,28 @@
       "Styles": {}
     },
     {
-      "ID": "btn3",
-      "LazyID": "SubmitButton",
+      "ID": "test",
+      "LazyID": "ResponsiveList",
       "ExtProperties": {
-        "size":"small",
-        "color":"primary",
-        "label": "Save"
+        "hasFiller": true,
+        "items": "listItem",
+        "secondaryText": true,
+        "isDense": false,
+        "offset": {
+          "height": 100,
+          "width": 35
+        }
       },
-      "Actions": {
-        "OnClick":"removeToken"
+      "Actions": {},
+      "Styles": {}
+    },
+    {
+      "ID": "listItem",
+      "LazyID": "ActionItem",
+      "ExtProperties": {
+        "type": "listItem"
       },
+      "Actions": {},
       "Styles": {}
     }
 
@@ -213,18 +242,18 @@
     {
       "ID": "testExpPanel",
       "LazyID": "ExpansionPanel",
-      "Components": ["typo1","typo2","null","chip","typo3","btn2","btn3","tes3"],
+      "Components": ["typo1","typo2","chip","typo3","btn2","btn3","tes3","empty"],
       "ExtProperties": {
         "defaultExpanded": true
       },
       "renderComponents": {
-        "ExpansionPanelSummary": {
-          "components": ["typo1","typo2","tes3"]
+        "Summary": {
+          "components": ["typo1","typo2"]
         },
-        "ExpansionPanelDetails": {
-          "components": ["null","chip","typo3"]
+        "Details": {
+          "components": ["empty","chip","typo3"]
         },
-        "ExpansionPanelActions": {
+        "Actions": {
           "components": ["btn2","btn3"]
         }
       }
@@ -251,13 +280,18 @@
       "ID": "Historiales",
       "Path": "/historiales",
       "Components": ["testExpPanel"]
+    },
+    {
+      "ID": "Test",
+      "Path": "/Test",
+      "Components": ["test"]
     }
   ],
   "LinkList":[
     {
       "ID": "Turnos",
       "Path": "/turnos",
-      "Icon": "EventAvailable",
+      "Icon": "event_available",
       "ExtProperties": {
         "isMain": false
       }
@@ -265,7 +299,7 @@
     {
       "ID": "Clientes",
       "Path": "/clientes",
-      "Icon": "Contacts",
+      "Icon": "contacts",
       "ExtProperties": {
         "isMain": false
       }
@@ -273,7 +307,7 @@
     {
       "ID": "Calendario",
       "Path": "/calendario",
-      "Icon": "DateRange",
+      "Icon": "date_range",
       "ExtProperties": {
         "isMain": false
       }
@@ -281,7 +315,15 @@
     {
       "ID": "Historiales",
       "Path": "/historiales",
-      "Icon": "Notes",
+      "Icon": "notes",
+      "ExtProperties": {
+        "isMain": false
+      }
+    },
+    {
+      "ID": "Test",
+      "Path": "/test",
+      "Icon": "notes",
       "ExtProperties": {
         "isMain": false
       }

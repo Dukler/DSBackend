@@ -4,6 +4,8 @@ import (
 	"strings"
 )
 
+type componentTypes map[string]string
+
 func (dsui *UI) NormalizeData (data []byte) *NUI{
 	var nUI = NewNUI()
 	componentPool := make(map[string]string)
@@ -12,7 +14,15 @@ func (dsui *UI) NormalizeData (data []byte) *NUI{
 	for _,component := range dsui.Components {
 		nUI.Components.ByIDs[component.ID] = component
 		nUI.Components.IDs = append(nUI.Components.IDs,component.ID)
-		componentPool[component.LazyID]= "Components"
+		switch {
+		case strings.Contains(component.LazyID,"Item"):
+			componentPool[component.LazyID]= "Components/Items"
+		case strings.Contains(component.LazyID,"Button"):
+			componentPool[component.LazyID]= "Components/Buttons"
+		default:
+			componentPool[component.LazyID]= "Components"
+		}
+
 	}
 	for _,wrapper := range dsui.Wrappers {
 		nUI.Wrappers.ByIDs[wrapper.ID] = wrapper
