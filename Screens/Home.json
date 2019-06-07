@@ -22,20 +22,18 @@
       "LazyID": "WrappedComponents",
       "Wrapper": {
         "id": "testForm"
-      },
-      "Styles": {}
+      }
     },
     {
       "ID": "testPaper",
       "LazyID": "WrappedComponents",
       "Wrapper": {
         "id": "testPaper"
-      },
-      "Styles": {}
+      }
     },
     {
       "ID": "btn",
-      "LazyID": "FloatingActionButton",
+      "LazyID": "TextButton",
       "ExtProperties": {
         "label": "rToken",
         "variant": "contained",
@@ -99,16 +97,14 @@
       "LazyID": "WrappedComponents",
       "Wrapper": {
         "id": "testGrid"
-      },
-      "Styles": {}
+      }
     },
     {
       "ID": "testExpPanel",
       "LazyID": "WrappedComponents",
       "Wrapper": {
         "id": "testExpPanel"
-      },
-      "Styles": {}
+      }
     },
     {
       "ID": "typo1",
@@ -142,11 +138,9 @@
       "ID": "typo3",
       "LazyID": "Typography",
       "Value": "Select your destination of choice\n<br />\n<a\n    href=\"#sub-labels-and-columns\"\n    LazyID={classes.link}\n>\n    Learn more\n</a>",
-      "ValueProps": {
-        "isHtml": true
-      },
       "ExtProperties": {
-        "variant": "caption"
+        "variant": "caption",
+        "isHtml": true
       },
       "Styles": {
         "name": "Helper",
@@ -169,10 +163,12 @@
     },
     {
       "ID": "btn2",
-      "LazyID": "TextButton",
+      "LazyID": "FloatingActionButton",
       "ExtProperties": {
-        "size":"small",
-        "label": "Cancel"
+        "icon" : "add",
+        "color": "primary",
+        "label": "",
+        "aria-label": "Add"
       },
       "Actions": {
         "OnClick":"removeToken"
@@ -181,7 +177,7 @@
     },
     {
       "ID": "test",
-      "LazyID": "ResponsiveList",
+      "LazyID": "MegaFuckList",
       "ExtProperties": {
         "hasFiller": true,
         "items": "listItem",
@@ -199,7 +195,11 @@
       "ID": "listItem",
       "LazyID": "ActionItem",
       "ExtProperties": {
-        "type": "listItem"
+        "type": "listItem",
+        "secondaryIcon": "comment",
+        "hasSecondary": true,
+        "hasCheck": true,
+        "secondaryWithCheck": false
       },
       "Actions": {},
       "Styles": {}
