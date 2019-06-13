@@ -12,3 +12,5 @@
 *.out
 
 \.idea/workspace\.xml
+
+Screens/Home\.json

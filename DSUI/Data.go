@@ -19,6 +19,8 @@ func (dsui *UI) NormalizeData (data []byte) *NUI{
 			componentPool[component.LazyID]= "Components/Items"
 		case strings.Contains(component.LazyID,"Button"):
 			componentPool[component.LazyID]= "Components/Buttons"
+		case strings.Contains(component.LazyID,"Picker"):
+			componentPool[component.LazyID]= "Components/Pickers"
 		default:
 			componentPool[component.LazyID]= "Components"
 		}
