@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="testpsql">
-  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.14">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.15">
     <root id="1">
       <ServerVersion>9.6.7</ServerVersion>
     </root>
@@ -17,13 +17,13 @@
       <IntrospectionStateNumber>605</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
-      <Relations>sequence|table|16386|16388|1
+      <Relations>sequence|table|16499|16501|1
+sequence|table|16511|16513|1
+sequence|table|16410|16412|1
+sequence|table|16386|16388|1
 sequence|table|16394|16398|1
 sequence|table|16396|16398|5
-sequence|table|16410|16412|1
 sequence|table|16444|16398|6
-sequence|table|16499|16501|1
-sequence|table|16511|16513|1
 </Relations>
     </database>
     <role id="4" parent="1" name="dukler">
@@ -47,8 +47,8 @@ sequence|table|16511|16513|1
       <CreateRole>1</CreateRole>
       <CreateDb>1</CreateDb>
       <CanLogin>1</CanLogin>
-      <Replication>1</Replication>
       <ConnectionLimit>-1</ConnectionLimit>
+      <Replication>1</Replication>
       <BypassRls>1</BypassRls>
     </role>
     <schema id="7" parent="3" name="information_schema">
@@ -140,8 +140,8 @@ sequence|table|16511|16513|1
     </extension>
     <sequence id="20" parent="12" name="accounts_id_seq">
       <ObjectId>16499</ObjectId>
-      <Owner>dukler</Owner>
       <StateNumber>601</StateNumber>
+      <Owner>dukler</Owner>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
     </sequence>
@@ -177,8 +177,8 @@ sequence|table|16511|16513|1
     </sequence>
     <sequence id="26" parent="12" name="contacts_id_seq">
       <ObjectId>16511</ObjectId>
-      <Owner>dukler</Owner>
       <StateNumber>603</StateNumber>
+      <Owner>dukler</Owner>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
     </sequence>
@@ -266,8 +266,8 @@ sequence|table|16511|16513|1
       <ObjectId>16509</ObjectId>
       <StateNumber>601</StateNumber>
       <ColNames>id</ColNames>
-      <UnderlyingIndexName>accounts_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
+      <UnderlyingIndexName>accounts_pkey</UnderlyingIndexName>
     </key>
     <column id="42" parent="28" name="id">
       <Position>1</Position>
@@ -309,8 +309,8 @@ sequence|table|16511|16513|1
       <ObjectId>16404</ObjectId>
       <StateNumber>553</StateNumber>
       <ColNames>id</ColNames>
-      <UnderlyingIndexName>appointment_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
+      <UnderlyingIndexName>appointment_pkey</UnderlyingIndexName>
     </key>
     <foreign-key id="48" parent="28" name="appointment_client_id_fkey">
       <ObjectId>16405</ObjectId>
@@ -356,8 +356,8 @@ sequence|table|16511|16513|1
       <ObjectId>16417</ObjectId>
       <StateNumber>561</StateNumber>
       <ColNames>id</ColNames>
-      <UnderlyingIndexName>appointment_type_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
+      <UnderlyingIndexName>appointment_type_pkey</UnderlyingIndexName>
     </key>
     <column id="54" parent="30" name="id">
       <Position>1</Position>
@@ -383,8 +383,8 @@ sequence|table|16511|16513|1
       <ObjectId>16393</ObjectId>
       <StateNumber>552</StateNumber>
       <ColNames>id</ColNames>
-      <UnderlyingIndexName>client_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
+      <UnderlyingIndexName>client_pkey</UnderlyingIndexName>
     </key>
     <column id="58" parent="31" name="id">
       <Position>1</Position>
@@ -445,8 +445,8 @@ sequence|table|16511|16513|1
       <ObjectId>16521</ObjectId>
       <StateNumber>603</StateNumber>
       <ColNames>id</ColNames>
-      <UnderlyingIndexName>contacts_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
+      <UnderlyingIndexName>contacts_pkey</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>

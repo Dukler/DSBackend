@@ -1,6 +1,7 @@
-package DSUI
+package routing
+import . "duckstack.com/DSFramework/DSUI/common"
 
-type DSContentRoute struct {
+type ContentRoute struct {
 	ID      	string 	`json:"id"`
 	Path    	string 	`json:"path"`
 	Caption 	string 	`json:"caption"`

@@ -1,6 +1,6 @@
-package DSUI
+package components
 
-type DSActions struct {
+type Actions struct {
 	Actions map[string][]Action	`json:"actions"`
 }
 

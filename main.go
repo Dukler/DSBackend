@@ -3,8 +3,6 @@ package main
 import (
 	. "DuckstackBE/cloudStorage"
 	"DuckstackBE/controllers"
-	"encoding/json"
-	"fmt"
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 	_ "github.com/lib/pq"
@@ -19,28 +17,22 @@ var (
 
 
 func main() {
-	routerBehavior()
+	router = mux.NewRouter()
+	router.HandleFunc("/api/ui/update/{Screen}", controllers.UIEndpoint).Methods("GET", "DELETE", "OPTIONS", "POST")
+	http.Handle("/", router)
+
+
 	handler := handlers.CORS(
 		handlers.AllowedOrigins([]string{"*"}),
 		handlers.AllowedMethods([]string{"GET", "POST","OPTIONS"}),
 		handlers.AllowedHeaders([]string{"Content-Type", "X-Requested-With",  "Access-Control-Allow-Headers", "Authorization"}),
 	)(router)
+
 	port :=  os.Getenv("PORT")
-
-	body := "<html><body>Hello World</body></html>"
-
-	result, _ := json.Marshal(body)
-	fmt.Println(string(result))
 
 	Firebase.InitBucket("duckstackui")
 
 	//REST
 	log.Fatal(http.ListenAndServe(":"+ port, handler))
-}
-
-func routerBehavior() {
-	router = mux.NewRouter()
-	router.HandleFunc("/api/ui/update/{Screen}", controllers.UIEndpoint).Methods("GET", "DELETE", "OPTIONS", "POST")
-	http.Handle("/", router)
 }
 

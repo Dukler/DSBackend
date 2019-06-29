@@ -1,12 +1,12 @@
-package DSUI
+package state
 
 import (
+	. "DuckstackBE/DSUI/components"
+	. "DuckstackBE/DSUI/routing"
 	"strings"
 )
 
-type componentTypes map[string]string
-
-func (dsui *UI) NormalizeData (data []byte) *NUI{
+func (dsui *UI) Normalize (data []byte) *NUI{
 	var nUI = NewNUI()
 	componentPool := make(map[string]string)
 	dsui.Unmarshal(data)
@@ -57,31 +57,31 @@ type NUI struct{
 }
 
 type nComponents struct {
-	ByIDs 			map[string]*DSComponent		`json:"byIds"`
-	IDs 			[]string 					`json:"ids"`
+	ByIDs 			map[string]*Component `json:"byIds"`
+	IDs 			[]string                  `json:"ids"`
 }
 
 type nWrappers struct {
-	ByIDs			map[string]*DSWrapper		`json:"byIds"`
-	IDs 			[]string 					`json:"ids"`
+	ByIDs			map[string]*Wrapper `json:"byIds"`
+	IDs 			[]string                           `json:"ids"`
 }
 
 type nLinkList struct{
-	ByIDs    		map[string]*DSListedLink	`json:"byIds"`
-	IDs 			[]string 					`json:"ids"`
+	ByIDs    		map[string]*ListedLink `json:"byIds"`
+	IDs 			[]string                           `json:"ids"`
 }
 
 type nContentRoute struct {
-	ByIDs 			map[string]*DSContentRoute	`json:"byIds"`
-	IDs 			[]string 					`json:"ids"`
+	ByIDs 			map[string]*ContentRoute `json:"byIds"`
+	IDs 			[]string                             `json:"ids"`
 }
 
 func  NewNUI() *NUI {
 	nUI := new(NUI)
-	nUI.Components.ByIDs = make(map[string]*DSComponent)
-	nUI.Wrappers.ByIDs = make(map[string]*DSWrapper)
-	nUI.LinkList.ByIDs = make(map[string]*DSListedLink)
-	nUI.ContentRoutes.ByIDs = make(map[string]*DSContentRoute)
+	nUI.Components.ByIDs = make(map[string]*Component)
+	nUI.Wrappers.ByIDs = make(map[string]*Wrapper)
+	nUI.LinkList.ByIDs = make(map[string]*ListedLink)
+	nUI.ContentRoutes.ByIDs = make(map[string]*ContentRoute)
 	nUI.ComponentsPool = make(map[string]string)
 	return nUI
 }

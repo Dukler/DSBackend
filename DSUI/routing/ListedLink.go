@@ -1,6 +1,8 @@
-package DSUI
+package routing
 
-type DSListedLink struct {
+import . "duckstack.com/DSFramework/DSUI/common"
+
+type ListedLink struct {
 	ID      		string `json:"id"`
 	Caption 		string `json:"caption"`
 	Path    		string `json:"path"`

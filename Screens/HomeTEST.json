@@ -2,178 +2,359 @@
   "Components": [
     {
       "ID": "root",
-      "Wrapper": "root"
+      "Wrapper": {
+        "id": "root"
+      },
+      "Styles": {}
     },
     {
       "ID": "responsiveDrawer",
-      "ClassName": "ResponsiveDrawer"
+      "LazyID": "ResponsiveDrawer",
+      "Styles": {}
     },
     {
       "ID": "calendarAgenda",
-      "ClassName": "CalendarAgenda"
+      "LazyID": "CalendarPicker",
+      "Styles": {}
     },
     {
       "ID": "formTurnos",
-      "ClassName": "WrappedComponents",
-      "Wrapper": "testForm"
+      "LazyID": "WrappedComponents",
+      "Wrapper": {
+        "id": "testForm"
+      }
     },
     {
       "ID": "testPaper",
-      "ClassName": "WrappedComponents",
-      "Wrapper": "testPaper"
-    },
-    {
-      "ID": "calendarPaper",
-      "ClassName": "WrappedComponents",
-      "Wrapper": "calendarPaper"
+      "LazyID": "WrappedComponents",
+      "Wrapper": {
+        "id": "testPaper"
+      }
     },
     {
       "ID": "btn",
-      "ClassName": "SubmitButton",
+      "LazyID": "TextButton",
       "ExtProperties": {
-        "caption": "rToken",
+        "label": "rToken",
         "variant": "contained",
-        "color": "primary"
+        "color": "primary",
+        "margin":"normal"
       },
       "Actions": {
         "OnClick":"removeToken"
-      }
-    },
-    {
-      "ID": "test1",
-      "ClassName": "FormInput",
-      "Value": "",
-      "ExtProperties": {
-        "caption": "Prueba",
-        "type": "text",
-        "autoComplete": ""
-      }
-    },
-    {
-      "ID": "tes2",
-      "ClassName": "FormInput",
-      "Value": "",
-      "ExtProperties": {
-        "autoComplete": "",
-        "type": "text",
-        "caption": "Prueba2"
-      }
+      },
+      "Styles": {}
     },
     {
       "ID": "tes3",
-      "ClassName": "FormInput",
+      "LazyID": "TextField",
       "Value": "",
       "ExtProperties": {
-        "caption": "Prueba3",
+        "label": "Prueba3",
         "type": "text",
-        "autoComplete": ""
+        "autoComplete": "",
+        "margin":"normal",
+        "variant": "outlined"
+      },
+      "Styles": {
+        "name": "Column"
       }
     },
     {
       "ID": "tes5",
-      "ClassName": "FormInput",
+      "LazyID": "TextField",
       "Value": "",
       "ExtProperties": {
         "autoComplete": "",
         "type": "text",
-        "caption": "Prueba5"
-      }
+        "label": "Prueba5",
+        "margin":"normal"
+      },
+      "Wrapper": {
+        "item": true,
+        "xs": 12
+      },
+      "Styles": {}
     },
     {
       "ID": "tes4",
-      "ClassName": "FormInput",
+      "LazyID": "TextField",
       "Value": "",
       "ExtProperties": {
         "autoComplete": "",
         "type": "text",
-        "caption": "Prueba4"
-      }
+        "label": "Prueba4",
+        "margin":"normal"
+      },
+      "Wrapper": {
+        "item": true,
+        "xs": 12
+      },
+      "Styles": {}
     },
     {
       "ID": "testGrid",
-      "ClassName": "WrappedComponents",
-      "Wrapper": "testGrid"
+      "LazyID": "WrappedComponents",
+      "Wrapper": {
+        "id": "testGrid"
+      }
+    },
+    {
+      "ID": "testExpPanel",
+      "LazyID": "WrappedComponents",
+      "Wrapper": {
+        "id": "testExpPanel"
+      }
+    },
+    {
+      "ID": "typo1",
+      "LazyID": "Typography",
+      "Value": "Location",
+      "ExtProperties": {
+      },
+      "Styles": {
+        "name": "Column",
+        "component": {
+          "fontSize": 15,
+          "color": "primary"
+        }
+      }
+    },
+    {
+      "ID": "typo2",
+      "LazyID": "Typography",
+      "Value": "Select trip destination",
+      "ExtProperties": {
+      },
+      "Styles": {
+        "name": "Column",
+        "component": {
+          "fontSize": 15,
+          "color": "secondary"
+        }
+      }
+    },
+    {
+      "ID": "typo3",
+      "LazyID": "Typography",
+      "Value": "Select your destination of choice\n<br />\n<a\n    href=\"#sub-labels-and-columns\"\n    LazyID={classes.link}\n>\n    Learn more\n</a>",
+      "ExtProperties": {
+        "variant": "caption",
+        "isHtml": true
+      },
+      "Styles": {
+        "name": "Helper",
+        "component": {
+          "fontSize": 12,
+          "color": "secondary"
+        }
+      }
+    },
+    {
+      "ID": "chip",
+      "LazyID": "Chip",
+      "Value": "",
+      "ExtProperties": {
+        "label": "Barbados"
+      },
+      "Styles": {
+        "name": "Column"
+      }
+    },
+    {
+      "ID": "btn2",
+      "LazyID": "FloatingActionButton",
+      "ExtProperties": {
+        "icon" : "add",
+        "color": "primary",
+        "label": "",
+        "aria-label": "Add"
+      },
+      "Actions": {
+        "OnClick":"removeToken"
+      },
+      "Styles": {}
+    },
+    {
+      "ID": "test",
+      "LazyID": "Test",
+      "Wrapper": {
+        "id": "testList"
+      }
+    },
+    {
+      "ID": "listItem",
+      "LazyID": "ActionItem",
+      "ExtProperties": {
+        "type": "listItem",
+        "secondaryIcon": "comment",
+        "hasSecondary": true,
+        "hasCheck": true,
+        "secondaryWithCheck": false
+      },
+      "Actions": {},
+      "Styles": {}
+    },
+    {
+      "ID": "speedDial",
+      "LazyID": "SpeedDial",
+      "ExtProperties": {
+        "aria-label": "Add"
+      },
+      "Actions": {
+      },
+      "Styles": {}
+    },
+    {
+      "ID": "picker",
+      "LazyID": "WeekPicker",
+      "ExtProperties": {
+        "aria-label": "Add"
+      },
+      "Actions": {},
+      "Styles": {}
     }
+
   ],
   "Wrappers": [
     {
       "ID": "root",
-      "ClassName": "root",
+      "LazyID": "root",
       "Components": ["responsiveDrawer"],
-      "LinkList": ["Turnos","Clientes","Calendario","Historiales"]
+      "ExtProperties": {
+        "LinkList": ["Turnos","Clientes","Calendario","Historiales"]
+      }
     },
     {
       "ID": "testPaper",
-      "ClassName": "Paper",
+      "LazyID": "Paper",
       "Components": ["formTurnos"]
     },
     {
       "ID": "testForm",
-      "ClassName": "form",
+      "LazyID": "form",
       "Components": ["tes3","btn"]
-
-    },
-    {
-      "ID": "calendarPaper",
-      "ClassName": "Paper",
-      "Components": ["calendarAgenda"],
-      "Attributes": {
-        "className": "paper"
-      }
     },
     {
       "ID": "testGrid",
-      "ClassName": "Grid",
-      "Components": ["tes4","tes5"]
+      "LazyID": "Grid",
+      "Components": ["tes5","tes4"],
+      "ExtProperties": {
+        "container": true,
+        "spacing": 0
+      },
+      "renderComponents": {
+        "All": {
+          "components": ["tes5","tes4"]
+        }
+      }
+    },
+    {
+      "ID": "testExpPanel",
+      "LazyID": "ExpansionPanel",
+      "Components": ["typo1","typo2","chip","typo3","btn2","btn3","tes3","empty"],
+      "ExtProperties":{
+        "defaultExpanded": true
+      },
+      "renderComponents": {
+        "Summary": {
+          "components": ["typo1","typo2"]
+        },
+        "Details": {
+          "components": ["empty","chip","typo3"]
+        },
+        "Actions": {
+          "components": ["btn2","btn3"]
+        }
+      }
+    },
+    {
+      "ID": "testList",
+      "LazyID": "SimpleList",
+      "Components": ["listItem","speedDial"],
+      "ExtProperties": {
+        "item": "listItem",
+        "order": ["list","speedDial"],
+        "hasFiller": true,
+        "secondaryText": true,
+        "isDense": false,
+        "isDivided": true,
+        "offset": {
+          "height": 100,
+          "width": 35
+        }
+      }
     }
+
   ],
   "ContentRoutes":[
     {
       "ID": "Turnos",
       "Path": "/turnos",
-      "Caption": "p",
+      "label": "p",
       "Components": ["testPaper"]
     },
     {
       "ID": "Clientes",
       "Path": "/clientes",
-      "Components": ["test1","tes2"]
+      "Components": ["picker"]
     },
     {
       "ID": "Calendario",
       "Path": "/calendario",
-      "Components": ["calendarPaper"]
+      "Components": ["calendarAgenda"]
     },
     {
       "ID": "Historiales",
       "Path": "/historiales",
-      "Components": [""]
+      "Components": ["testExpPanel"]
+    },
+    {
+      "ID": "Test",
+      "Path": "/Test",
+      "Components": ["test"]
     }
   ],
   "LinkList":[
     {
       "ID": "Turnos",
       "Path": "/turnos",
-      "Icon": "EventAvailable",
-      "Components": ["testPaper","formTurnos","tes3","btn"]
+      "Icon": "event_available",
+      "ExtProperties": {
+        "isMain": false
+      }
     },
     {
       "ID": "Clientes",
       "Path": "/clientes",
-      "Icon": "Contacts",
-      "Components": ["test1","tes2"]
+      "Icon": "contacts",
+      "ExtProperties": {
+        "isMain": false
+      }
     },
     {
       "ID": "Calendario",
       "Path": "/calendario",
-      "Icon": "DateRange",
-      "Components": ["testPaper","formTurnos","tes3","btn"]
+      "Icon": "date_range",
+      "ExtProperties": {
+        "isMain": false
+      }
     },
     {
       "ID": "Historiales",
       "Path": "/historiales",
-      "Icon": "Notes",
-      "Components": ["testGrid"]
+      "Icon": "notes",
+      "ExtProperties": {
+        "isMain": false
+      }
+    },
+    {
+      "ID": "Test",
+      "Path": "/test",
+      "Icon": "notes",
+      "ExtProperties": {
+        "isMain": false
+      }
     }
   ]
 }

@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"DuckstackBE/DSUI"
+	"DuckstackBE/DSUI/state"
 	. "DuckstackBE/cloudStorage"
 	"encoding/json"
 	"fmt"
@@ -13,7 +13,7 @@ import (
 )
 
 var UIEndpoint = func (w http.ResponseWriter, req *http.Request) {
-	ui := DSUI.NewUI()
+	ui := state.NewUI()
 	vars := mux.Vars(req)
 	var screen string
 	screen = vars["Screen"]
@@ -22,10 +22,10 @@ var UIEndpoint = func (w http.ResponseWriter, req *http.Request) {
 	switch req.Method {
 		case "GET":
 			w.Header().Set("Content-Type", "application/json")
-			w.Header().Add("Cache-Control", "max-age=86400")
+			//w.Header().Add("Cache-Control", "max-age=86400")
 			w.WriteHeader(http.StatusOK)
 			data := getScreenJson(screen)
-			nUI := ui.NormalizeData(data)
+			nUI := ui.Normalize(data)
 			response, err := json.Marshal(nUI)
 			w.Write(response)
 			if err != nil {
