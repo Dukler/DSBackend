@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"DuckstackBE/DSUI/state"
-	. "DuckstackBE/cloudStorage"
+	"duckstack.com/DSFramework/DSUI/state"
+	. "duckstack.com/DSFramework/cloudStorage"
 	"encoding/json"
 	"fmt"
 	"github.com/gorilla/mux"

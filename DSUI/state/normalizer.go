@@ -1,8 +1,8 @@
 package state
 
 import (
-	. "DuckstackBE/DSUI/components"
-	. "DuckstackBE/DSUI/routing"
+	. "duckstack.com/DSFramework/DSUI/components"
+	. "duckstack.com/DSFramework/DSUI/routing"
 	"strings"
 )
 
