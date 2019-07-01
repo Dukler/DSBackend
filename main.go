@@ -20,6 +20,7 @@ func main() {
 	router = mux.NewRouter()
 	router.HandleFunc("/api/ui/update/{Screen}", controllers.UIEndpoint).Methods("GET", "DELETE", "OPTIONS", "POST")
 	http.Handle("/", router)
+	//log.Print(m.ScreenGet())
 
 
 	handler := handlers.CORS(

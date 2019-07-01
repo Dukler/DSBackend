@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/DuckstackBE.iml" filepath="$PROJECT_DIR$/.idea/DuckstackBE.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/DSFramework.iml" filepath="$PROJECT_DIR$/.idea/DSFramework.iml" />
     </modules>
   </component>
 </project>
