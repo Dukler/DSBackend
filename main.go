@@ -1,8 +1,9 @@
 package main
 
 import (
-	. "duckstack.com/DSFramework/cloudStorage"
-	"duckstack.com/DSFramework/controllers"
+	"github.com/Dukler/DSFramework/dsui/state"
+	"github.com/Dukler/DSFramework/controllers"
+	"github.com/Dukler/DSFramework/data"
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 	_ "github.com/lib/pq"
@@ -18,10 +19,10 @@ var (
 
 func main() {
 	router = mux.NewRouter()
-	router.HandleFunc("/api/ui/update/{Screen}", controllers.UIEndpoint).Methods("GET", "DELETE", "OPTIONS", "POST")
+	state.UIState = state.NewUI()
+	router.HandleFunc("/api/ui/update/{Screen}", controllers.UIEndpoint).Methods("GET")
+	router.HandleFunc("/api/do/{Action}", controllers.DoEndpoint).Methods("POST")
 	http.Handle("/", router)
-	//log.Print(m.ScreenGet())
-
 
 	handler := handlers.CORS(
 		handlers.AllowedOrigins([]string{"*"}),
@@ -31,8 +32,7 @@ func main() {
 
 	port :=  os.Getenv("PORT")
 
-	Firebase.InitBucket("duckstackui")
-
+	data.InitBucket("duckstackui")
 	//REST
 	log.Fatal(http.ListenAndServe(":"+ port, handler))
 }

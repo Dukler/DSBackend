@@ -1,0 +1,53 @@
+{
+  "Components": [
+    {
+      "ID": "list",
+      "LazyID": "WrappedComponents",
+      "Wrapper": {
+        "id": "testList"
+      }
+    },
+    {
+      "ID": "listItem",
+      "LazyID": "ActionItem",
+      "ExtProperties": {
+        "type": "listItem",
+        "secondaryIcon": "comment",
+        "hasSecondary": true,
+        "hasCheck": true,
+        "secondaryAndCheck": true
+      },
+      "Actions": {},
+      "Styles": {}
+    },
+    {
+      "ID": "speedDial",
+      "LazyID": "SpeedDial",
+      "ExtProperties": {
+        "aria-label": "Add"
+      },
+      "Actions": {
+      },
+      "Styles": {}
+    }
+  ],
+  "Wrappers": [
+    {
+      "ID": "testList",
+      "LazyID": "SimpleList",
+      "Components": ["listItem","speedDial"],
+      "ExtProperties": {
+        "item": "listItem",
+        "order": ["list","speedDial"],
+        "hasFiller": true,
+        "secondaryText": true,
+        "isDense": false,
+        "isDivided": true,
+        "offset": {
+          "height": 100,
+          "width": 35
+        }
+      }
+    }
+  ]
+}

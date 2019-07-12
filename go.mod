@@ -1,9 +1,9 @@
-module duckstack.com/DSFramework
+module github.com/Dukler/DSFramework
 
 go 1.12
 
 require (
-	cloud.google.com/go v0.40.0
+	cloud.google.com/go v0.41.0
 	firebase.google.com/go v3.8.1+incompatible
 	github.com/gorilla/handlers v1.4.0
 	github.com/gorilla/mux v1.7.3

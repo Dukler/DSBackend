@@ -1,0 +1,16 @@
+{
+  "Components": [
+    {
+      "ID": "picker",
+      "LazyID": "WeekPicker",
+      "ExtProperties": {
+        "aria-label": "Add"
+      },
+      "Actions": {},
+      "Styles": {}
+    }
+  ],
+  "Wrappers": [
+
+  ]
+}

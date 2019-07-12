@@ -1,0 +1,14 @@
+{
+  "Components": [
+    {
+      "ID": "calendarAgenda",
+      "LazyID": "CalendarPicker",
+      "Styles": {
+        "a": 2
+      }
+    }
+  ],
+  "Wrappers": [
+
+  ]
+}

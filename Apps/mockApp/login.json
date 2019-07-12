@@ -1,0 +1,117 @@
+{
+  "Components": [
+    {
+      "ID": "userPaper",
+      "LazyID": "WrappedComponents",
+      "Wrapper": {
+        "id": "loginPaper"
+      }
+    },
+    {
+      "ID": "userForm",
+      "LazyID": "WrappedComponents",
+      "Wrapper": {
+        "id": "loginForm"
+      }
+    },
+    {
+      "ID": "user",
+      "LazyID": "TextField",
+      "ExtProperties": {
+        "label": "user",
+        "type": "text",
+        "autoComplete": "",
+        "margin":"normal",
+        "variant": "outlined"
+      },
+      "Styles": {
+        "width": "100%"
+      }
+    },
+    {
+      "ID": "password",
+      "LazyID": "TextField",
+      "ExtProperties": {
+        "label": "password",
+        "type": "password",
+        "autoComplete": "",
+        "margin":"normal",
+        "variant": "outlined"
+      },
+      "Styles": {
+        "width": "100%"
+      }
+    },
+    {
+      "ID": "gridUserButtonsWrapper",
+      "LazyID": "WrappedComponents",
+      "Wrapper": {
+        "id": "loginGridButtons"
+      }
+    },
+    {
+      "ID": "createUser",
+      "LazyID": "TextButton",
+      "ExtProperties": {
+        "label": "Crear Usuario",
+        "variant": "contained",
+        "color": "primary"
+      },
+      "Actions": {
+        "onClick": "fml"
+      },
+      "Styles": {},
+      "Wrapper": {
+        "item": true
+      }
+    },
+    {
+      "ID": "login",
+      "LazyID": "TextButton",
+      "ExtProperties": {
+        "label": "Iniciar Sesion",
+        "variant": "contained",
+        "color": "primary"
+      },
+      "Actions": {
+        "onClick": "fml"
+      },
+      "Styles": {
+
+      },
+      "Wrapper": {
+        "item": true
+      }
+    }
+  ],
+  "Wrappers": [
+    {
+      "ID": "loginPaper",
+      "LazyID": "Paper",
+      "Components": ["userForm","gridUserButtonsWrapper"],
+      "ExtProperties": {
+      }
+    },
+    {
+      "ID": "loginForm",
+      "LazyID": "form",
+      "Components": ["user","password"]
+    },
+    {
+      "ID": "loginGridButtons",
+      "LazyID": "Grid",
+      "Components": ["createUser","login"],
+      "ExtProperties": {
+        "container": true,
+        "direction": "row",
+        "justify": "space-between",
+        "alignItems": "flex-start"
+      },
+      "RenderComponents": {
+        "All":{
+          "components": ["createUser","login"]
+        }
+      }
+    }
+  ]
+}
