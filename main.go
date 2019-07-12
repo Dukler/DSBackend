@@ -1,9 +1,9 @@
 package main
 
 import (
-	"duckstack.com/DSBackend/dsui/state"
 	"duckstack.com/DSBackend/controllers"
 	"duckstack.com/DSBackend/data"
+	"duckstack.com/DSBackend/dsui/state"
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 	_ "github.com/lib/pq"
@@ -19,7 +19,7 @@ var (
 
 func main() {
 	router = mux.NewRouter()
-	state.UIState = state.NewUI()
+	dsui.UIState = dsui.NewUI()
 	router.HandleFunc("/api/ui/update/{Screen}", controllers.UIEndpoint).Methods("GET")
 	router.HandleFunc("/api/do/{Action}", controllers.DoEndpoint).Methods("POST")
 	http.Handle("/", router)

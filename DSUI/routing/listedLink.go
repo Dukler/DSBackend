@@ -1,4 +1,4 @@
-package routing
+package dsui
 
 type ListedLink struct {
 	ID      		string `json:"id"`

@@ -1,4 +1,4 @@
-package components
+package dsui
 
 type Component struct {
 	ID      		string         `json:"id"`
