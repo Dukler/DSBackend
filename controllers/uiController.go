@@ -1,10 +1,10 @@
 package controllers
 
 import (
+	"duckstack.com/DSBackend/data"
+	"duckstack.com/DSBackend/dsui"
 	"encoding/json"
 	"fmt"
-	. "duckstack.com/DSBackend/dsui/state"
-	"duckstack.com/DSBackend/data"
 	"net/http"
 	"os"
 )
@@ -16,9 +16,9 @@ var UIEndpoint = func (w http.ResponseWriter, req *http.Request) {
 			//w.Header().Add("Cache-Control", "max-age=86400")
 			w.WriteHeader(http.StatusOK)
 			data :=  data.GetAppJson("mockApp")
-			UIState.Unmarshal(data)
+			dsui.UIState.Unmarshal(data)
 
-			response, err := json.Marshal(UIState)
+			response, err := json.Marshal(dsui.UIState)
 			//response = append(response,response...)
 			_, responseErr := w.Write(response)
 			if err != nil {

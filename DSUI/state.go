@@ -3,31 +3,29 @@ package dsui
 import (
 	"errors"
 	"fmt"
-	. "duckstack.com/DSBackend/dsui/components"
-	. "duckstack.com/DSBackend/dsui/routing"
 	"log"
 	"reflect"
 	"strings"
 )
 
 type Components struct {
-	ByIDs 			map[string]*Component 	  `json:"byIds"`
-	IDs 			[]string                  `json:"ids"`
+	ByIDs 			map[string]*Component `json:"byIds"`
+	IDs 			[]string                `json:"ids"`
 }
 
 type Wrappers struct {
-	ByIDs			map[string]*Wrapper 	`json:"byIds"`
-	IDs 			[]string            	`json:"ids"`
+	ByIDs			map[string]*Wrapper `json:"byIds"`
+	IDs 			[]string              `json:"ids"`
 }
 
 type LinkList struct{
-	ByIDs    		map[string]*ListedLink 	`json:"byIds"`
-	IDs 			[]string               	`json:"ids"`
+	ByIDs    		map[string]*ListedLink `json:"byIds"`
+	IDs 			[]string                 `json:"ids"`
 }
 
 type ContentRoutes struct {
 	ByIDs 			map[string]*ContentRoute `json:"byIds"`
-	IDs 			[]string                 `json:"ids"`
+	IDs 			[]string                   `json:"ids"`
 }
 
 type UI struct {

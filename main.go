@@ -3,7 +3,7 @@ package main
 import (
 	"duckstack.com/DSBackend/controllers"
 	"duckstack.com/DSBackend/data"
-	"duckstack.com/DSBackend/dsui/state"
+	"duckstack.com/DSBackend/dsui"
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 	_ "github.com/lib/pq"
