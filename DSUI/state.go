@@ -48,30 +48,30 @@ func NewUI() *UI{
 	return ui
 }
 
-func (dsui *UI) Unmarshal (data *map[string][]interface{}) {
+func (ui *UI) Unmarshal (data *map[string][]interface{}) {
 	for _,component := range (*data)["Components"] {
 		id := component.(map[string]interface{})["ID"].(string)
 		lazyID := ""
 		if (component.(map[string]interface{})["LazyID"] != nil){
 			lazyID = component.(map[string]interface{})["LazyID"].(string)
 		}
-		dsui.Components.ByIDs[id] = new(Component)
-		err := FillStruct(dsui.Components.ByIDs[id], component.(map[string]interface{}))
+		ui.Components.ByIDs[id] = new(Component)
+		err := FillStruct(ui.Components.ByIDs[id], component.(map[string]interface{}))
 		if err != nil {
 			log.Fatal(err)
 		}
-		dsui.Components.IDs = append(dsui.Components.IDs,id)
+		ui.Components.IDs = append(ui.Components.IDs,id)
 		switch {
 		case strings.Contains(lazyID,"Item"):
-			dsui.ComponentsPool[lazyID] = "Components/Items"
+			ui.ComponentsPool[lazyID] = "Components/Items"
 		case strings.Contains(lazyID,"Button"):
-			dsui.ComponentsPool[lazyID] = "Components/Buttons"
+			ui.ComponentsPool[lazyID] = "Components/Buttons"
 		case strings.Contains(lazyID,"Picker"):
-			dsui.ComponentsPool[lazyID] = "Components/Pickers"
+			ui.ComponentsPool[lazyID] = "Components/Pickers"
 		case lazyID == "":
 			break
 		default:
-			dsui.ComponentsPool[lazyID] = "Components"
+			ui.ComponentsPool[lazyID] = "Components"
 		}
 	}
 	for _,wrapper := range (*data)["Wrappers"] {
@@ -80,33 +80,33 @@ func (dsui *UI) Unmarshal (data *map[string][]interface{}) {
 		if (wrapper.(map[string]interface{})["LazyID"] != nil){
 			lazyID = wrapper.(map[string]interface{})["LazyID"].(string)
 		}
-		dsui.Wrappers.ByIDs[id] = new(Wrapper)
-		err := FillStruct(dsui.Wrappers.ByIDs[id], wrapper.(map[string]interface{}))
+		ui.Wrappers.ByIDs[id] = new(Wrapper)
+		err := FillStruct(ui.Wrappers.ByIDs[id], wrapper.(map[string]interface{}))
 		if err != nil {
 			log.Fatal(err)
 		}
-		dsui.Wrappers.IDs = append(dsui.Wrappers.IDs,id)
+		ui.Wrappers.IDs = append(ui.Wrappers.IDs,id)
 		if strings.Title(lazyID) == lazyID {
-			dsui.ComponentsPool[lazyID]= "Wrappers"
+			ui.ComponentsPool[lazyID]= "Wrappers"
 		}
 	}
 	for _,listedList := range (*data)["LinkList"] {
 		id := listedList.(map[string]interface{})["ID"].(string)
-		dsui.LinkList.ByIDs[id] = new(ListedLink)
-		err := FillStruct(dsui.LinkList.ByIDs[id], listedList.(map[string]interface{}))
+		ui.LinkList.ByIDs[id] = new(ListedLink)
+		err := FillStruct(ui.LinkList.ByIDs[id], listedList.(map[string]interface{}))
 		if err != nil {
 			log.Fatal(err)
 		}
-		dsui.LinkList.IDs = append(dsui.LinkList.IDs,id)
+		ui.LinkList.IDs = append(ui.LinkList.IDs,id)
 	}
 	for _,contentRoute := range (*data)["ContentRoutes"] {
 		id := contentRoute.(map[string]interface{})["ID"].(string)
-		dsui.ContentRoutes.ByIDs[id] = new(ContentRoute)
-		err := FillStruct(dsui.ContentRoutes.ByIDs[id], contentRoute.(map[string]interface{}))
+		ui.ContentRoutes.ByIDs[id] = new(ContentRoute)
+		err := FillStruct(ui.ContentRoutes.ByIDs[id], contentRoute.(map[string]interface{}))
 		if err != nil {
 			log.Fatal(err)
 		}
-		dsui.ContentRoutes.IDs = append(dsui.ContentRoutes.IDs,id)
+		ui.ContentRoutes.IDs = append(ui.ContentRoutes.IDs,id)
 	}
 }
 
