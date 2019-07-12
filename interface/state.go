@@ -1,4 +1,4 @@
-package dsui
+package _interface
 
 import (
 	"errors"

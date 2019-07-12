@@ -1,4 +1,4 @@
-package dsui
+package _interface
 
 //type DSWrapper struct{
 //	Wrappers map[string]Wrapper	`json:"wrappers"`

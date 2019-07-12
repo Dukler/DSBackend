@@ -1,4 +1,4 @@
-package dsui
+package _interface
 
 type ContentRoute struct {
 	ID      	string 			`json:"id"`
