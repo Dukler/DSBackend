@@ -1,9 +1,9 @@
 package main
 
 import (
-	"duckstack.com/DSBackend/controllers"
-	"duckstack.com/DSBackend/data"
-	"duckstack.com/DSBackend/dsui"
+	"DSBackend/controllers"
+	"DSBackend/data"
+	"DSBackend/dsui"
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 	_ "github.com/lib/pq"

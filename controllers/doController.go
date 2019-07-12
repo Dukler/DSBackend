@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"duckstack.com/DSBackend/actions"
+	"DSBackend/actions"
 	"encoding/json"
 	"fmt"
 	"github.com/gorilla/mux"

@@ -3,8 +3,8 @@ package actions
 import (
 	"encoding/json"
 	"fmt"
-	d "duckstack.com/DSBackend/data"
-	"duckstack.com/DSBackend/do"
+	d "DSBackend/data"
+	"DSBackend/do"
 	"io"
 )
 

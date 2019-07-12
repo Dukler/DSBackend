@@ -1,4 +1,4 @@
-module duckstack.com/DSBackend
+module DSBackend
 
 go 1.12
 

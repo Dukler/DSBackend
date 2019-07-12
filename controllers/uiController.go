@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"duckstack.com/DSBackend/data"
-	"duckstack.com/DSBackend/dsui"
+	"DSBackend/data"
+	"DSBackend/dsui"
 	"encoding/json"
 	"fmt"
 	"net/http"
