@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/Dukler/DSFramework/dsui/state"
-	"github.com/Dukler/DSFramework/controllers"
-	"github.com/Dukler/DSFramework/data"
+	"duckstack.com/DSBackend/dsui/state"
+	"duckstack.com/DSBackend/controllers"
+	"duckstack.com/DSBackend/data"
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 	_ "github.com/lib/pq"

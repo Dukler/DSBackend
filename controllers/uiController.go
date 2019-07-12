@@ -3,8 +3,8 @@ package controllers
 import (
 	"encoding/json"
 	"fmt"
-	. "github.com/Dukler/DSFramework/dsui/state"
-	"github.com/Dukler/DSFramework/data"
+	. "duckstack.com/DSBackend/dsui/state"
+	"duckstack.com/DSBackend/data"
 	"net/http"
 	"os"
 )

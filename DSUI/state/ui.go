@@ -3,8 +3,8 @@ package state
 import (
 	"errors"
 	"fmt"
-	. "github.com/Dukler/DSFramework/dsui/components"
-	. "github.com/Dukler/DSFramework/dsui/routing"
+	. "duckstack.com/DSBackend/dsui/components"
+	. "duckstack.com/DSBackend/dsui/routing"
 	"log"
 	"reflect"
 	"strings"

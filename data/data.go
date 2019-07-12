@@ -17,23 +17,29 @@ func InitBucket (bucketName string) {
 
 func GetAppJson(name string) *map[string][]interface{} {
 	data := make(map[string][]interface{})
-	if os.Getenv("APP_ENV") == "NotDebug" {
-		s := fmt.Sprintf("./Apps/%s", name)
-		path, _ := filepath.Abs(s)
-		err := filepath.Walk(path, mapData(&data))
-		if err != nil {
-			log.Fatal(err)
-		}
-	} else {
-		//s := fmt.Sprintf("SPA/%s.json", name)
-		//data = Firebase.ReadFile(s)
-		s := fmt.Sprintf("%s/", name)
-
-		a := Firebase.ReadFile(s)
-
-		fmt.Print(a)
-		log.Print(s,a)
+	s := fmt.Sprintf("./Apps/%s", name)
+	path, _ := filepath.Abs(s)
+	err := filepath.Walk(path, mapData(&data))
+	if err != nil {
+		log.Fatal(err)
 	}
+	//if os.Getenv("APP_ENV") != "Debug" {
+	//	s := fmt.Sprintf("./Apps/%s", name)
+	//	path, _ := filepath.Abs(s)
+	//	err := filepath.Walk(path, mapData(&data))
+	//	if err != nil {
+	//		log.Fatal(err)
+	//	}
+	//} else {
+	//	//s := fmt.Sprintf("SPA/%s.json", name)
+	//	//data = Firebase.ReadFile(s)
+	//	s := fmt.Sprintf("%s/", name)
+	//
+	//	a := Firebase.ReadFile(s)
+	//
+	//	fmt.Print(a)
+	//	log.Print(s,a)
+	//}
 	return &data
 }
 

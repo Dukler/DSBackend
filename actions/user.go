@@ -3,8 +3,8 @@ package actions
 import (
 	"encoding/json"
 	"fmt"
-	d "github.com/Dukler/DSFramework/data"
-	"github.com/Dukler/DSFramework/do"
+	d "duckstack.com/DSBackend/data"
+	"duckstack.com/DSBackend/do"
 	"io"
 )
 
