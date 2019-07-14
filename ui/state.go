@@ -1,4 +1,4 @@
-package _interface
+package ui
 
 import (
 	"errors"
@@ -36,7 +36,7 @@ type UI struct {
 	ComponentsPool		map[string]string	`json:"componentsPool"`
 }
 
-var UIState *UI
+//var UIState *UI
 
 func NewUI() *UI{
 	ui := new(UI)
@@ -108,6 +108,7 @@ func (ui *UI) Unmarshal (data *map[string][]interface{}) {
 		}
 		ui.ContentRoutes.IDs = append(ui.ContentRoutes.IDs,id)
 	}
+	log.Print("ad")
 }
 
 func SetField(obj interface{}, name string, value interface{}) error {

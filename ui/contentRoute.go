@@ -1,4 +1,4 @@
-package _interface
+package ui
 
 type ContentRoute struct {
 	ID      	string 			`json:"id"`

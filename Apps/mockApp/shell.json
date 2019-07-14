@@ -17,7 +17,6 @@
   "Wrappers": [
     {
       "ID": "root",
-      "LazyID": "root",
       "Components": ["responsiveDrawer"],
       "ExtProperties": {
         "LinkList": ["Turnos","Clientes","Calendario","Historiales"]
@@ -49,6 +48,11 @@
       "ID": "Login",
       "Path": "/Login",
       "Components": ["userPaper"]
+    },
+    {
+      "ID": "Confirmation",
+      "Path": "/placeholder",
+      "Components": [""]
     }
   ],
   "LinkList":[

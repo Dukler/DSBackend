@@ -3,7 +3,6 @@ package main
 import (
 	"DSBackend/controllers"
 	"DSBackend/data"
-	"DSBackend/interface"
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 	_ "github.com/lib/pq"
@@ -19,7 +18,7 @@ var (
 
 func main() {
 	router = mux.NewRouter()
-	_interface.UIState = _interface.NewUI()
+
 	router.HandleFunc("/api/ui/update/{Screen}", controllers.UIEndpoint).Methods("GET")
 	router.HandleFunc("/api/do/{Action}", controllers.DoEndpoint).Methods("POST")
 	http.Handle("/", router)

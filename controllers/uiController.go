@@ -2,7 +2,7 @@ package controllers
 
 import (
 	"DSBackend/data"
-	"DSBackend/interface"
+	"DSBackend/ui"
 	"encoding/json"
 	"fmt"
 	"net/http"
@@ -16,9 +16,9 @@ var UIEndpoint = func (w http.ResponseWriter, req *http.Request) {
 			//w.Header().Add("Cache-Control", "max-age=86400")
 			w.WriteHeader(http.StatusOK)
 			data :=  data.GetAppJson("mockApp")
-			_interface.UIState.Unmarshal(data)
-
-			response, err := json.Marshal(_interface.UIState)
+			responseUI := ui.NewUI()
+			responseUI.Unmarshal(data)
+			response, err := json.Marshal(responseUI)
 			//response = append(response,response...)
 			_, responseErr := w.Write(response)
 			if err != nil {
@@ -32,7 +32,7 @@ var UIEndpoint = func (w http.ResponseWriter, req *http.Request) {
 
 		//case "POST":
 		//	decoder := json.NewDecoder(req.Body)
-		//	var test interface{}
+		//	var test ui{}
 		//	var uiState []byte
 		//	err := decoder.Decode(&test)
 		//	uiState, err = json.Marshal(&test)

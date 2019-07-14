@@ -32,7 +32,7 @@ func decodeBody(body io.ReadCloser) map[string]interface{}{
 	return b
 }
 
-func Login (data map[string]interface{}) interface{}{
+func Login (data map[string]interface{}) *interface{}{
 	//usr := new(user)
 	//usr.Email = data["email"].(string)
 	//usr.Password = data["password"].(string)
@@ -40,17 +40,18 @@ func Login (data map[string]interface{}) interface{}{
 	jsonStr := readData(data)
 	response := do.Post(url,jsonStr)
 	body := decodeBody(response.Body)
-	token := body["user"].(map[string]interface{})["token"].(string)
+	token := body["user"].(map[string]interface{})["token"]
 	//log.Print(token)
-	return token
+	return &token
 }
 
-func CreateUser (data map[string]interface{}) interface{}{
+func CreateUser (data map[string]interface{}) *interface{}{
 	url := fmt.Sprintf("%sapi/user/new",  d.GetApi("login"))
 	jsonStr := readData(data)
 	response := do.Post(url,jsonStr)
-	body := decodeBody(response.Body)
-	//token := body["user"].(map[string]interface{})["token"].(string)
+	var body interface{}
+	body = decodeBody(response.Body)
+	//token := body["user"].(map[string]ui{})["token"].(string)
 	//log.Print(token)
-	return body
+	return &body
 }

@@ -21,8 +21,7 @@ var DoEndpoint = func (w http.ResponseWriter, req *http.Request) {
 		if err != nil {
 			panic(err)
 		}
-		var answer interface{}
-		actions.Dispatch(action,payload,&answer)
+		answer := actions.Dispatch(action,payload)
 		w.WriteHeader(http.StatusOK)
 		response, err := json.Marshal(answer)
 		_, responseErr := w.Write(response)

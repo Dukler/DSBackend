@@ -1,13 +1,13 @@
 package actions
 
-func Dispatch (action string, payload map[string]interface{}, answer *interface{}){
+func Dispatch (action string, payload map[string]interface{}) *interface{}{
 
 	switch action {
 	case "login":
-		*answer = Login(payload)
+		return Login(payload)
 	case "register":
-		*answer = CreateUser(payload)
+		return CreateUser(payload)
 	default:
-		break
+		return nil
 	}
 }

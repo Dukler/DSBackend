@@ -1,4 +1,4 @@
-package _interface
+package ui
 
 type ListedLink struct {
 	ID      		string `json:"id"`
