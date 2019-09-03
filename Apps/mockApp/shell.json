@@ -43,16 +43,6 @@
       "ID": "Historiales",
       "Path": "/historiales",
       "Components": [""]
-    },
-    {
-      "ID": "Login",
-      "Path": "/Login",
-      "Components": ["userPaper"]
-    },
-    {
-      "ID": "Confirmation",
-      "Path": "/placeholder",
-      "Components": [""]
     }
   ],
   "LinkList":[
@@ -83,14 +73,6 @@
     {
       "ID": "Historiales",
       "Path": "/historiales",
-      "Icon": "notes",
-      "ExtProperties": {
-        "isMain": false
-      }
-    },
-    {
-      "ID": "Login",
-      "Path": "/login",
       "Icon": "notes",
       "ExtProperties": {
         "isMain": false

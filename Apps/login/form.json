@@ -15,10 +15,10 @@
       }
     },
     {
-      "ID": "user",
+      "ID": "email",
       "LazyID": "TextField",
       "ExtProperties": {
-        "label": "user",
+        "label": "email",
         "type": "text",
         "autoComplete": "",
         "margin":"normal",
@@ -95,7 +95,7 @@
     {
       "ID": "loginForm",
       "LazyID": "form",
-      "Components": ["user","password"]
+      "Components": ["email","password"]
     },
     {
       "ID": "loginGridButtons",

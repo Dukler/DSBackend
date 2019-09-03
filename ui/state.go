@@ -108,7 +108,6 @@ func (ui *UI) Unmarshal (data *map[string][]interface{}) {
 		}
 		ui.ContentRoutes.IDs = append(ui.ContentRoutes.IDs,id)
 	}
-	log.Print("ad")
 }
 
 func SetField(obj interface{}, name string, value interface{}) error {
@@ -125,10 +124,11 @@ func SetField(obj interface{}, name string, value interface{}) error {
 
 	structFieldType := structFieldValue.Type()
 	val := reflect.ValueOf(value)
-	if structFieldType != val.Type() {
+
+	if structFieldType.Kind() != reflect.Interface && structFieldType != val.Type() {
 		a := val.Type().String()
 		b := structFieldType.String()
-		log.Print(a,b)
+		log.Print(a," ",b)
 		invalidTypeError := errors.New("Provided value type didn't match obj field type")
 		return invalidTypeError
 	}

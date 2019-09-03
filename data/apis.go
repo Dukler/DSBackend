@@ -7,13 +7,7 @@ func GetApi(name string) string {
 	if (os.Getenv("APP_ENV") == "Debug"){
 		url = "http://localhost:8082/"
 	}else{
-		switch name {
-		case "login":
-			url = "https://dsloginserver.herokuapp.com/"
-			break
-		default:
-			break
-		}
+		url = "https://dsappserver.herokuapp.com/"
 	}
 
 	return url

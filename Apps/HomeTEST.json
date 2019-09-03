@@ -241,7 +241,7 @@
         "container": true,
         "spacing": 0
       },
-      "renderComponents": {
+      "RenderComponents": {
         "All": {
           "components": ["tes5","tes4"]
         }
@@ -254,7 +254,7 @@
       "ExtProperties":{
         "defaultExpanded": true
       },
-      "renderComponents": {
+      "RenderComponents": {
         "Summary": {
           "components": ["typo1","typo2"]
         },
@@ -289,7 +289,6 @@
     {
       "ID": "Turnos",
       "Path": "/turnos",
-      "label": "p",
       "Components": ["testPaper"]
     },
     {

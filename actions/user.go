@@ -6,6 +6,7 @@ import (
 	d "DSBackend/data"
 	"DSBackend/do"
 	"io"
+	"net/http"
 )
 
 //type user struct {
@@ -36,13 +37,19 @@ func Login (data map[string]interface{}) *interface{}{
 	//usr := new(user)
 	//usr.Email = data["email"].(string)
 	//usr.Password = data["password"].(string)
-	url := fmt.Sprintf("%sapi/user/login",  d.GetApi("login"))
+	url := fmt.Sprintf("%sapi/users/login",  d.GetApi("login"))
 	jsonStr := readData(data)
 	response := do.Post(url,jsonStr)
-	body := decodeBody(response.Body)
-	token := body["user"].(map[string]interface{})["token"]
+	token := new(interface{})
+	if response.StatusCode == http.StatusOK{
+		body := decodeBody(response.Body)
+		*token = body["token"]
+	}else if response.StatusCode == http.StatusUnauthorized{
+		fmt.Print("wrong")
+	}
+	 //.(map[string]interface{})["token"]
 	//log.Print(token)
-	return &token
+	return token
 }
 
 func CreateUser (data map[string]interface{}) *interface{}{

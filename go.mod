@@ -10,4 +10,5 @@ require (
 	github.com/lib/pq v1.1.1
 	golang.org/x/net v0.0.0-20190628185345-da137c7871d7
 	google.golang.org/api v0.7.0
+	google.golang.org/grpc v1.21.1
 )

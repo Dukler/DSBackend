@@ -15,9 +15,10 @@ var UIEndpoint = func (w http.ResponseWriter, req *http.Request) {
 			w.Header().Set("Content-Type", "application/json")
 			//w.Header().Add("Cache-Control", "max-age=86400")
 			w.WriteHeader(http.StatusOK)
-			data :=  data.GetAppJson("mockApp")
+			var answer *map[string][]interface{}
+			answer = data.GetApp(req)
 			responseUI := ui.NewUI()
-			responseUI.Unmarshal(data)
+			responseUI.Unmarshal(answer)
 			response, err := json.Marshal(responseUI)
 			//response = append(response,response...)
 			_, responseErr := w.Write(response)
@@ -29,20 +30,6 @@ var UIEndpoint = func (w http.ResponseWriter, req *http.Request) {
 				fmt.Println(err)
 				os.Exit(2)
 			}
-
-		//case "POST":
-		//	decoder := json.NewDecoder(req.Body)
-		//	var test ui{}
-		//	var uiState []byte
-		//	err := decoder.Decode(&test)
-		//	uiState, err = json.Marshal(&test)
-		//	if err != nil {
-		//		panic(err)
-		//	}
-		//	fmt.Println(uiState)
-		//
-		//case "OPTIONS":
-		//	w.WriteHeader(http.StatusOK)
 	}
 
 }
