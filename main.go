@@ -18,8 +18,8 @@ func main() {
 	router := *chi.NewRouter()
 
 	c := cors.New(cors.Options{
-		AllowedOrigins: []string{"https://duckstack.com"}, // Use this to allow specific origin hosts
-		//AllowedOrigins:   []string{"*"},
+		//AllowedOrigins: []string{"https://duckstack.com"}, // Use this to allow specific origin hosts
+		AllowedOrigins:   []string{"*"},
 
 		// AllowOriginFunc:  func(r *http.Request, origin string) bool { return true },
 		AllowedMethods:   []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
