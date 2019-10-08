@@ -36,12 +36,6 @@ func main() {
 
 	http.Handle("/", &router)
 
-	//handler := handlers.CORS(
-	//	handlers.AllowedOrigins([]string{"*"}),
-	//	handlers.AllowedMethods([]string{"GET", "POST","OPTIONS"}),
-	//	handlers.AllowedHeaders([]string{"Content-Type", "X-Requested-With",  "Access-Control-Allow-Headers", "Authorization"}),
-	//)(router)
-
 	port :=  os.Getenv("PORT")
 
 	data.InitBucket("duckstackui")

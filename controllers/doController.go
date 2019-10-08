@@ -4,7 +4,7 @@ import (
 	"DSBackend/actions"
 	"encoding/json"
 	"fmt"
-	"github.com/gorilla/mux"
+	"github.com/go-chi/chi"
 	"net/http"
 	"os"
 )
@@ -13,8 +13,8 @@ var DoEndpoint = func (w http.ResponseWriter, req *http.Request) {
 	switch req.Method {
 	case "POST":
 		w.Header().Set("Content-Type", "application/json")
-		vars := mux.Vars(req)
-		action := vars["Action"]
+		//vars := mux.Vars(req)
+		action := chi.URLParam(req, "Action")
 		decoder := json.NewDecoder(req.Body)
 		var payload map[string]interface{}
 		err := decoder.Decode(&payload)
