@@ -1,0 +1,44 @@
+{
+    "Components": [
+        {
+            "ID": "root",
+            "Wrapper": {
+                "id": "root"
+            },
+            "Styles": {}
+        },
+        {
+            "ID": "routes",
+            "LazyID": "RootRouter",
+            "Styles": {}
+        }
+    ],
+    "Wrappers": [
+        {
+            "ID": "login",
+            "Components": [
+                "routes"
+            ],
+            "ExtProperties": {
+                "LinkList": [],
+                "Shell": true
+            }
+        }
+    ],
+    "ContentRoutes": [
+        {
+            "ID": "Login",
+            "Path": "/login",
+            "Components": [
+                "userPaper"
+            ]
+        },
+        {
+            "ID": "Confirmation",
+            "Path": "/placeholder",
+            "Components": [
+                ""
+            ]
+        }
+    ]
+}

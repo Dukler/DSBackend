@@ -12,27 +12,32 @@
       "LazyID": "RootRouter",
       "Styles": {}
     }
-
   ],
   "Wrappers": [
     {
       "ID": "root",
-      "Components": ["routes"],
+      "Components": [
+        "routes"
+      ],
       "ExtProperties": {
         "LinkList": []
       }
     }
   ],
-  "ContentRoutes":[
+  "ContentRoutes": [
     {
       "ID": "Login",
-      "Path": "/",
-      "Components": ["userPaper"]
+      "Path": "/login",
+      "Components": [
+        "userPaper"
+      ]
     },
     {
       "ID": "Confirmation",
       "Path": "/placeholder",
-      "Components": [""]
+      "Components": [
+        ""
+      ]
     }
   ]
 }

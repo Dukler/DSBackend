@@ -14,11 +14,11 @@ import (
 	"strings"
 )
 
-func InitBucket (bucketName string) {
+func InitBucket(bucketName string) {
 	Firebase.InitBucket(bucketName)
 }
 
-func readData (data map[string]interface{}) []byte{
+func readData(data map[string]interface{}) []byte {
 	jsonStr, err := json.Marshal(data)
 	if err != nil {
 		fmt.Println(err)
@@ -27,7 +27,7 @@ func readData (data map[string]interface{}) []byte{
 	return jsonStr
 }
 
-func decodeBody(body io.ReadCloser) map[string]interface{}{
+func decodeBody(body io.ReadCloser) map[string]interface{} {
 	decoder := json.NewDecoder(body)
 	var b map[string]interface{}
 	err := decoder.Decode(&b)
@@ -37,16 +37,17 @@ func decodeBody(body io.ReadCloser) map[string]interface{}{
 	return b
 }
 
-func cleanURL(origin *string){
-	*origin = strings.TrimPrefix(*origin,"https")
-	*origin = strings.TrimPrefix(*origin,"http")
-	*origin = strings.TrimPrefix(*origin,"://")
-	*origin = strings.TrimPrefix(*origin,"www.")
+func cleanURL(origin *string) {
+	*origin = strings.TrimPrefix(*origin, "https")
+	*origin = strings.TrimPrefix(*origin, "http")
+	*origin = strings.TrimPrefix(*origin, "://")
+	*origin = strings.TrimPrefix(*origin, "www.")
 }
 
-func GetApp(req *http.Request) *map[string][]interface{}{
+func GetApp(req *http.Request) *map[string][]interface{} {
 	data := make(map[string]interface{})
-	url := fmt.Sprintf("%sapi/host/app",  GetApi("login"))
+	// url := fmt.Sprintf("%sapi/host/app",  GetApi("login"))
+	url := fmt.Sprintf("%sapi/host/app", GetApi(""))
 	domain := req.Header.Get("origin")
 	cleanURL(&domain)
 
@@ -54,7 +55,7 @@ func GetApp(req *http.Request) *map[string][]interface{}{
 	data["token"] = req.Header.Get("Authorization")
 
 	jsonStr := readData(data)
-	response := do.Post(url,jsonStr)
+	response := do.Post(url, jsonStr)
 	body := decodeBody(response.Body)
 	appName := body["appName"].(string)
 
@@ -65,8 +66,8 @@ func GetApp(req *http.Request) *map[string][]interface{}{
 		log.Fatal(err)
 	}
 	for _, f := range files {
-		if strings.Contains(f.Name(),"setup.config"){
-			p := filepath.ToSlash(fmt.Sprintf(path + "/%s", f.Name()))
+		if strings.Contains(f.Name(), "setup.config") {
+			p := filepath.ToSlash(fmt.Sprintf(path+"/%s", f.Name()))
 			aux := make(map[string]map[string]interface{})
 			var jsonData []byte
 			jsonData, err := ioutil.ReadFile(p)
@@ -78,12 +79,12 @@ func GetApp(req *http.Request) *map[string][]interface{}{
 				log.Fatal(err)
 			}
 			//status, err := strconv.Atoi(response.Header.Get("status"))
-			if aux["credentials"]["login"] == true && body["loggedIn"] != true {
-				path,err = filepath.Abs(fmt.Sprintf("./Apps/%s", aux["login"]["appName"]))
-				if err != nil {
-					log.Fatal(err)
-				}
-			}
+			// if aux["credentials"]["login"] == true && body["loggedIn"] != true {
+			// 	path,err = filepath.Abs(fmt.Sprintf("./Apps/%s", aux["login"]["appName"]))
+			// 	if err != nil {
+			// 		log.Fatal(err)
+			// 	}
+			// }
 		}
 	}
 
@@ -118,7 +119,6 @@ func getAppJson(path string) *map[string][]interface{} {
 	return &data
 }
 
-
 func mapData(data *map[string][]interface{}) filepath.WalkFunc {
 	return func(path string, info os.FileInfo, err error) error {
 		var dataError error
@@ -129,7 +129,7 @@ func mapData(data *map[string][]interface{}) filepath.WalkFunc {
 		fileName := filepath.Base(path)
 		fileNameNoExt := strings.TrimSuffix(fileName, fileExt)
 		//log.Print(test)
-		if fileExt == ".json" && !strings.Contains(fileNameNoExt,".") {
+		if fileExt == ".json" && !strings.Contains(fileNameNoExt, ".") {
 			//name := trimSuffix(info.Name(), ".json")
 			aux := make(map[string][]interface{})
 			var jsonData []byte

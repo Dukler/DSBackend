@@ -11,18 +11,15 @@ import (
 	"os"
 )
 
-
-
-
 func main() {
 	router := *chi.NewRouter()
 
 	c := cors.New(cors.Options{
 		//AllowedOrigins: []string{"https://duckstack.com"}, // Use this to allow specific origin hosts
-		AllowedOrigins:   []string{"*"},
+		AllowedOrigins: []string{"*"},
 
 		// AllowOriginFunc:  func(r *http.Request, origin string) bool { return true },
-		AllowedMethods:   []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
+		AllowedMethods: []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
 		//AllowedHeaders:   []string{"Accept", "Authorization", "Content-Type", "X-CSRF-Token", "X-Requested-With",  "Access-Control-Allow-Headers"},
 		AllowedHeaders:   []string{"*"},
 		ExposedHeaders:   []string{"Link"},
@@ -36,10 +33,9 @@ func main() {
 
 	http.Handle("/", &router)
 
-	port :=  os.Getenv("PORT")
+	port := os.Getenv("PORT")
 
 	data.InitBucket("duckstackui")
 	//REST
-	log.Fatal(http.ListenAndServe(":"+ port, &router))
+	log.Fatal(http.ListenAndServe(":"+port, &router))
 }
-
