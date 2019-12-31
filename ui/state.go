@@ -9,50 +9,50 @@ import (
 )
 
 type Components struct {
-	ByIDs 			map[string]*Component `json:"byIds"`
-	IDs 			[]string                `json:"ids"`
+	ByIDs map[string]*Component `json:"byIds"`
+	IDs   []string              `json:"ids"`
 }
 
-type Wrappers struct {
-	ByIDs			map[string]*Wrapper `json:"byIds"`
-	IDs 			[]string              `json:"ids"`
+type Containers struct {
+	ByIDs map[string]*Container `json:"byIds"`
+	IDs   []string              `json:"ids"`
 }
 
-type LinkList struct{
-	ByIDs    		map[string]*ListedLink `json:"byIds"`
-	IDs 			[]string                 `json:"ids"`
+type LinkList struct {
+	ByIDs map[string]*ListedLink `json:"byIds"`
+	IDs   []string               `json:"ids"`
 }
 
 type ContentRoutes struct {
-	ByIDs 			map[string]*ContentRoute `json:"byIds"`
-	IDs 			[]string                   `json:"ids"`
+	ByIDs map[string]*ContentRoute `json:"byIds"`
+	IDs   []string                 `json:"ids"`
 }
 
 type UI struct {
-	Components      	`json:"components"`
-	Wrappers		   	`json:"wrappers"`
-	LinkList    	    `json:"linkList"`
-	ContentRoutes 	 	`json:"contentRoutes"`
-	ComponentsPool		map[string]string	`json:"componentsPool"`
+	Components     `json:"components"`
+	Containers     `json:"containers"`
+	LinkList       `json:"linkList"`
+	ContentRoutes  `json:"contentRoutes"`
+	ComponentsPool map[string]string `json:"componentsPool"`
 }
 
 //var UIState *UI
 
-func NewUI() *UI{
+func NewUI() *UI {
 	ui := new(UI)
 	ui.Components.ByIDs = make(map[string]*Component)
-	ui.Wrappers.ByIDs = make(map[string]*Wrapper)
+	ui.Containers.ByIDs = make(map[string]*Container)
 	ui.LinkList.ByIDs = make(map[string]*ListedLink)
 	ui.ContentRoutes.ByIDs = make(map[string]*ContentRoute)
 	ui.ComponentsPool = make(map[string]string)
 	return ui
 }
 
-func (ui *UI) Unmarshal (data *map[string][]interface{}) {
-	for _,component := range (*data)["Components"] {
+func (ui *UI) Unmarshal(data *map[string][]interface{}) {
+	for _, component := range (*data)["Components"] {
 		id := component.(map[string]interface{})["ID"].(string)
 		lazyID := ""
-		if (component.(map[string]interface{})["LazyID"] != nil){
+		if component.(map[string]interface{})["LazyID"] != nil {
 			lazyID = component.(map[string]interface{})["LazyID"].(string)
 		}
 		ui.Components.ByIDs[id] = new(Component)
@@ -60,13 +60,13 @@ func (ui *UI) Unmarshal (data *map[string][]interface{}) {
 		if err != nil {
 			log.Fatal(err)
 		}
-		ui.Components.IDs = append(ui.Components.IDs,id)
+		ui.Components.IDs = append(ui.Components.IDs, id)
 		switch {
-		case strings.Contains(lazyID,"Item"):
+		case strings.Contains(lazyID, "Item"):
 			ui.ComponentsPool[lazyID] = "Components/Items"
-		case strings.Contains(lazyID,"Button"):
+		case strings.Contains(lazyID, "Button"):
 			ui.ComponentsPool[lazyID] = "Components/Buttons"
-		case strings.Contains(lazyID,"Picker"):
+		case strings.Contains(lazyID, "Picker"):
 			ui.ComponentsPool[lazyID] = "Components/Pickers"
 		case lazyID == "":
 			break
@@ -74,39 +74,39 @@ func (ui *UI) Unmarshal (data *map[string][]interface{}) {
 			ui.ComponentsPool[lazyID] = "Components"
 		}
 	}
-	for _,wrapper := range (*data)["Wrappers"] {
-		id := wrapper.(map[string]interface{})["ID"].(string)
+	for _, container := range (*data)["Containers"] {
+		id := container.(map[string]interface{})["ID"].(string)
 		lazyID := ""
-		if (wrapper.(map[string]interface{})["LazyID"] != nil){
-			lazyID = wrapper.(map[string]interface{})["LazyID"].(string)
+		if container.(map[string]interface{})["LazyID"] != nil {
+			lazyID = container.(map[string]interface{})["LazyID"].(string)
 		}
-		ui.Wrappers.ByIDs[id] = new(Wrapper)
-		err := FillStruct(ui.Wrappers.ByIDs[id], wrapper.(map[string]interface{}))
+		ui.Containers.ByIDs[id] = new(Container)
+		err := FillStruct(ui.Containers.ByIDs[id], container.(map[string]interface{}))
 		if err != nil {
 			log.Fatal(err)
 		}
-		ui.Wrappers.IDs = append(ui.Wrappers.IDs,id)
+		ui.Containers.IDs = append(ui.Containers.IDs, id)
 		if strings.Title(lazyID) == lazyID {
-			ui.ComponentsPool[lazyID]= "Wrappers"
+			ui.ComponentsPool[lazyID] = "Containers"
 		}
 	}
-	for _,listedList := range (*data)["LinkList"] {
+	for _, listedList := range (*data)["LinkList"] {
 		id := listedList.(map[string]interface{})["ID"].(string)
 		ui.LinkList.ByIDs[id] = new(ListedLink)
 		err := FillStruct(ui.LinkList.ByIDs[id], listedList.(map[string]interface{}))
 		if err != nil {
 			log.Fatal(err)
 		}
-		ui.LinkList.IDs = append(ui.LinkList.IDs,id)
+		ui.LinkList.IDs = append(ui.LinkList.IDs, id)
 	}
-	for _,contentRoute := range (*data)["ContentRoutes"] {
+	for _, contentRoute := range (*data)["ContentRoutes"] {
 		id := contentRoute.(map[string]interface{})["ID"].(string)
 		ui.ContentRoutes.ByIDs[id] = new(ContentRoute)
 		err := FillStruct(ui.ContentRoutes.ByIDs[id], contentRoute.(map[string]interface{}))
 		if err != nil {
 			log.Fatal(err)
 		}
-		ui.ContentRoutes.IDs = append(ui.ContentRoutes.IDs,id)
+		ui.ContentRoutes.IDs = append(ui.ContentRoutes.IDs, id)
 	}
 }
 
@@ -128,7 +128,7 @@ func SetField(obj interface{}, name string, value interface{}) error {
 	if structFieldType.Kind() != reflect.Interface && structFieldType != val.Type() {
 		a := val.Type().String()
 		b := structFieldType.String()
-		log.Print(a," ",b)
+		log.Print(a, " ", b)
 		invalidTypeError := errors.New("Provided value type didn't match obj field type")
 		return invalidTypeError
 	}

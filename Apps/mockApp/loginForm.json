@@ -3,14 +3,14 @@
         {
             "ID": "userPaper",
             "LazyID": "WrappedComponents",
-            "Wrapper": {
+            "Container": {
                 "id": "loginPaper"
             }
         },
         {
             "ID": "userForm",
             "LazyID": "WrappedComponents",
-            "Wrapper": {
+            "Container": {
                 "id": "loginForm"
             }
         },
@@ -43,9 +43,9 @@
             }
         },
         {
-            "ID": "gridUserButtonsWrapper",
+            "ID": "gridUserButtonsContainer",
             "LazyID": "WrappedComponents",
-            "Wrapper": {
+            "Container": {
                 "id": "loginGridButtons"
             }
         },
@@ -61,7 +61,7 @@
                 "onClick": "fml"
             },
             "Styles": {},
-            "Wrapper": {
+            "Container": {
                 "item": true
             }
         },
@@ -77,18 +77,18 @@
                 "onClick": "login"
             },
             "Styles": {},
-            "Wrapper": {
+            "Container": {
                 "item": true
             }
         }
     ],
-    "Wrappers": [
+    "Containers": [
         {
             "ID": "loginPaper",
             "LazyID": "Paper",
             "Components": [
                 "userForm",
-                "gridUserButtonsWrapper"
+                "gridUserButtonsContainer"
             ],
             "ExtProperties": {}
         },

@@ -2,7 +2,7 @@
   "Components": [
     {
       "ID": "root",
-      "Wrapper": {
+      "Container": {
         "id": "root"
       },
       "Styles": {}
@@ -20,14 +20,14 @@
     {
       "ID": "formTurnos",
       "LazyID": "WrappedComponents",
-      "Wrapper": {
+      "Container": {
         "id": "testForm"
       }
     },
     {
       "ID": "testPaper",
       "LazyID": "WrappedComponents",
-      "Wrapper": {
+      "Container": {
         "id": "testPaper"
       }
     },
@@ -38,10 +38,10 @@
         "label": "rToken",
         "variant": "contained",
         "color": "primary",
-        "margin":"normal"
+        "margin": "normal"
       },
       "Actions": {
-        "OnClick":"removeToken"
+        "OnClick": "removeToken"
       },
       "Styles": {}
     },
@@ -53,7 +53,7 @@
         "label": "Prueba3",
         "type": "text",
         "autoComplete": "",
-        "margin":"normal",
+        "margin": "normal",
         "variant": "outlined"
       },
       "Styles": {
@@ -68,9 +68,9 @@
         "autoComplete": "",
         "type": "text",
         "label": "Prueba5",
-        "margin":"normal"
+        "margin": "normal"
       },
-      "Wrapper": {
+      "Container": {
         "item": true,
         "xs": 12
       },
@@ -84,9 +84,9 @@
         "autoComplete": "",
         "type": "text",
         "label": "Prueba4",
-        "margin":"normal"
+        "margin": "normal"
       },
-      "Wrapper": {
+      "Container": {
         "item": true,
         "xs": 12
       },
@@ -95,14 +95,14 @@
     {
       "ID": "testGrid",
       "LazyID": "WrappedComponents",
-      "Wrapper": {
+      "Container": {
         "id": "testGrid"
       }
     },
     {
       "ID": "testExpPanel",
       "LazyID": "WrappedComponents",
-      "Wrapper": {
+      "Container": {
         "id": "testExpPanel"
       }
     },
@@ -110,8 +110,7 @@
       "ID": "typo1",
       "LazyID": "Typography",
       "Value": "Location",
-      "ExtProperties": {
-      },
+      "ExtProperties": {},
       "Styles": {
         "name": "Column",
         "component": {
@@ -124,8 +123,7 @@
       "ID": "typo2",
       "LazyID": "Typography",
       "Value": "Select trip destination",
-      "ExtProperties": {
-      },
+      "ExtProperties": {},
       "Styles": {
         "name": "Column",
         "component": {
@@ -165,7 +163,7 @@
       "ID": "btn2",
       "LazyID": "FloatingActionButton",
       "ExtProperties": {
-        "icon" : "add",
+        "icon": "add",
         "color": "primary",
         "label": "",
         "aria-label": "Add"
@@ -176,7 +174,7 @@
     {
       "ID": "test",
       "LazyID": "Test",
-      "Wrapper": {
+      "Container": {
         "id": "testList"
       }
     },
@@ -199,8 +197,7 @@
       "ExtProperties": {
         "aria-label": "Add"
       },
-      "Actions": {
-      },
+      "Actions": {},
       "Styles": {}
     },
     {
@@ -212,67 +209,109 @@
       "Actions": {},
       "Styles": {}
     }
-
   ],
-  "Wrappers": [
+  "Containers": [
     {
       "ID": "root",
       "LazyID": "root",
-      "Components": ["responsiveDrawer"],
+      "Components": [
+        "responsiveDrawer"
+      ],
       "ExtProperties": {
-        "LinkList": ["Turnos","Clientes","Calendario","Historiales"]
+        "LinkList": [
+          "Turnos",
+          "Clientes",
+          "Calendario",
+          "Historiales"
+        ]
       }
     },
     {
       "ID": "testPaper",
       "LazyID": "Paper",
-      "Components": ["formTurnos"]
+      "Components": [
+        "formTurnos"
+      ]
     },
     {
       "ID": "testForm",
       "LazyID": "form",
-      "Components": ["tes3","btn"]
+      "Components": [
+        "tes3",
+        "btn"
+      ]
     },
     {
       "ID": "testGrid",
       "LazyID": "Grid",
-      "Components": ["tes5","tes4"],
+      "Components": [
+        "tes5",
+        "tes4"
+      ],
       "ExtProperties": {
         "container": true,
         "spacing": 0
       },
       "RenderComponents": {
         "All": {
-          "components": ["tes5","tes4"]
+          "components": [
+            "tes5",
+            "tes4"
+          ]
         }
       }
     },
     {
       "ID": "testExpPanel",
       "LazyID": "ExpansionPanel",
-      "Components": ["typo1","typo2","chip","typo3","btn2","btn3","tes3","empty"],
-      "ExtProperties":{
+      "Components": [
+        "typo1",
+        "typo2",
+        "chip",
+        "typo3",
+        "btn2",
+        "btn3",
+        "tes3",
+        "empty"
+      ],
+      "ExtProperties": {
         "defaultExpanded": true
       },
       "RenderComponents": {
         "Summary": {
-          "components": ["typo1","typo2"]
+          "components": [
+            "typo1",
+            "typo2"
+          ]
         },
         "Details": {
-          "components": ["empty","chip","typo3"]
+          "components": [
+            "empty",
+            "chip",
+            "typo3"
+          ]
         },
         "Actions": {
-          "components": ["btn2","btn3"]
+          "components": [
+            "btn2",
+            "btn3"
+          ]
         }
       }
     },
     {
       "ID": "testList",
       "LazyID": "SimpleList",
-      "Components": ["listItem","speedDial"],
+      "Components": [
+        "listItem",
+        "speedDial"
+      ],
       "ExtProperties": {
         "item": "listItem",
-        "order": ["list","speedDial"],
+        "order": [
+          "list",
+          "speedDial"
+        ],
         "hasFiller": true,
         "secondaryText": true,
         "isDense": false,
@@ -283,36 +322,45 @@
         }
       }
     }
-
   ],
-  "ContentRoutes":[
+  "ContentRoutes": [
     {
       "ID": "Turnos",
       "Path": "/turnos",
-      "Components": ["testPaper"]
+      "Components": [
+        "testPaper"
+      ]
     },
     {
       "ID": "Clientes",
       "Path": "/clientes",
-      "Components": ["picker"]
+      "Components": [
+        "picker"
+      ]
     },
     {
       "ID": "Calendario",
       "Path": "/calendario",
-      "Components": ["calendarAgenda"]
+      "Components": [
+        "calendarAgenda"
+      ]
     },
     {
       "ID": "Historiales",
       "Path": "/historiales",
-      "Components": ["testExpPanel"]
+      "Components": [
+        "testExpPanel"
+      ]
     },
     {
       "ID": "Test",
       "Path": "/Test",
-      "Components": ["test"]
+      "Components": [
+        "test"
+      ]
     }
   ],
-  "LinkList":[
+  "LinkList": [
     {
       "ID": "Turnos",
       "Path": "/turnos",

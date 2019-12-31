@@ -2,7 +2,7 @@
   "Components": [
     {
       "ID": "root",
-      "Wrapper": {
+      "Container": {
         "id": "root"
       },
       "Styles": {}
@@ -20,7 +20,7 @@
     {
       "ID": "list",
       "LazyID": "WrappedComponents",
-      "Wrapper": {
+      "Container": {
         "id": "testList"
       }
     },
@@ -43,8 +43,7 @@
       "ExtProperties": {
         "aria-label": "Add"
       },
-      "Actions": {
-      },
+      "Actions": {},
       "Styles": {}
     },
     {
@@ -56,24 +55,36 @@
       "Actions": {},
       "Styles": {}
     }
-
   ],
-  "Wrappers": [
+  "Containers": [
     {
       "ID": "root",
       "LazyID": "root",
-      "Components": ["responsiveDrawer"],
+      "Components": [
+        "responsiveDrawer"
+      ],
       "ExtProperties": {
-        "LinkList": ["Turnos","Clientes","Calendario","Historiales"]
+        "LinkList": [
+          "Turnos",
+          "Clientes",
+          "Calendario",
+          "Historiales"
+        ]
       }
     },
     {
       "ID": "testList",
       "LazyID": "SimpleList",
-      "Components": ["listItem","speedDial"],
+      "Components": [
+        "listItem",
+        "speedDial"
+      ],
       "ExtProperties": {
         "item": "listItem",
-        "order": ["list","speedDial"],
+        "order": [
+          "list",
+          "speedDial"
+        ],
         "hasFiller": true,
         "secondaryText": true,
         "isDense": false,
@@ -84,36 +95,45 @@
         }
       }
     }
-
   ],
-  "ContentRoutes":[
+  "ContentRoutes": [
     {
       "ID": "Turnos",
       "Path": "/turnos",
-      "Components": ["list"]
+      "Components": [
+        "list"
+      ]
     },
     {
       "ID": "Clientes",
       "Path": "/clientes",
-      "Components": ["picker"]
+      "Components": [
+        "picker"
+      ]
     },
     {
       "ID": "Calendario",
       "Path": "/calendario",
-      "Components": ["calendarAgenda"]
+      "Components": [
+        "calendarAgenda"
+      ]
     },
     {
       "ID": "Historiales",
       "Path": "/historiales",
-      "Components": [""]
+      "Components": [
+        ""
+      ]
     },
     {
       "ID": "Test",
       "Path": "/Test",
-      "Components": [""]
+      "Components": [
+        ""
+      ]
     }
   ],
-  "LinkList":[
+  "LinkList": [
     {
       "ID": "Turnos",
       "Path": "/turnos",

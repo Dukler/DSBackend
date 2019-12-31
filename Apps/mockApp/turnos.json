@@ -3,7 +3,7 @@
     {
       "ID": "list",
       "LazyID": "WrappedComponents",
-      "Wrapper": {
+      "Container": {
         "id": "testList"
       }
     },
@@ -26,19 +26,24 @@
       "ExtProperties": {
         "aria-label": "Add"
       },
-      "Actions": {
-      },
+      "Actions": {},
       "Styles": {}
     }
   ],
-  "Wrappers": [
+  "Containers": [
     {
       "ID": "testList",
       "LazyID": "SimpleList",
-      "Components": ["listItem","speedDial"],
+      "Components": [
+        "listItem",
+        "speedDial"
+      ],
       "ExtProperties": {
         "item": "listItem",
-        "order": ["list","speedDial"],
+        "order": [
+          "list",
+          "speedDial"
+        ],
         "hasFiller": true,
         "secondaryText": true,
         "isDense": false,

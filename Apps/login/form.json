@@ -3,14 +3,14 @@
     {
       "ID": "userPaper",
       "LazyID": "WrappedComponents",
-      "Wrapper": {
+      "Container": {
         "id": "loginPaper"
       }
     },
     {
       "ID": "userForm",
       "LazyID": "WrappedComponents",
-      "Wrapper": {
+      "Container": {
         "id": "loginForm"
       }
     },
@@ -21,7 +21,7 @@
         "label": "email",
         "type": "text",
         "autoComplete": "",
-        "margin":"normal",
+        "margin": "normal",
         "variant": "outlined"
       },
       "Styles": {
@@ -35,7 +35,7 @@
         "label": "password",
         "type": "password",
         "autoComplete": "",
-        "margin":"normal",
+        "margin": "normal",
         "variant": "outlined"
       },
       "Styles": {
@@ -43,9 +43,9 @@
       }
     },
     {
-      "ID": "gridUserButtonsWrapper",
+      "ID": "gridUserButtonsContainer",
       "LazyID": "WrappedComponents",
-      "Wrapper": {
+      "Container": {
         "id": "loginGridButtons"
       }
     },
@@ -61,7 +61,7 @@
         "onClick": "fml"
       },
       "Styles": {},
-      "Wrapper": {
+      "Container": {
         "item": true
       }
     },
@@ -76,31 +76,37 @@
       "Actions": {
         "onClick": "login"
       },
-      "Styles": {
-
-      },
-      "Wrapper": {
+      "Styles": {},
+      "Container": {
         "item": true
       }
     }
   ],
-  "Wrappers": [
+  "Containers": [
     {
       "ID": "loginPaper",
       "LazyID": "Paper",
-      "Components": ["userForm","gridUserButtonsWrapper"],
-      "ExtProperties": {
-      }
+      "Components": [
+        "userForm",
+        "gridUserButtonsContainer"
+      ],
+      "ExtProperties": {}
     },
     {
       "ID": "loginForm",
       "LazyID": "form",
-      "Components": ["email","password"]
+      "Components": [
+        "email",
+        "password"
+      ]
     },
     {
       "ID": "loginGridButtons",
       "LazyID": "Grid",
-      "Components": ["createUser","login"],
+      "Components": [
+        "createUser",
+        "login"
+      ],
       "ExtProperties": {
         "container": true,
         "direction": "row",
@@ -108,8 +114,11 @@
         "alignItems": "flex-start"
       },
       "RenderComponents": {
-        "All":{
-          "components": ["createUser","login"]
+        "All": {
+          "components": [
+            "createUser",
+            "login"
+          ]
         }
       }
     }
