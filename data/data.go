@@ -136,8 +136,8 @@ func mapData(data *map[string][]interface{}) filepath.WalkFunc {
 			jsonData, dataError = ioutil.ReadFile(path)
 			err := json.Unmarshal(jsonData, &aux)
 
-			for uiElement, components := range aux {
-				(*data)[uiElement] = append((*data)[uiElement], components...)
+			for uiElement, standalones := range aux {
+				(*data)[uiElement] = append((*data)[uiElement], standalones...)
 			}
 
 			if err != nil {

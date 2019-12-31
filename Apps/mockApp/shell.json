@@ -1,5 +1,5 @@
 {
-  "Components": [
+  "Standalones": [
     {
       "ID": "root",
       "Container": {
@@ -16,7 +16,7 @@
   "Containers": [
     {
       "ID": "root",
-      "Components": [
+      "Standalones": [
         "responsiveDrawer"
       ],
       "ExtProperties": {
@@ -34,28 +34,28 @@
     {
       "ID": "Turnos",
       "Path": "/turnos",
-      "Components": [
+      "Standalones": [
         "list"
       ]
     },
     {
       "ID": "Clientes",
       "Path": "/clientes",
-      "Components": [
+      "Standalones": [
         "picker"
       ]
     },
     {
       "ID": "Calendario",
       "Path": "/calendario",
-      "Components": [
+      "Standalones": [
         "calendarAgenda"
       ]
     },
     {
       "ID": "Historiales",
       "Path": "/historiales",
-      "Components": [
+      "Standalones": [
         ""
       ]
     }

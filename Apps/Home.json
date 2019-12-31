@@ -1,5 +1,5 @@
 {
-  "Components": [
+  "Standalones": [
     {
       "ID": "root",
       "Container": {
@@ -19,7 +19,7 @@
     },
     {
       "ID": "list",
-      "LazyID": "WrappedComponents",
+      "LazyID": "ContainerSuper",
       "Container": {
         "id": "testList"
       }
@@ -60,7 +60,7 @@
     {
       "ID": "root",
       "LazyID": "root",
-      "Components": [
+      "Standalones": [
         "responsiveDrawer"
       ],
       "ExtProperties": {
@@ -75,7 +75,7 @@
     {
       "ID": "testList",
       "LazyID": "SimpleList",
-      "Components": [
+      "Standalones": [
         "listItem",
         "speedDial"
       ],
@@ -100,35 +100,35 @@
     {
       "ID": "Turnos",
       "Path": "/turnos",
-      "Components": [
+      "Standalones": [
         "list"
       ]
     },
     {
       "ID": "Clientes",
       "Path": "/clientes",
-      "Components": [
+      "Standalones": [
         "picker"
       ]
     },
     {
       "ID": "Calendario",
       "Path": "/calendario",
-      "Components": [
+      "Standalones": [
         "calendarAgenda"
       ]
     },
     {
       "ID": "Historiales",
       "Path": "/historiales",
-      "Components": [
+      "Standalones": [
         ""
       ]
     },
     {
       "ID": "Test",
       "Path": "/Test",
-      "Components": [
+      "Standalones": [
         ""
       ]
     }

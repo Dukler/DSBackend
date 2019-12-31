@@ -1,15 +1,15 @@
 {
-  "Components": [
+  "Standalones": [
     {
       "ID": "userPaper",
-      "LazyID": "WrappedComponents",
+      "LazyID": "ContainerSuper",
       "Container": {
         "id": "loginPaper"
       }
     },
     {
       "ID": "userForm",
-      "LazyID": "WrappedComponents",
+      "LazyID": "ContainerSuper",
       "Container": {
         "id": "loginForm"
       }
@@ -44,7 +44,7 @@
     },
     {
       "ID": "gridUserButtonsContainer",
-      "LazyID": "WrappedComponents",
+      "LazyID": "ContainerSuper",
       "Container": {
         "id": "loginGridButtons"
       }
@@ -86,7 +86,7 @@
     {
       "ID": "loginPaper",
       "LazyID": "Paper",
-      "Components": [
+      "Standalones": [
         "userForm",
         "gridUserButtonsContainer"
       ],
@@ -95,7 +95,7 @@
     {
       "ID": "loginForm",
       "LazyID": "form",
-      "Components": [
+      "Standalones": [
         "email",
         "password"
       ]
@@ -103,7 +103,7 @@
     {
       "ID": "loginGridButtons",
       "LazyID": "Grid",
-      "Components": [
+      "Standalones": [
         "createUser",
         "login"
       ],
@@ -113,9 +113,9 @@
         "justify": "space-between",
         "alignItems": "flex-start"
       },
-      "RenderComponents": {
+      "RenderStandalones": {
         "All": {
-          "components": [
+          "standalones": [
             "createUser",
             "login"
           ]

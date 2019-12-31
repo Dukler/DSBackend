@@ -1,8 +1,8 @@
 {
-  "Components": [
+  "Standalones": [
     {
       "ID": "list",
-      "LazyID": "WrappedComponents",
+      "LazyID": "ContainerSuper",
       "Container": {
         "id": "testList"
       }
@@ -34,7 +34,7 @@
     {
       "ID": "testList",
       "LazyID": "SimpleList",
-      "Components": [
+      "Standalones": [
         "listItem",
         "speedDial"
       ],

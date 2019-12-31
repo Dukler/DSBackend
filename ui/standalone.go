@@ -1,6 +1,6 @@
 package ui
 
-type Component struct {
+type Standalone struct {
 	ID            string                 `json:"id"`
 	LazyID        string                 `json:"lazyID"`
 	Actions       map[string]interface{} `json:"actions"`

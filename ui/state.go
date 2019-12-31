@@ -8,9 +8,9 @@ import (
 	"strings"
 )
 
-type Components struct {
-	ByIDs map[string]*Component `json:"byIds"`
-	IDs   []string              `json:"ids"`
+type Standalones struct {
+	ByIDs map[string]*Standalone `json:"byIds"`
+	IDs   []string               `json:"ids"`
 }
 
 type Containers struct {
@@ -29,7 +29,7 @@ type ContentRoutes struct {
 }
 
 type UI struct {
-	Components     `json:"components"`
+	Standalones    `json:"standalones"`
 	Containers     `json:"containers"`
 	LinkList       `json:"linkList"`
 	ContentRoutes  `json:"contentRoutes"`
@@ -40,7 +40,7 @@ type UI struct {
 
 func NewUI() *UI {
 	ui := new(UI)
-	ui.Components.ByIDs = make(map[string]*Component)
+	ui.Standalones.ByIDs = make(map[string]*Standalone)
 	ui.Containers.ByIDs = make(map[string]*Container)
 	ui.LinkList.ByIDs = make(map[string]*ListedLink)
 	ui.ContentRoutes.ByIDs = make(map[string]*ContentRoute)
@@ -49,29 +49,29 @@ func NewUI() *UI {
 }
 
 func (ui *UI) Unmarshal(data *map[string][]interface{}) {
-	for _, component := range (*data)["Components"] {
-		id := component.(map[string]interface{})["ID"].(string)
+	for _, standalone := range (*data)["Standalones"] {
+		id := standalone.(map[string]interface{})["ID"].(string)
 		lazyID := ""
-		if component.(map[string]interface{})["LazyID"] != nil {
-			lazyID = component.(map[string]interface{})["LazyID"].(string)
+		if standalone.(map[string]interface{})["LazyID"] != nil {
+			lazyID = standalone.(map[string]interface{})["LazyID"].(string)
 		}
-		ui.Components.ByIDs[id] = new(Component)
-		err := FillStruct(ui.Components.ByIDs[id], component.(map[string]interface{}))
+		ui.Standalones.ByIDs[id] = new(Standalone)
+		err := FillStruct(ui.Standalones.ByIDs[id], standalone.(map[string]interface{}))
 		if err != nil {
 			log.Fatal(err)
 		}
-		ui.Components.IDs = append(ui.Components.IDs, id)
+		ui.Standalones.IDs = append(ui.Standalones.IDs, id)
 		switch {
 		case strings.Contains(lazyID, "Item"):
-			ui.ComponentsPool[lazyID] = "Components/Items"
+			ui.ComponentsPool[lazyID] = "Standalone/Items"
 		case strings.Contains(lazyID, "Button"):
-			ui.ComponentsPool[lazyID] = "Components/Buttons"
+			ui.ComponentsPool[lazyID] = "Standalone/Buttons"
 		case strings.Contains(lazyID, "Picker"):
-			ui.ComponentsPool[lazyID] = "Components/Pickers"
+			ui.ComponentsPool[lazyID] = "Standalone/Pickers"
 		case lazyID == "":
 			break
 		default:
-			ui.ComponentsPool[lazyID] = "Components"
+			ui.ComponentsPool[lazyID] = "Standalone"
 		}
 	}
 	for _, container := range (*data)["Containers"] {
@@ -87,7 +87,7 @@ func (ui *UI) Unmarshal(data *map[string][]interface{}) {
 		}
 		ui.Containers.IDs = append(ui.Containers.IDs, id)
 		if strings.Title(lazyID) == lazyID {
-			ui.ComponentsPool[lazyID] = "Containers"
+			ui.ComponentsPool[lazyID] = "Container"
 		}
 	}
 	for _, listedList := range (*data)["LinkList"] {
