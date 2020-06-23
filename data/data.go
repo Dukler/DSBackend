@@ -4,7 +4,6 @@ import (
 	"DSBackend/do"
 	"encoding/json"
 	"fmt"
-	_ "github.com/lib/pq"
 	"io"
 	"io/ioutil"
 	"log"
@@ -12,6 +11,8 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+
+	_ "github.com/lib/pq"
 )
 
 func InitBucket(bucketName string) {
@@ -51,7 +52,12 @@ func GetApp(req *http.Request) *map[string][]interface{} {
 	domain := req.Header.Get("origin")
 	cleanURL(&domain)
 
-	data["domain"] = domain
+	if (domain == "duckstackui.firebaseapp.com"){
+		data["domain"] = "duckstack.com"
+	}else{
+		data["domain"] = domain
+	}
+	
 	data["token"] = req.Header.Get("Authorization")
 
 	jsonStr := readData(data)
