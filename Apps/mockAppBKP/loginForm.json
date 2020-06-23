@@ -1,12 +1,24 @@
 {
     "Standalones": [
         {
+            "ID": "userPaper",
+            "LazyID": "ContainerSuper",
+            "Container": {
+                "id": "loginPaper"
+            }
+        },
+        {
+            "ID": "userForm",
+            "LazyID": "ContainerSuper",
+            "Container": {
+                "id": "loginForm"
+            }
+        },
+        {
             "ID": "email",
             "LazyID": "TextField",
             "ExtProperties": {
-                "label": "email"
-            },
-            "Params": {
+                "label": "email",
                 "type": "text",
                 "autoComplete": "",
                 "margin": "normal",
@@ -20,9 +32,7 @@
             "ID": "password",
             "LazyID": "TextField",
             "ExtProperties": {
-                "label": "password"
-            },
-            "Params": {
+                "label": "password",
                 "type": "password",
                 "autoComplete": "",
                 "margin": "normal",
@@ -33,18 +43,21 @@
             }
         },
         {
+            "ID": "gridUserButtonsContainer",
+            "LazyID": "ContainerSuper",
+            "Container": {
+                "id": "loginGridButtons"
+            }
+        },
+        {
             "ID": "createUser",
             "LazyID": "TextButton",
             "ExtProperties": {
-                "label": "Crear Usuario"
-            },
-            "Params": {
+                "label": "Crear Usuario",
                 "variant": "contained",
                 "color": "primary"
             },
-            "Actions": {
-                "onClick": "fml"
-            },
+            "Actions": {},
             "Styles": {},
             "Container": {
                 "item": true
@@ -54,14 +67,27 @@
             "ID": "login",
             "LazyID": "TextButton",
             "ExtProperties": {
-                "label": "Iniciar Sesion"
-            },
-            "Params": {
+                "label": "Iniciar Sesion",
                 "variant": "contained",
                 "color": "primary"
             },
             "Actions": {
-                "onClick": "login"
+                "test": {
+                    "type": "test",
+                    "subType": "event",
+                    "event": "click"
+                },
+                "submitForm": {
+                    "type": "SUBMIT_WRAPPER_VALUES",
+                    "subType": "event",
+                    "event": "click",
+                    "payload": {
+                        "id": "loginForm",
+                        "callback": {
+                            "type": "SAVE_LOGIN_TOKEN"
+                        }
+                    }
+                }
             },
             "Styles": {},
             "Container": {
@@ -73,16 +99,16 @@
         {
             "ID": "loginPaper",
             "LazyID": "Paper",
-            "Components": [
-                "loginForm",
-                "loginGridButtons"
+            "Standalones": [
+                "userForm",
+                "gridUserButtonsContainer"
             ],
             "ExtProperties": {}
         },
         {
             "ID": "loginForm",
             "LazyID": "form",
-            "Components": [
+            "Standalones": [
                 "email",
                 "password"
             ]
@@ -90,12 +116,11 @@
         {
             "ID": "loginGridButtons",
             "LazyID": "Grid",
-            "Components": [
+            "Standalones": [
                 "createUser",
                 "login"
             ],
-            "ExtProperties": {},
-            "Params": {
+            "ExtProperties": {
                 "container": true,
                 "direction": "row",
                 "justify": "space-between",

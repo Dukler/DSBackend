@@ -16,9 +16,7 @@
   "Containers": [
     {
       "ID": "root",
-      "Standalones": [
-        "routes"
-      ],
+      "Standalones": [],
       "ExtProperties": {
         "LinkList": []
       }
@@ -28,16 +26,12 @@
     {
       "ID": "Login",
       "Path": "/login",
-      "Standalones": [
-        "userPaper"
-      ]
+      "Standalones": []
     },
     {
       "ID": "Confirmation",
       "Path": "/placeholder",
-      "Standalones": [
-        ""
-      ]
+      "Standalones": []
     }
   ]
 }

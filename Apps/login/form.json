@@ -1,20 +1,6 @@
 {
   "Standalones": [
     {
-      "ID": "userPaper",
-      "LazyID": "ContainerSuper",
-      "Container": {
-        "id": "loginPaper"
-      }
-    },
-    {
-      "ID": "userForm",
-      "LazyID": "ContainerSuper",
-      "Container": {
-        "id": "loginForm"
-      }
-    },
-    {
       "ID": "email",
       "LazyID": "TextField",
       "ExtProperties": {
@@ -40,13 +26,6 @@
       },
       "Styles": {
         "width": "100%"
-      }
-    },
-    {
-      "ID": "gridUserButtonsContainer",
-      "LazyID": "ContainerSuper",
-      "Container": {
-        "id": "loginGridButtons"
       }
     },
     {
@@ -87,8 +66,8 @@
       "ID": "loginPaper",
       "LazyID": "Paper",
       "Standalones": [
-        "userForm",
-        "gridUserButtonsContainer"
+        "loginForm",
+        "loginGridButtons"
       ],
       "ExtProperties": {}
     },

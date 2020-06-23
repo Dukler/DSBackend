@@ -7,7 +7,9 @@ package ui
 type Container struct {
 	ID                string                 `json:"id"`
 	LazyID            string                 `json:"lazyID"`
-	Standalones       []interface{}          `json:"standalones"`
+	Components 		  []interface{}          `json:"components"`
+	Params     	  	  map[string]interface{} `json:"params"`
 	ExtProperties     map[string]interface{} `json:"extProperties"`
 	RenderStandalones map[string]interface{} `json:"renderStandalones"`
+	Hooks			  interface{}          	 `json:"hooks"`
 }

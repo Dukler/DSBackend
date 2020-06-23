@@ -16,7 +16,7 @@
   "Containers": [
     {
       "ID": "root",
-      "Components": [
+      "Standalones": [
         "responsiveDrawer"
       ],
       "ExtProperties": {
@@ -34,26 +34,28 @@
     {
       "ID": "Turnos",
       "Path": "/turnos",
-      "Components": [
-        "testResponsive"
+      "Standalones": [
+        "responsiveList"
       ]
     },
     {
       "ID": "Clientes",
       "Path": "/clientes",
-      "Components": []
+      "Standalones": [
+        "typo1"
+      ]
     },
     {
       "ID": "Calendario",
       "Path": "/calendario",
-      "Components": [
+      "Standalones": [
         "calendarAgenda"
       ]
     },
     {
       "ID": "Historiales",
       "Path": "/historiales",
-      "Components": [
+      "Standalones": [
         ""
       ]
     }

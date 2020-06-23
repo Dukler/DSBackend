@@ -1,0 +1,19 @@
+{
+  "Standalones": [
+    {
+      "ID": "typo1",
+      "LazyID": "Typography",
+      "Value": "PORONGA",
+      "ExtProperties": {},
+      "Styles": {
+        "name": "Header",
+        "component": {
+          "height": 250,
+          "fontSize": 20,
+          "color": "primary"
+        }
+      }
+    }
+  ],
+  "Containers": []
+}

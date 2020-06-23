@@ -16,7 +16,7 @@
     "Containers": [
         {
             "ID": "login",
-            "Components": [
+            "Standalones": [
                 "routes"
             ],
             "ExtProperties": {
@@ -29,14 +29,14 @@
         {
             "ID": "Login",
             "Path": "/login",
-            "Components": [
-                "loginPaper"
+            "Standalones": [
+                "userPaper"
             ]
         },
         {
             "ID": "Confirmation",
             "Path": "/placeholder",
-            "Components": [
+            "Standalones": [
                 ""
             ]
         }

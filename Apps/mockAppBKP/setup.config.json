@@ -1,0 +1,9 @@
+{
+  "credentials": {
+    "login": true
+  },
+  "login": {
+    "required": true,
+    "appName": "login"
+  }
+}

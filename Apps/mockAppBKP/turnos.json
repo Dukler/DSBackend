@@ -25,6 +25,20 @@
       }
     },
     {
+      "ID": "list",
+      "LazyID": "ContainerSuper",
+      "Container": {
+        "id": "testList"
+      }
+    },
+    {
+      "ID": "responsiveList",
+      "LazyID": "ContainerSuper",
+      "Container": {
+        "id": "testResponsive"
+      }
+    },
+    {
       "ID": "listItem",
       "LazyID": "ActionItem",
       "ExtProperties": {
@@ -88,7 +102,7 @@
     {
       "ID": "testList",
       "LazyID": "SimpleList",
-      "Components": [
+      "Standalones": [
         "listItem",
         "speedDial"
       ],
@@ -111,9 +125,9 @@
     {
       "ID": "testResponsive",
       "LazyID": "ResponsiveLayout",
-      "Components": [
+      "Standalones": [
         "picker",
-        "testList"
+        "list"
       ],
       "ExtProperties": {
         "Responsive": {
@@ -124,7 +138,7 @@
       "RenderStandalones": {
         "All": {
           "standalones": [
-            "testList",
+            "list",
             "picker"
           ]
         }

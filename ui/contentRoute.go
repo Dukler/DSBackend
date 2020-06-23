@@ -5,5 +5,5 @@ type ContentRoute struct {
 	Path        string        `json:"path"`
 	Caption     string        `json:"caption"`
 	ClassName   string        `json:"className"`
-	Standalones []interface{} `json:"standalones"`
+	Components []interface{}  `json:"components"`
 }
