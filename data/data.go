@@ -52,12 +52,12 @@ func GetApp(req *http.Request) *map[string][]interface{} {
 	domain := req.Header.Get("origin")
 	cleanURL(&domain)
 
-	if (domain == "duckstackui.firebaseapp.com"){
-		data["domain"] = "duckstack.com"
-	}else{
-		data["domain"] = domain
-	}
-	
+	// if (domain == "duckstackui.firebaseapp.com"){
+	// 	data["domain"] = "duckstack.com"
+	// }else{
+	// 	data["domain"] = domain
+	// }
+	data["domain"] = domain
 	data["token"] = req.Header.Get("Authorization")
 
 	jsonStr := readData(data)
