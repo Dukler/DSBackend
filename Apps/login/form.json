@@ -36,9 +36,11 @@
         "variant": "contained",
         "color": "primary"
       },
-      "Actions": {
-        "onClick": "fml"
-      },
+      "Actions": [
+        {
+          "onClick": "fml"
+        }
+      ],
       "Styles": {},
       "Container": {
         "item": true
@@ -52,9 +54,11 @@
         "variant": "contained",
         "color": "primary"
       },
-      "Actions": {
-        "onClick": "login"
-      },
+      "Actions": [
+        {
+          "onClick": "login"
+        }
+      ],
       "Styles": {},
       "Container": {
         "item": true

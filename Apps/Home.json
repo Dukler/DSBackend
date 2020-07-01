@@ -34,7 +34,7 @@
         "hasCheck": true,
         "secondaryAndCheck": true
       },
-      "Actions": {},
+      "Actions": [],
       "Styles": {}
     },
     {
@@ -43,7 +43,7 @@
       "ExtProperties": {
         "aria-label": "Add"
       },
-      "Actions": {},
+      "Actions": [],
       "Styles": {}
     },
     {
@@ -52,7 +52,7 @@
       "ExtProperties": {
         "aria-label": "Add"
       },
-      "Actions": {},
+      "Actions": [],
       "Styles": {}
     }
   ],

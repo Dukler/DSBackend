@@ -36,8 +36,6 @@ type UI struct {
 	ComponentsPool map[string]string `json:"componentsPool"`
 }
 
-//var UIState *UI
-
 func NewUI() *UI {
 	ui := new(UI)
 	ui.Standalones.ByIDs = make(map[string]*Standalone)
@@ -74,14 +72,16 @@ func (ui *UI) Unmarshal(data *map[string][]interface{}) {
 			ui.ComponentsPool[lazyID] = "Standalone"
 		}
 	}
-	for _, container := range (*data)["Containers"] {
-		id := container.(map[string]interface{})["ID"].(string)
+	for _, c := range (*data)["Containers"] {
+		container := c.(map[string]interface{});
+		// log.Print(c)
+		id := container["ID"].(string)
 		lazyID := ""
-		if container.(map[string]interface{})["LazyID"] != nil {
-			lazyID = container.(map[string]interface{})["LazyID"].(string)
+		if container["LazyID"] != nil {
+			lazyID = container["LazyID"].(string)
 		}
 		ui.Containers.ByIDs[id] = new(Container)
-		err := FillStruct(ui.Containers.ByIDs[id], container.(map[string]interface{}))
+		err := FillStruct(ui.Containers.ByIDs[id], container)
 		if err != nil {
 			log.Fatal(err)
 		}
@@ -89,24 +89,40 @@ func (ui *UI) Unmarshal(data *map[string][]interface{}) {
 		if strings.Title(lazyID) == lazyID {
 			ui.ComponentsPool[lazyID] = "Container"
 		}
+		setSysInfo(container["ID"].(string),"containers",container["Components"].([]interface{}), ui);
 	}
-	for _, listedList := range (*data)["LinkList"] {
-		id := listedList.(map[string]interface{})["ID"].(string)
+	for _, l := range (*data)["LinkList"] {
+		listedList := l.(map[string]interface{})
+		id := listedList["ID"].(string)
 		ui.LinkList.ByIDs[id] = new(ListedLink)
-		err := FillStruct(ui.LinkList.ByIDs[id], listedList.(map[string]interface{}))
+		err := FillStruct(ui.LinkList.ByIDs[id], listedList)
 		if err != nil {
 			log.Fatal(err)
 		}
 		ui.LinkList.IDs = append(ui.LinkList.IDs, id)
 	}
-	for _, contentRoute := range (*data)["ContentRoutes"] {
-		id := contentRoute.(map[string]interface{})["ID"].(string)
+	for _, r := range (*data)["ContentRoutes"] {
+		contentRoute := r.(map[string]interface{})
+		id := contentRoute["ID"].(string)
 		ui.ContentRoutes.ByIDs[id] = new(ContentRoute)
-		err := FillStruct(ui.ContentRoutes.ByIDs[id], contentRoute.(map[string]interface{}))
+		err := FillStruct(ui.ContentRoutes.ByIDs[id], contentRoute)
 		if err != nil {
 			log.Fatal(err)
 		}
 		ui.ContentRoutes.IDs = append(ui.ContentRoutes.IDs, id)
+
+		setSysInfo(contentRoute["ID"].(string),"contentRoutes",contentRoute["Components"].([]interface{}), ui);
+	}
+}
+
+func setSysInfo (containerID string, storeReducer string, arr []interface{}, ui *UI){
+	for _, c := range arr{
+		if _, ok := ui.Standalones.ByIDs[c.(string)]; ok {
+			comp := c.(string)
+			ui.Standalones.ByIDs[comp].SystemInfo.TreePosition.StoreReducer = storeReducer;
+			ui.Standalones.ByIDs[comp].SystemInfo.TreePosition.ID = containerID;
+			// log.Print(comp);
+		}
 	}
 }
 

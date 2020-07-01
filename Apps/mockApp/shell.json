@@ -1,13 +1,6 @@
 {
   "Standalones": [
     {
-      "ID": "root",
-      "Container": {
-        "id": "root"
-      },
-      "Styles": {}
-    },
-    {
       "ID": "responsiveDrawer",
       "LazyID": "ResponsiveDrawer",
       "Styles": {}
@@ -41,7 +34,9 @@
     {
       "ID": "Clientes",
       "Path": "/clientes",
-      "Components": []
+      "Components": [
+        "abmPaper"
+      ]
     },
     {
       "ID": "Calendario",

@@ -1,7 +1,7 @@
 {
     "Standalones": [
         {
-            "ID": "email",
+            "ID": "loginEmail",
             "LazyID": "TextField",
             "ExtProperties": {
                 "label": "email"
@@ -17,7 +17,7 @@
             }
         },
         {
-            "ID": "password",
+            "ID": "loginPassword",
             "LazyID": "TextField",
             "ExtProperties": {
                 "label": "password"
@@ -42,9 +42,11 @@
                 "variant": "contained",
                 "color": "primary"
             },
-            "Actions": {
-                "onClick": "fml"
-            },
+            "Actions": [
+                {
+                    "onClick": "fml"
+                }
+            ],
             "Styles": {},
             "Container": {
                 "item": true
@@ -60,9 +62,11 @@
                 "variant": "contained",
                 "color": "primary"
             },
-            "Actions": {
-                "onClick": "login"
-            },
+            "Actions": [
+                {
+                    "onClick": "login"
+                }
+            ],
             "Styles": {},
             "Container": {
                 "item": true
@@ -83,8 +87,8 @@
             "ID": "loginForm",
             "LazyID": "form",
             "Components": [
-                "email",
-                "password"
+                "loginEmail",
+                "loginPassword"
             ]
         },
         {

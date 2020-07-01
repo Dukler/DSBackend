@@ -6,7 +6,7 @@
       "ExtProperties": {
         "aria-label": "Add"
       },
-      "Actions": {},
+      "Actions": [],
       "Hooks": {
         "SideEffect": {
           "type": "UPDATE_CONTAINER",
@@ -48,7 +48,7 @@
         "hasCheck": true,
         "secondaryAndCheck": true
       },
-      "Actions": {},
+      "Actions": [],
       "Styles": {}
     },
     {
@@ -94,7 +94,7 @@
           }
         ]
       },
-      "Actions": {},
+      "Actions": [],
       "Styles": {}
     }
   ],

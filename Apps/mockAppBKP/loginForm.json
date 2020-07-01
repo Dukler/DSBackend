@@ -57,7 +57,7 @@
                 "variant": "contained",
                 "color": "primary"
             },
-            "Actions": {},
+            "Actions": [],
             "Styles": {},
             "Container": {
                 "item": true
@@ -71,24 +71,26 @@
                 "variant": "contained",
                 "color": "primary"
             },
-            "Actions": {
-                "test": {
-                    "type": "test",
-                    "subType": "event",
-                    "event": "click"
-                },
-                "submitForm": {
-                    "type": "SUBMIT_WRAPPER_VALUES",
-                    "subType": "event",
-                    "event": "click",
-                    "payload": {
-                        "id": "loginForm",
-                        "callback": {
-                            "type": "SAVE_LOGIN_TOKEN"
+            "Actions": [
+                {
+                    "test": {
+                        "type": "test",
+                        "subType": "event",
+                        "event": "click"
+                    },
+                    "submitForm": {
+                        "type": "SUBMIT_WRAPPER_VALUES",
+                        "subType": "event",
+                        "event": "click",
+                        "payload": {
+                            "id": "loginForm",
+                            "callback": {
+                                "type": "SAVE_LOGIN_TOKEN"
+                            }
                         }
                     }
                 }
-            },
+            ],
             "Styles": {},
             "Container": {
                 "item": true

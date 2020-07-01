@@ -1,4 +1,58 @@
 {
-  "Standalones": [],
-  "Containers": []
+  "Standalones": [
+    {
+      "ID": "abmNombre",
+      "LazyID": "TextField",
+      "ExtProperties": {},
+      "Params": {
+        "label": "nombre",
+        "type": "text",
+        "autoComplete": "",
+        "margin": "normal",
+        "variant": "outlined"
+      },
+      "Styles": {
+        "width": "100%"
+      }
+    },
+    {
+      "ID": "abmApellido",
+      "LazyID": "TextField",
+      "Params": {
+        "label": "apellido",
+        "type": "text",
+        "autoComplete": "",
+        "margin": "normal",
+        "variant": "outlined"
+      },
+      "Styles": {
+        "width": "100%"
+      }
+    },
+    {
+      "ID": "abmSave",
+      "LazyID": "TextButton",
+      "ExtProperties": {
+        "label": "Crear Usuario"
+      },
+      "Params": {
+        "variant": "contained",
+        "color": "primary"
+      },
+      "Actions": [],
+      "Styles": {}
+    }
+  ],
+  "Containers": [
+    {
+      "ID": "abmPaper",
+      "LazyID": "Paper",
+      "Components": [
+        "abmNombre",
+        "abmApellido",
+        "abmSave"
+      ],
+      "ExtProperties": {}
+    }
+  ]
 }

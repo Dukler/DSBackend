@@ -6,7 +6,7 @@
       "ExtProperties": {
         "aria-label": "Add"
       },
-      "Actions": {},
+      "Actions": [],
       "Hooks": {
         "SideEffect": {
           "type": "UPDATE_CONTAINER",
@@ -34,7 +34,7 @@
         "hasCheck": true,
         "secondaryAndCheck": true
       },
-      "Actions": {},
+      "Actions": [],
       "Styles": {}
     },
     {
@@ -49,19 +49,16 @@
               {
                 "click": [
                   {
-                    "type": "TOGGLE_DISABLE_STANDALONE",
-                    "payload": {
-                      "id": "testDialog"
-                    }
-                  },
-                  {
                     "type": "NEW_STANDALONE",
                     "payload": {
                       "id": "testDialog",
                       "lazyID": "Typography",
-                      "treePosition": {
-                        "type": "container",
-                        "id": "root"
+                      "systemInfo": {
+                        "treePosition": {
+                          "storeReducer": "containers",
+                          "id": "root"
+                        },
+                        "selfDestruct": true
                       },
                       "value": "Location",
                       "styles": {
@@ -71,7 +68,8 @@
                           "color": "primary",
                           "zIndex": 100000
                         }
-                      }
+                      },
+                      "extProperties": {}
                     }
                   }
                 ]
@@ -80,7 +78,7 @@
           }
         ]
       },
-      "Actions": {},
+      "Actions": [],
       "Styles": {}
     }
   ],
