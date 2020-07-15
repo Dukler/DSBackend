@@ -3,6 +3,7 @@ package main
 import (
 	"DSBackend/controllers"
 	"DSBackend/data"
+	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -34,8 +35,13 @@ func main() {
 	http.Handle("/", &router)
 
 	port := os.Getenv("PORT")
-
+	if (port == ""){
+		port = "8081"
+	}
+	
 	data.InitBucket("duckstackui")
 	//REST
+	fmt.Println("DSBackend")
 	log.Fatal(http.ListenAndServe(":"+port, &router))
+	
 }

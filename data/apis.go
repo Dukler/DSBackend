@@ -4,10 +4,10 @@ import "os"
 
 func GetApi(name string) string {
 	var url string
-	if os.Getenv("APP_ENV") == "Debug" {
-		url = "http://localhost:8082/"
-	} else {
+	if os.Getenv("ENV") == "HEROKU" {
 		url = "https://dsappserver.herokuapp.com/"
+	} else {
+		url = "http://localhost:8082/"
 	}
 	//url = "https://dsappserver.herokuapp.com/"
 
