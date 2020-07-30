@@ -2,11 +2,12 @@
   "Standalones": [
     {
       "ID": "calendarAgenda",
-      "LazyID": "CalendarPicker",
+      "LazyID": "Calendar",
       "Styles": {
         "a": 2
       },
-      "Value": {}
+      "Value": {},
+      "ExtProperties": {}
     }
   ],
   "Containers": []

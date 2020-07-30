@@ -30,6 +30,20 @@
       }
     },
     {
+      "ID": "abmPrueba",
+      "LazyID": "TextField",
+      "Params": {
+        "label": "prueba",
+        "type": "text",
+        "autoComplete": "",
+        "margin": "normal",
+        "variant": "outlined"
+      },
+      "Styles": {
+        "width": "100%"
+      }
+    },
+    {
       "ID": "abmSave",
       "LazyID": "TextButton",
       "ExtProperties": {

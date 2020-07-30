@@ -2,18 +2,20 @@
   "Standalones": [
     {
       "ID": "picker",
-      "LazyID": "WeekPicker",
+      "LazyID": "Calendar",
       "ExtProperties": {
-        "aria-label": "Add"
+        "aria-label": "Add",
+        "showHeader": false,
+        "picker": "week"
       },
       "Actions": [],
       "Hooks": {
-        "SideEffect": {
-          "type": "UPDATE_CONTAINER",
+        "StateChange": {
+          "type": "UPDATE_ATTRIBUTE",
           "payload": {
             "id": "testList",
             "attribute": "sourceIndex",
-            "value": "value"
+            "value": "selected"
           }
         }
       },
